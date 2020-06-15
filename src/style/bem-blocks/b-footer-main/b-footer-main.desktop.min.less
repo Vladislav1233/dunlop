@@ -1,0 +1,114 @@
+/* MAIN : 1000 + */
+
+.b-footer-main {
+    border-top: 1px solid rgba(160,160,160,0.3);
+    display: flex;
+    height: 61px;
+    justify-content: space-between;
+    // background: @cl-dunlop-footer;
+
+    &--how-to {
+        background: @cl-dunlop-news-background;
+        border-color: @cl-footer-border;
+    }
+
+    &--where-to-buy {
+        background: @cl-dunlop-bg;
+        border-color: @cl-dunlop-catalog-border;
+    }
+
+    &--catalog {
+        background: @cl-dunlop-footer;
+        border-color: @cl-footer-border;
+    }
+
+    &__copyriting {
+        margin: 0 0 0 15px;
+        font-size: 0;
+    }
+
+    &__copyriting span {
+        color: @cl-font-white;
+        display: inline-block;
+        font-family: @font-regular;
+        font-size: 11px;
+        line-height: 60px;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 0 33px 0 0;
+    }
+
+    &__list {
+        display: inline-block;
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 33px 0 0;
+        padding: 0;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__link {
+        color: @cl-font-white;
+        display: inline-block;
+        font-family: @font-regular;
+        font-size: 11px;
+        line-height: 60px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__link:hover {
+        color: @cl-font-link;
+        text-decoration: none;
+    }
+
+    &__about {
+        margin: 0 15px 0 0;
+
+        img {
+            width: 54px;
+            margin: 22px 0 0;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__social {
+        // padding: 0 0 0 18px;
+        text-decoration: none;
+
+        span {
+            color: @cl-font-link;
+            font-family: @font-regular;
+            font-size: 11px;
+            line-height: 60px;
+            padding: 0 0 0 18px;
+            text-transform: uppercase;
+        }
+
+        i {
+            color: @cl-dunlop-white;
+            position: relative;
+            top: 2px;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            i {
+                color: @cl-dublop-facebook-hover;
+            }
+        }
+    }
+}

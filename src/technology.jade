@@ -1,0 +1,27 @@
+//- Основная страница: Технология.
+//- ====================
+
+//- Используем Dunlop: tab.jade: mixin +tab()
+include ./section/tab.jade
+//- Используем Dunlop: technology.jade: mixin +technology()
+include ./section/technology.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Технология DRS';
+    - var logo = false;
+    - var background = '/images/inhtml/tech.jpg';
+
+//- Выводим контент
+block content
+    +b.technology
+        +e.content.js-tab_ui
+            +b.container--tech
+                //- Используем Dunlop: include ./section/tab.jade
+                +tabs('В автошинах', 'В мотошинах').b-tab--tech
+            +b.line
+            //- Используем Dunlop: include ./section/technology.jade
+            +technology()

@@ -1,0 +1,29 @@
+//- ====================
+//- Dunlop: open-close
+//- 11-05-2016: Vladimir Trifonov
+//- --------------------
+//- Открытие-закрытие карты
+//- ====================
+mixin open-close(text)
+    +b('a')(href="javascript:void(0);" title="Скрыть карту").open-close--map.js-map-slide.opened
+        +e('span').text #{text}
+
+//- ====================
+//- Dunlop: open-close
+//- 11-05-2016: Vladimir Trifonov
+//- --------------------
+//- Открытие-закрытие прочих дилеров
+//- ====================
+mixin open-other(text)
+    +b('a')(href="javascript:void(0);" title="Показать остальных дилеров").open-close--more.js-show-other
+        +e('span').text--more #{text}
+
+//- ====================
+//- Dunlop: open-close
+//- 05-05-2016: Vladimir Trifonov
+//- --------------------
+//- Открытие-закрытие таблицы размеров
+//- ====================
+mixin open-table(text)
+    +b('a')(href="javascript:void(0);" title="Скрыть список типоразмеров").open-close--table.js-show-table
+        +e('span').text #{text}

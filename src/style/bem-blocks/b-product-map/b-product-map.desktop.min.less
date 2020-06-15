@@ -1,0 +1,238 @@
+/* MAIN : 1000 + */
+.b-product-map {
+    position: relative;
+    margin-left: 3px;
+    margin-bottom: 34px;
+    min-height: 40px;
+
+    //(vlad) модификатор для страницы contacts.jade - находится в файле contacts-map.jade
+    &--contacts {
+        margin-left: 0px;
+        margin-top: 65px;
+    }
+    //(drtvader) модификатор для страницы where-to-buy.jade - находится в файле product-map.jade
+    &--where-to-buy-map {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    &__map {
+        position: relative;
+        height: 393px;
+
+        &--where-to-buy-map {
+            height: 460px;
+        }
+    }
+
+    &__baloon-map {
+        position: absolute;
+        width: 51px;
+        height: 57px;
+        // background-color: @cl-dunlop-table-dot;
+        text-align: center;
+        background: url(../images/inhtml/pin.png) no-repeat left top;
+
+        &:hover {
+            // background-color: @cl-dunlop-ballon-hover;
+            background: url(../images/inhtml/pin-hover.png) no-repeat left top;
+        }
+
+        &--contacts {
+            &:hover {
+                background: url(../images/inhtml/pin.png) no-repeat left top;
+                cursor: default;
+            }
+        }
+        // &:after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 43px;
+        //     left: 39%;
+        //     border: 5px solid transparent;
+        //     border-top: 5px solid @cl-dunlop-table-dot;
+        // }
+    }
+
+    &__logo {
+        height: 25px;
+        margin: 9px 12px;
+    }
+
+    &__ballon-block {
+        width: 212px !important;
+        height: auto !important;
+        position: absolute;
+        background-color: @cl-dunlop-white;
+        box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.25);
+        text-align: center;
+        border-bottom: 2px solid @cl-dunlop-table-dot;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -16px;
+            left: 46%;
+            border: 7px solid transparent;
+            border-top: 9px solid @cl-dunlop-table-dot
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            left: 46%;
+            z-index: 2;
+            border: 7px solid transparent;
+            border-top: 8px solid @cl-dunlop-white;
+        }
+    }
+
+    &__info {
+        padding: 0 20px;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    &__close-link {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        color: @cl-dunlop-black;
+        margin-right: 4px;
+        padding: 0 10px;
+        text-decoration: none;
+        &:hover {
+            color: @cl-dublop-main;
+            text-decoration: none;
+        }
+
+        i {
+            font-size: 10px;
+        }
+    }
+
+    &__name {
+        font-family: @font-bold;
+        color: @cl-dunlop-black;
+        font-size: 14px;
+        line-height: 20px;
+
+        p {
+            margin-top: 0;
+            margin-bottom: 11px;
+        }
+    }
+    
+    .b-diler-block {
+
+        &__info {
+            padding-bottom: 3px;
+        }
+        &__icon {
+            display: none;
+        }
+
+        &__adress {
+            width: 175px;
+            color: @cl-dunlop-black;
+            font-size: 13px;
+            line-height: 20px;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &__icon-phone {
+            i {
+                padding-right: 4px;
+            }
+        }
+
+        &__show-phone {
+            display: none;
+        }
+
+        &__phone {
+            display: inline-block !important;
+            color: @cl-dunlop-black;
+            font-size: 13px;
+            text-decoration: none;
+            margin-top: 9px;
+            margin-bottom: 9px;
+
+            &:hover {
+                color: @cl-dunlop-black;
+                text-decoration: none;
+            }
+        }
+        
+        &__phone2 {
+            display: inline;
+            color: @cl-dunlop-black;
+            font-size: 13px;
+            text-decoration: none;
+            margin-top: 9px;
+            margin-bottom: 9px;
+            line-height: 20px;
+
+            &:hover {
+                color: @cl-dunlop-black;
+                text-decoration: none;
+            }
+        }
+        
+        &__hidden-icon {
+            display: block;
+            margin-bottom: 15px;
+            margin-top: 13px;
+            i {
+                padding: 0 7px;
+                color: @cl-dunlop-black;
+                font-size: 15px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &.icon-car {
+                    font-size: 15px;
+                }
+                &.icon-big-car {
+                    font-size: 17px;
+                }
+                &.icon-moto {
+                    font-size: 16px;
+                }
+                &.icon-remont {
+                    font-size: 19px;
+                }
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .b-button {
+        padding: 7px 9px;
+        margin-bottom: 15px;
+        line-height: 20px;
+        letter-spacing: -0.3px;
+    }
+
+    &__icon-block {
+        margin-bottom: 15px;
+        i {
+            padding: 0 7px;
+            color: @cl-dunlop-black;
+            font-size: 15px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

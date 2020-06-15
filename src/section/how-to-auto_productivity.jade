@@ -1,0 +1,71 @@
+//- ====================
+//- Dunlop: how-to-auto_productivity
+//- 03-05-2016: Dovzhenko Vladislav
+//- --------------------
+//- Индекс нагрузки и категоря скорости на странице "как выбрать шины" (how-to-auto.jade).
+//- ====================
+
+//- Dunlop: info_productivity()
+//- 03-05-2016: Dovzhenko Vladislav
+//- ---------------------
+//- Шаблон - информация об индексах
+mixin info-productivity(title, info)
+    +e('p').title #{title}
+    +e('p').info(class!=attributes.class) #{info}
+
+
+
+mixin value-productivity(index, value)
+    +e('div').item
+        +e('p').value #{index}
+        +e('p').value--weight #{value}
+
+
+//- Dunlop: info_productivity()
+//- 03-05-2016: Dovzhenko Vladislav
+//- ---------------------
+//- Шаблон - информация об индексах нагрузки и скорости
+mixin performance-data(level, index, value, ...items)
+    +b.performance-data
+        +e.caption
+            +e('p').caption-item #{index}
+            +e('p').caption-item--weight #{value}
+        +e('div').productivity(class!=attributes.class)
+            if level
+                each item in items
+                    +e('div').item
+                        +e('p').value #{item}
+                        +e('p').value--weight #{item}
+            else
+                +value-productivity('M', '130')
+                +value-productivity('N', '130')
+                +value-productivity('P', '130')
+                +value-productivity('Q', '130')
+                +value-productivity('R', '130')
+                +value-productivity('S', '130')
+                +value-productivity('T', '130')
+                +value-productivity('H', '130')
+                +value-productivity('Y', '130')
+                +value-productivity('ZR', '130')
+                +value-productivity('(W)', '130')
+                +value-productivity('(Y)', '130')
+                    
+
+
+
+//- Dunlop: mixin how-to-auto_productivity()
+//- 03-05-2016: Dovzhenko Vladislav
+//- ---------------------
+//- Индекс нагрузки и категоря скорости (общий шаблон)
+mixin how-to-auto_productivity()
+    // BEGIN section.b-productivity
+    +b('section').productivity
+        //- mixin info_productivity(title, info)
+        +info-productivity('Индекс нагрузки','Индексу нагрузки (ИН) соответствует максимальная нагрузка в килограммах, которую шина способна долговременно выдерживать при движении на максимальной скорости (соответствует категории скорости)')
+        //- performance-data(level, ...items)
+        //- .js-performance-data - класс для инициализации slick-slider
+        +performance-data('yes', 'ИН', 'кг', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355', '355')(class="js-performance-data")
+        +info-productivity('Категория скорости','Категория скорости соответствует максимальной скорости на которой шина может двигаться с наибольшей нагрузкой')(class = "productivity__info--weight")
+        //- performance-data(level, ...items) - контент добавлен в миксинах
+        +performance-data('', 'КС', 'км/ч')(class="js-performance-data")
+    // END section.b-productivity

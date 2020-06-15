@@ -1,0 +1,307 @@
+/* MAIN : 1000 + */
+.b-catalog {
+    padding: 30px 23px 0 23px;
+
+    &__list {
+        font-size: 0;
+        padding-left: 0;
+        // border-top: 1px solid @cl-dunlop-catalog-border;
+        border-left: 1px solid @cl-dunlop-catalog-border;
+        border-right: 1px solid transparent;
+        margin-bottom: 0;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        list-style: none;
+        display: inline-flex;
+        flex-direction: column;
+        vertical-align: top;
+        border-top: 1px solid @cl-dunlop-catalog-border;
+        border-bottom: 1px solid @cl-dunlop-catalog-border;
+        border-right: 1px solid @cl-dunlop-catalog-border;
+        height: 402px;
+        position: relative;
+        margin-bottom: 0;
+        text-align: center;
+        width: 223px;
+        margin-top: -1px;
+    }
+
+    &__new {
+        position: absolute;
+        top: 15px;
+        left: 2px;
+        line-height: 24px;
+        padding-left: 8px;
+        padding-right: 25px;
+        background: @cl-dunlop-catalog-background-new;
+        font-size: 10px;
+        color: @cl-dunlop-white;
+        font-family: 'helvetican_bold';
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+
+        &--info {
+            left: 19px;
+            top: 15px;
+        }
+    }
+
+    &__image {
+        width: auto;
+        height: 173px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: @cl-dunlop-white;
+        font-family: 'helvetican_bold';
+        font-size: 14px;
+        display: block;
+        overflow: hidden;
+        
+        span {
+            text-transform: none;
+            font: 19px/60% Arial;
+        }
+    }
+
+    &__text {
+        font-family: 'helvetican_regular';
+        color: @cl-dunlop-catalog-text;
+        font-size: 11px;
+        margin-bottom: 0;
+
+        &--info {
+            display: none;
+        }
+    }
+
+    &__sum {
+        font-family: 'helvetican_regular';
+        font-size: 11px;
+        color: @cl-dunlop-white;
+        margin-bottom: 10px;
+        padding: 0 5px;
+
+        span {
+            font-family: 'helvetican_bold';
+            font-size: 12px;
+            padding-left: 5px;
+        }
+    }
+
+    &__price {
+        background: @cl-dunlop-catalog-background;
+        display: block;
+        text-align: center;
+        height: 94px;
+        padding: 13px 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+
+        &--info {
+            background: none;
+            height: 70px;
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            display: none;
+
+            .b-catalog__sum {
+                span {
+                    display: block;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        padding: 27px 20px 0 20px;
+        width: 222px;
+        margin: 0 auto;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:after {
+            content:"";
+            background:url("../images/inhtml/special-background-hover-catalog.png") no-repeat scroll center bottom;
+            display: none;
+            height: calc(~"100% - 42px");
+            position: absolute;
+            width: 100%;
+            bottom: 42px;
+            left: 0px;
+        }
+
+        &--info {
+            padding: 42px 37px 11px 37px;
+        }
+    }
+
+    &__description {
+        padding-bottom: 11px;
+        z-index: 10;
+        flex: 1;
+        overflow: hidden;
+        text-decoration: none;
+
+        @media screen {
+            &:hover {
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+                position: absolute;
+                left: -17px;
+                top: -15px;
+                background: @cl-dunlop-catalog-background;
+                width: 256px;
+                min-height: 460px;
+                display: block;
+                padding-bottom: 50px;
+                z-index: 15;
+                text-decoration: none;
+                cursor: pointer;
+
+                .b-catalog__information {
+                    display: block;
+                }
+
+                .b-catalog__new {
+                    left: 19px;
+                }
+
+                .b-catalog__link {
+                    padding-top: 42px;
+                    padding-bottom: 30px;
+                }
+
+                .b-catalog__link:after {
+                    display: block;
+                }
+
+                .b-catalog__list-line {
+                    display: block;
+                }
+
+                .b-button.b-button--catalog-info {
+                    display: block;
+                    z-index: 16;
+                }
+
+                .b-catalog__text {
+                    display: none;
+                }
+
+                .b-catalog__text--info {
+                    display: block;
+                }
+
+                .b-button.b-button--catalog-text,
+                .b-button.b-button--catalog {
+                    display: none;
+                }
+
+                .b-catalog__price {
+                    display: none;
+                }
+
+                .b-catalog__price--info {
+                    display: block;
+                }
+            }
+        }
+
+        &--sport {
+            margin-bottom: 100px;
+
+            &:hover {
+                margin-bottom: 0;
+                padding-bottom: 10px;
+
+                .b-catalog__link:after {
+                    bottom: 0px;
+                }
+            }
+        }
+
+        &--button {
+            margin-bottom: 60px;
+
+            &:hover {
+                margin-bottom: 0;
+            }
+        }
+
+        &--price {
+            margin-bottom: 100px;
+
+            &:hover {
+                margin-bottom: 0;
+
+                .b-catalog__text {
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    &__line {
+        background: url(../images/inhtml/moto-line.svg) no-repeat;
+        background-size: 183px 119px;
+        display: inline-block;
+        vertical-align: top;
+        width: 183px;
+        height: 4px;
+        position: relative;
+
+        &--fill_4 {
+            background-position: 0px 0px;
+        }
+        &--fill_3 {
+            background-position: 0px -29px;
+        }
+        &--fill_2 {
+            background-position: 0px -57px;
+        }
+        &--fill_1 {
+            background-position: 0px -85px;
+        }
+        &--fill_0 {
+            background-position: 0px -115px;
+        }
+    }
+
+    &__caption {
+        font-size: 10px;
+        font-family: 'helvetican_medium';
+        color: @cl-dunlop-white;
+        display: block;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    &__list-line {
+        font-size: 0;
+        padding: 15px 37px 15px;
+        display: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    &__item-line {
+        font-size: 0;
+        list-style:  none;
+        margin-bottom: 0;
+    }
+}

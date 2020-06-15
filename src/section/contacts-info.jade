@@ -1,0 +1,32 @@
+//- ====================
+//- Dunlop: contacts-infp
+//- 10-05-2016: Tatiana Sh
+//- --------------------
+//- Шаблон контактов - блок с инфо
+//- ====================
+
+//- Dunlop: mixin contacts-info
+//- 10-05-2016: Tatiana Sh
+//- ---------------------
+//- Карточка контактов
+mixin contacts-info()
+    // BEGIN section.b-contacts-info
+
+    +b.contacts-info
+        +e.inner
+            +e('h1').title ООО «Данлоп Тайр СНГ»
+            +e('div').address 
+                i.icon-baloon
+                | 121108, Россия, Москва,
+                br
+                | ул. Ивана Франко 8, 11 этаж
+                br
+                | БЦ «Kutuzoff Tower»
+            +e('div').address
+                i.icon-phone
+                | +7 (495) 663-2360
+                br
+                | +7 (495) 663-2460 
+                +e('span').fax (факс)
+            +b('a')(href="javascript:void(0);" data-target="#feedback" title="Отправить сообщение").button--contacts-info.js-open-popup Отправить сообщение
+    // END section.b-contacts-info

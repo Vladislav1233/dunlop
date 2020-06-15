@@ -1,0 +1,27 @@
+//- Dunlop: mixin pagination
+//- 07-05-2016: Maksim Karukanov
+//- --------------------
+//- пагинация
+mixin pagination(start, numPages, curr, base)
+    - start    = start    || 1
+    - numPages = numPages || 9
+    - curr     = curr     || 1
+    - base     = base     || '#'
+    +b.pagination
+        +e('ul').list
+            +e('li').item--disabled
+                +e('a')(href="javascript:void(0);" title="Предыдущая").prev Предыдущая
+            - for(var i=start;i<start+numPages;i++) {
+                - if (i == curr)
+                    +e('li').item--active
+                        +e('a')(href='#{base}#{i}' title="").link #{i}
+                - else if (i == 5)
+                    +e('li').item
+                        +e('a')(href='#{base}#{i}' title="").link #{i}
+                    +e('li').item ...
+                - else if ((i != 6) && (i != 7) && (i != 8))
+                    +e('li').item
+                        +e('a')(href='#{base}#{i}' title="").link #{i}
+            - }
+            +e('li').item
+                 +e('a')(href="javascript:void(0);" title="Следующая").next Следующая

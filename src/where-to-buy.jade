@@ -1,0 +1,46 @@
+//- Основная страница: Где купить.
+//- ====================
+
+//- Используем Dunlop: tab.jade: mixin +tab()
+include ./section/tab.jade
+//- Используем Dunlop: product-description.jade: mixin +product_map()
+include ./section/product-map.jade
+//- Используем Dunlop: product-description.jade: mixin +diler_block()
+include ./section/diler-block.jade
+//- Используем Dunlop: product-description.jade: mixin +search()
+include ./section/search.jade
+//- Используем Dunlop: product-diller-block.jade: mixin +product_diller-block()
+include ./section/product-diller-block.jade
+//- Используем Dunlop: choose-region.jade: mixin +popup-city(mixin, name)
+include ./section/choose-region.jade
+//- Используем Dunlop: open-close.jade: mixin +open_close(text)
+include ./section/open-close.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Где купить';
+    - var logo = false;
+    - var background = '/images/inhtml/bg_8_where_to_by.jpg';
+    - var mod="b-footer-main--where-to-buy";
+
+//- Выводим контент
+block content
+    +b.container--where-to-buy
+        +b.where-to-buy__header
+            +b('h1').title--where-to-buy Где купить
+            +b('a')(href="javascript:void(0);" data-target="#choose-region" title="Выбрать город" rel="{northeast:{lat:56.01074,lng:37.964969},southwest:{lat:55.490667,lng:37.182743}}").choose-city__link.choose-city__link--where-to-buy.js-select-city.js-open-popup.js-to-page     Москва
+    +b.line--popup
+    +b.container--where-to-buy
+        //- Используем Dunlop: include ./section/search.jade
+        +search-where-to-buy()
+    //- Используем Dunlop: include ./section/product-map.jade
+    +where_to_buy_map()
+    +b.container--where-to-buy
+        //- Используем Dunlop: include ./section/diler-block.jade
+        +where-to-buy()
+    //- Используем Dunlop: popups.jade: mixin +popup(mixin, name)
+    +popup-region('choose-region', 'Выбор региона', '')
+    +popup-region('choose-city', 'Выбор города', 'back')

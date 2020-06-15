@@ -1,0 +1,42 @@
+//- ====================
+//- Dunlop: search
+//- 05-05-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон поиск
+//- ====================
+
+
+
+
+//- Dunlop: mixin search
+//- 05-05-2016: Vladimir Trifonov
+//- ---------------------
+//- поиск
+mixin search()
+    // BEGIN section.b-search
+    +b.search
+        +e('form')(action='#').form
+            +e('label').baloon
+                i.icon-baloon
+            +e('input')(type='text' placeholder='Введите название улицы').input.js-gmap-search
+            button(type='submit').b-button.b-button--search.js-gmap-search-btn
+                i.icon-lupa
+                span Найти
+                //- i.icon-lupa
+    // END section.b-search
+
+//- Dunlop: mixin search
+//- 05-05-2016: Vladimir Trifonov
+//- ---------------------
+//- поиск для страницы Где купить
+mixin search-where-to-buy()
+    // BEGIN section.b-search
+    +b.search--where-to-buy
+        +e('form')(action='#').form
+            +e('label').baloon
+                i.icon-baloon
+            +e('input')(type='text' placeholder='Введите название улицы').input.js-gmap-search
+            button(type='submit').b-button.b-button--search.js-gmap-search-btn
+                i.icon-lupa
+                span Найти
+    // END section.b-search

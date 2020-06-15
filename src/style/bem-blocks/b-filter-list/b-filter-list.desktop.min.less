@@ -1,0 +1,40 @@
+/* MAIN : 1000 + */
+
+.b-filter-list {
+    display: none;
+
+    background: @cl-dublop-main;
+    max-height: 220px;
+    padding: 13px 0px;
+    overflow: hidden;
+    z-index: 100;
+    position: relative;
+    border-top: 1px solid @cl-dunlop-filter-list-border;
+
+    &__list {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__item {
+        list-style-type: none;
+        margin: 0px;
+    }
+
+    &__link {
+        display: block;
+        padding: 9px 13px;
+
+        position: relative;
+
+        color: @cl-font-black;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    &__link:hover {
+        color: @cl-font-black;
+        text-decoration: none;
+        background-image: linear-gradient(left, rgba(243,190,33,1) 0%,rgba(243,210,42,0) 100%);
+    }
+}

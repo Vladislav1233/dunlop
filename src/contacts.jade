@@ -1,0 +1,30 @@
+//- Основная страница: Контакты. 
+
+//- Используем Dunlop: popups.jade: mixin +popup(mixin, name)
+include ./section/popup.jade
+//- Используем Dunlop: contacts-map.jade: mixin +contacts-map()
+include ./section/contacts-map.jade
+//- Используем Dunlop: contacts-info.jade: mixin +contacts-info()
+include ./section/contacts-info.jade
+
+//- Используем стандартный шаблон
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Контакты';
+    - var logo = false;
+    - var background = '/images/inhtml/bg_9_contacts.jpg';
+    - var contacts = true;
+    - var mod="b-footer--contacts"
+
+//- Выводим контент
+block content
+    +b.contacts
+        //- +e.content
+        //- Используем Dunlop: include ./section/contacts-map.jade
+        +contacts-map()
+        //- Используем Dunlop: include ./section/contacts-info.jade
+        +contacts-info()
+        //- Используем Dunlop: popup.jade: mixin +popup(mixin, name)
+        +popup('feedback', 'Обратная связь')

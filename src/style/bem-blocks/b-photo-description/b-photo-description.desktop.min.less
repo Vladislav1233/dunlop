@@ -1,0 +1,37 @@
+/* MAIN : 1000 + */
+.b-photo-description {
+    font-size: 0;
+    margin-bottom: 67px;
+    padding: 0 30px;
+
+    &__description {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        font-size: 11px;
+        line-height: 20px;
+        text-align: right;
+        padding-right: 39px;
+        position: relative;
+        padding-left: 60px;
+        padding-top: 38px;
+
+        &:before {
+            content:"";
+            position: absolute;
+            display: block;
+            left: 2px;
+            top: 14px;
+            height: 3px;
+            width: 330px;
+            background: @cl-dublop-main;
+        }
+    }
+
+    &__image {
+        vertical-align: top;
+        display: inline-block;
+        width: 50%;
+        padding-top: 14px;
+    }
+}

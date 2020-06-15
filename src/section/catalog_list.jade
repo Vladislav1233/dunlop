@@ -1,0 +1,105 @@
+//- ====================
+//- Dunlop: catalog_list
+//- 29-04-2016: Tatiana Shemenyova
+//- --------------------
+//- Шаблон списка товаров.
+//- ====================
+
+//- Dunlop: catalog_item_price
+//- 29-04-2016: Tatiana Shemenyova
+//- --------------------
+//- Шаблон Цены товара.
+mixin catalog_item_price(sum,value)
+    +e.price(class!=attributes.class)
+        +e.sum #{sum}
+            span #{value}
+        +b('div')(href='' title='Купить у дилера').button--catalog Купить у дилера
+
+//- Dunlop: mixin catalog_item
+//- 02-05-2016: Maksim Karukanov
+//- ---------------------
+//- шаблон товара
+mixin catalog_item(product, image, title, text, info)
+    if product
+        +e('a')(href='http://dunlop.kontora-dev.ru/product.html' title='').link
+            +e('img')(src="#{image}" alt="#{title}" title="#{title}").image
+            +e.title #{title}
+            +e('p').text #{text}
+            +e('p').text--info #{info}
+            +e.new #{product}
+    else
+        +e('a')(href='http://dunlop.kontora-dev.ru/product.html' title='').link
+            +e('img')(src="#{image}" alt="#{title}" title="#{title}").image
+            +e.title #{title}
+            +e('p').text #{text}
+            +e('p').text--info #{info}
+
+//- Dunlop: mixin catalog_item_price_info
+//- 02-05-2016: Maksim Karukanov
+//- ---------------------
+//- шаблон отличной карточки для шин
+mixin catalog_item_anower_info()
+    +e('ul').list-line
+        +e('li').item-line
+            +e.caption Гонки
+            +e.line--fill_0
+        +e('li').item-line
+            +e.caption Спорт
+            +e.line--fill_1
+        +e('li').item-line
+            +e.caption Туризм
+            +e.line--fill_2
+        +e('li').item-line
+            +e.caption Спорт
+            +e.line--fill_3
+        +e('li').item-line
+            +e.caption Туризм
+            +e.line--fill_4
+
+//- Dunlop: mixin catalog_list
+//- 02-05-2016: Maksim Karukanov
+//- ---------------------
+//- Основной шаблон списка товаров
+
+
+mixin catalog_list()
+    // BEGIN section.b-catalog
+    +b.container--content
+        +b('section').catalog
+                +e('ul').list
+                    +e('li').item
+                        +e.description
+                            //- (product, image, title, text, info)
+                            +catalog_item('new', '/images/content/tire_1.png', 'sp winter ice02', 'Летняя легковая шина Dunlop SP Touring T1 создана для владельцев легковых автомобилей малого и среднего сласса.', 'Летняя легковая шина Dunlop SP Touring T1 создана для владельцев легковых автомобилей малого и среднего сласса. Данная модель обладает оптимальным балансом между')
+                            +b('a')(href= "http://dunlop.kontora-dev.ru/product-map.html" title='').button--catalog-info Купить у ближайшего дилера
+                    +e('li').item
+                        +e.description--sport
+                            +catalog_item('', '/images/content/tire_2.png', 'Graspic ds-2', 'Шина изготовлена по технологии DIGI-TYPE.', 'Шина изготовлена по технологии DIGI-TYPE.')
+                            +catalog_item_anower_info
+                            +catalog_item_price('Средняя цена:', '37 500 руб.')
+                    +e('li').item
+                        +e.description--button
+                            +catalog_item('', '/images/content/product-pic.png', 'sp Sport LM703', 'Повышенный комфорт и безопасность.', 'Повышенный комфорт и безопасность.')
+                            +b('a')(href='http://dunlop.kontora-dev.ru/product-map.html' title='').button--catalog-info Купить у ближайшего дилера
+                            +b('a')(href='http://dunlop.kontora-dev.ru/product-map.html' title='').button--catalog-text Купить у дилера
+                    +e('li').item
+                        +e.description
+                            +catalog_item('', '/images/content/product-pic.png', 'sp touring t1', 'Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса.', 'SP TOURING T1 Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса. Данная модель обладает оптимальным балансом между управляемостью и высоким уровнем комфорта.')
+                            +b('a')(href='http://dunlop.kontora-dev.ru/product-map.html' title='').button--catalog-info Купить у ближайшего дилера
+                    +e('li').item
+                        +e.description--price
+                            +catalog_item('', '/images/content/product-pic.png', 'Graspic ds-2', 'Шина изготовлена по технологии DIGI-TYPE.', 'Шина изготовлена по технологии DIGI-TYPE.')
+                            +catalog_item_price('Средняя цена','укажите параметры шины').b-catalog__price--info
+                            +b('a')(href='http://dunlop.kontora-dev.ru/product-map.html' title='').button--catalog-info Купить у ближайшего дилера
+                            +catalog_item_price('Средняя цена:', '—')
+                    +e('li').item
+                        +e.description
+                            +catalog_item('', '/images/content/product-pic.png', 'sp touring t1', 'Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса.', 'Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса.')
+                            +b('a')(href='http://dunlop.kontora-dev.ru/product-map.html' title='').button--catalog-info Купить у ближайшего дилера
+                    +e('li').item
+                        +e.description--price
+                            +catalog_item('', '/images/content/product-pic.png', 'Graspic ds-2', 'Шина изготовлена по технологии DIGI-TYPE.', 'Шина изготовлена по технологии DIGI-TYPE.').text
+                            +catalog_item_price('Средняя цена','укажите параметры шины').b-catalog__price--info
+                            +b('a')(href='http://dunlop.kontora-dev.ru/product-map.html' title='').button--catalog-info Купить у ближайшего дилера
+                            +catalog_item_price('Средняя цена:', '—')
+            // END section.b-catalog

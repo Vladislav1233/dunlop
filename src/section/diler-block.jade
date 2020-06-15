@@ -1,0 +1,202 @@
+//- ====================
+//- Dunlop: diler_block
+//- 05-05-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон карточки товара - список дилеров
+//- ====================
+mixin diler(name, adress, phone, car, bigcar, moto, remont, rel, rev)
+    +e('li').item.js-dealer(rel="4map")
+        +e.icon
+            +e('img')(src='images/inhtml/logo-min.svg' alt='' title='').logo
+        +e.info
+            +e.name
+                p #{name}
+            +e.adress
+                p #{adress}
+            +e('a')(href="javascript:void(0);" title="Показать на карте" rel="#{rel}" rev="#{rev}").show-in-map.js-show-on-map
+                i.icon-baloon
+                span Показать на карте
+        +e.phone-block
+            +e.icon-phone
+                i.icon-phone
+            +e('a')(href="javascript:void(0);" title="Показать телефон").show-phone.js-show-phone
+                +e('span').border Показать телефон
+                +e('a')(href="tel:javascript:void(0);" title="Показать телефон").phone.js-phone #{phone}
+            +e.hidden-icon
+                if car
+                    i.icon-car
+                        span #{car}
+                if bigcar
+                    i.icon-big-car
+                        span #{bigcar}
+                if moto
+                    i.icon-moto
+                        span #{moto}
+                if remont
+                    i.icon-remont
+                        span #{remont}
+        +e.link
+            +b('a')(href='' title='Купить у дилера').button--product-map Купить у дилера
+
+
+//- ====================
+//- Dunlop: diler_block
+//- 05-05-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон карточки товара - список прочих дилеров
+//- ====================
+mixin other_diler(name, adress, phone, car, bigcar, moto, remont, rel, rev, type)
+    +e('li').item--other.js-dealer(rel="4map", class="#{type}")
+        +e.info--other
+            +e.name--other
+                p #{name}
+            +e.adress--other
+                p #{adress}
+            +e('a')(href="javascript:void(0);" title="Показать на карте" rel="#{rel}" rev="#{rev}").show-in-map.js-show-on-map
+                i.icon-baloon
+                span Показать на карте
+        +e.phone-block--other
+            +e.icon-phone
+                i.icon-phone
+            +e('a')(href="javascript:void(0);" title="Показать телефон").show-phone.js-show-phone
+                +e('span').border Показать телефон
+                +e('a')(href="tel:javascript:void(0);" title="Показать телефон").phone.js-phone=phone
+            +e.hidden-icon
+                if car
+                    i.icon-car
+                        span #{car}
+                if bigcar
+                    i.icon-big-car
+                        span #{bigcar}
+                if moto
+                    i.icon-moto
+                        span #{moto}
+                if remont
+                    i.icon-remont
+                        span #{remont}
+        +e.link
+            +b('a')(href='' title='Купить у дилера').button--other-diler Купить у дилера
+
+//- ====================
+//- Dunlop: diler_block
+//- 05-05-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон карточки товара - список дилеров для страницы Где купить
+//- ====================
+mixin where_to_buy_diler(name, adress, phone, car, bigcar, moto, remont, rel, rev)
+    +e('li').item--where-to-buy.js-dealer(rel="4map")
+        +e.info--where-to-buy
+            +e.name--where-to-buy
+                p #{name}
+            +e.adress--where-to-buy
+                p #{adress}
+            +e('a')(href="javascript:void(0);" title="Показать на карте" rel="#{rel}" rev="#{rev}").show-in-map.js-show-on-map
+                i.icon-baloon
+                span Показать на карте
+        +e.phone-block
+            +e.icon-phone
+                i.icon-phone
+            +e('a')(href="tel:#{phone};" title="Показать телефон").phone--where-to-buy=phone
+            +e.hidden-icon
+                if car != ''
+                    i.icon-car
+                        span #{car}
+                if bigcar != ''
+                    i.icon-big-car
+                        span #{bigcar}
+                if moto != ''
+                    i.icon-moto
+                        span #{moto}
+                if remont != ''
+                    i.icon-remont
+                        span #{remont}
+        +e.link
+            +b('a')(href='' title='Купить у дилера').button--where-to-buy Купить у дилера
+
+//- ====================
+//- Dunlop: diler_block
+//- 05-05-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон карточки товара - список дилеров для страницы Где купить
+//- ====================
+mixin where_to_buy_diler2(name, adress, phone, car, bigcar, moto, remont, rel, rev)
+    +e('li').item--where-to-buy.js-dealer(rel="4map")
+        +e.info--where-to-buy
+            +e.name--where-to-buy
+                p #{name}
+            +e.adress--where-to-buy
+                p #{adress}
+            +e('a')(href="javascript:void(0);" title="Показать на карте" rel="#{rel}" rev="#{rev}").show-in-map.js-show-on-map
+                i.icon-baloon
+                span Показать на карте
+        +e.phone-block
+            +e.icon-phone.b-diler-block__icon-phone--many-phone
+                i.icon-phone
+            +e('a')(href="tel:#{phone};" title="Показать телефон").phone2--where-to-buy=phone
+            +e.hidden-icon
+                if car != ''
+                    i.icon-car
+                        span #{car}
+                if bigcar != ''
+                    i.icon-big-car
+                        span #{bigcar}
+                if moto != ''
+                    i.icon-moto
+                        span #{moto}
+                if remont != ''
+                    i.icon-remont
+                        span #{remont}
+        +e.link
+            +b('a')(href='' title='Купить у дилера').button--where-to-buy Купить у дилера
+
+//- Dunlop: mixin diler_block
+//- 05-05-2016: Vladimir Trifonov
+//- ---------------------
+//- список дилеров
+mixin diler_block()
+    // BEGIN section.b-diler-block
+    +b.diler-block
+        +e('ul').list.js-dealers-top
+            +diler('Сеть фирменных магазинов «SA.ru»', 'МКАД, 50 км., развязка Очаково-Заречье (ТК «Ангар Авто»)', '+7 (495) 689-48-58-69', 'car', 'moto', 'remont', "", '55.6483184;37.5405192', '0')
+            +diler('P-Zero', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont','car', '55.780699;37.369871', '1')
+    // END section.b-diler-block
+
+//- Dunlop: mixin diler_block
+//- 05-05-2016: Vladimir Trifonov
+//- ---------------------
+//- список прочих дилеров
+mixin other-diler()
+    // BEGIN section.b-diler-block
+    +b.diler-block--other
+        +e('ul').list--other.js-dealers-bot
+            +other_diler('Сеть фирменных магазинов «SA.ru»', 'МКАД, 50 км., развязка Очаково-Заречье (ТК «Ангар Авто»)', '+7 (495) 689-48-58-69', 'car', 'moto', 'remont', "", '55.776264;37.835593', '2', "")
+            +other_diler('P-Zero', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "",'55.568407;37.5618584', '3', "")
+            +other_diler('Сеть фирменных магазинов «SA.ru»', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.776264;37.835593', '4', "")
+        +open-other('Показать остальных дилеров')
+        +e('ul').list--other-open.js-dealers-other.hidden(style="display:none;")
+            +other_diler('Сеть фирменных магазинов «SA.ru»', 'МКАД, 50 км., развязка Очаково-Заречье (ТК «Ангар Авто»)', '+7 (495) 689-48-58-69', 'car', 'moto', 'remont', "", '55.720383;37.772199', '5', "hidden")
+            +other_diler('P-Zero', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.930704262476375;37.37855471966666', '6', "hidden")
+            +other_diler('Сеть фирменных магазинов «SA.ru»', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.824132;37.558436', '7', "hidden")
+            +other_diler('Сеть фирменных магазинов «SA.ru»', 'МКАД, 50 км., развязка Очаково-Заречье (ТК «Ангар Авто»)', '+7 (495) 689-48-58-69', 'car', 'moto', 'remont', "", '55.720383;37.772199', '5', "hidden")
+            +other_diler('P-Zero', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.930704262476375;37.37855471966666', '6', "hidden")
+        
+    // END section.b-diler-block
+
+//- Dunlop: mixin diler_block
+//- 05-05-2016: Vladimir Trifonov
+//- ---------------------
+//- список дилеров для страницы Где купить
+mixin where-to-buy()
+    // BEGIN section.b-diler-block
+    +b.diler-block--where-to-buy
+        +e('ul').list--where-to-buy.js-catalog-dealers
+            +where_to_buy_diler2('Сеть фирменных магазинов «SA.ru»', 'МКАД, 50 км., развязка Очаково-Заречье (ТК «Ангар Авто»)', '+7 (495) 689-48-58-69,+7 (495) 689-48-58-69,+7 (495) 689-48-58-69,+7 (495) 689-48-58-69', 'car', 'moto', 'remont', "", '55.776264;37.835593', '2')
+            +where_to_buy_diler('P-Zero', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "",'55.568407;37.5618584', '3')
+            +where_to_buy_diler('Сеть фирменных магазинов «SA.ru»', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.776264;37.835673', '4')
+            +where_to_buy_diler('Сеть фирменных магазинов «SA.ru»', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.744264;37.843693', '4')
+            +where_to_buy_diler('Сеть фирменных магазинов «SA.ru»', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.772224;37.835593', '4')
+            +where_to_buy_diler('Сеть фирменных магазинов «SA.ru»', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.765894;37.334593', '4')
+            +where_to_buy_diler('Сеть фирменных магазинов «SA.ru»', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.773452;38.833589', '4')
+            +where_to_buy_diler('P-Zero', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont', "", '55.930704262476375;37.37855471966666', '4')
+    // END section.b-diler-block
+

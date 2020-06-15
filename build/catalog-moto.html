@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui, user-scalable=no">
+        <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="google" value="notranslate">
+        <link href="css/normalize/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <!-- jquery подключаем в шапке т.к. какой-то js может быть внутри компонентов-->
+        <script src="js/jquery/jquery.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.0/?lang=ru_RU&amp;load=package.standard" type="text/javascript"></script>
+        <title>Каталог</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <!--[if lte IE 9]><script src="js/html5shiv/html5shiv.min.js"></script><![endif]-->
+    </head>
+
+    <body>
+        <div class="b-wrapper">
+            <div class="b-wrapper__img-back-block">
+                <img src="/images/inhtml/moto_bg.jpg" alt="" title="" class="b-background-image" />
+            </div>
+            <!-- BEGIN section.b-header-->
+            <header class="b-header">
+                <div class="b-logo">
+                    <a href="/" title="">
+                        <img src="images/inhtml/logo.svg" alt="Dunlop" title="Dunlop">
+                    </a>
+                </div>
+                <!-- BEGIN section.header-navigation-->
+                <nav class="b-header-navigation">
+                    <ul class="b-header-navigation__list">
+                        <li class="b-header-navigation__item"><a href="javascript:void(0);" title="Подобрать шины" class="active b-header-navigation__link">Подобрать шины</a>
+                        </li>
+                        <li class="b-header-navigation__item"><a href="javascript:void(0);" title="Где купить" class="b-header-navigation__link">Где купить</a>
+                        </li>
+                        <li class="b-header-navigation__item"><a href="javascript:void(0);" title="Технологии" class="b-header-navigation__link">Технологии</a>
+                        </li>
+                        <li class="b-header-navigation__item"><a href="javascript:void(0);" title="История" class="b-header-navigation__link">История</a>
+                        </li>
+                        <li class="b-header-navigation__item"><a href="javascript:void(0);" title="Новости" class="b-header-navigation__link">Новости</a>
+                        </li>
+                        <li class="b-header-navigation__item"><a href="javascript:void(0);" title="Контакты" class="b-header-navigation__link">Контакты</a>
+                        </li>
+                    </ul><a href="javascript:void(0);" class="b-language">EN</a>
+                </nav>
+                <!-- END section.header-navigations-->
+            </header>
+            <!-- END section.b-header-->
+            <main class="b-wrapper-inner"><a title="Как правильно подобрать шину" href="javascript:void(0);" class="b-wheel-back-to b-wheel-back-to--catalog"><span class="b-wheel-back-to__line"><span class="b-wheel-back-to__dot"><i class="icon-line-catalog"></i></span></span><p class="b-wheel-back-to__value">Как правильно подобрать шину</p><img src="images/inhtml/mini-wheel-moto.png" class="b-wheel-back-to__mini-wheel" alt=""/></a>
+                <div
+                class="b-container b-container--catalog b-container--content">
+                    <h1 class="b-title b-title--catalog">Мотошины Dunlop<a href="javascript:void(0);" data-target="#choose-region" title="Выбрать город" class="b-choose-city__link b-choose-city__link--catalog js-open-popup js-select-city">Нижний новгород</a></h1>
+        </div>
+        <div class="b-line"></div>
+        <div class="b-container b-container--catalog b-container--content">
+            <div class="b-justify">
+                <div class="b-tab b-tab--catalog">
+                    <ul class="b-tab__list">
+                        <li class="b-tab__item"><a href="javascript:void(0);" title="Для легковых" class="active b-tab__link"><span class="b-tab__text">Для легковых</span></a>
+                        </li>
+                        <li class="b-tab__item"><a href="javascript:void(0);" title="Для внедорожников" class="b-tab__link"><span class="b-tab__text">Для внедорожников</span></a>
+                        </li>
+                        <li class="b-tab__item"><a href="javascript:void(0);" title="Для мотоциклов" class="b-tab__link"><span class="b-tab__text">Для мотоциклов</span></a>
+                        </li>
+                    </ul>
+                    <!-- END section.b-tab-->
+                </div>
+                <!-- BEGIN section.b-file-->
+                <div class="b-file b-file--catalog">
+                    <ul class="b-file__list">
+                        <li class="b-file__item"><a href="javascript:void(0);" title="Каталог летних шин" class="b-file__link"><span class="b-file__icon">PDF</span><span class="b-file__text">Каталог летних шин</span></a>
+                        </li>
+                        <li class="b-file__item"><a href="javascript:void(0);" title="Каталог стандартных шин" class="b-file__link"><span class="b-file__icon">PDF</span><span class="b-file__text">Каталог стандартных шин</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END section.b-file-->
+            </div>
+        </div>
+        <!-- BEGIN section.b-catalog-filter-->
+        <section class="b-catalog-filter">
+            <ul class="b-catalog-filter__list">
+                <li class="b-catalog-filter__item b-catalog-filter__item--type"><a href="javascript:void(0)" title="Сезон зима" class="b-catalog-filter__link b-catalog-filter__link--type js-filter-main__trigger">Дорожные</a>
+                    <div class="b-filter-main js-filter-main">
+                        <div class="b-filter-main__block">
+                            <ul class="b-filter-main__list b-filter-main__list--simple">
+                                <li class="b-filter-main__item"><a href="javascript:void(0)" title="дорожные" class="b-filter-main__link b-filter-main__link--main">дорожные</a>
+                                </li>
+                                <li class="b-filter-main__item"><a href="javascript:void(0)" title="внедорожные" class="b-filter-main__link b-filter-main__link--main">внедорожные</a>
+                                </li>
+                            </ul>
+                            <ul class="b-filter-main__list">
+                                <li class="b-filter-main__item">
+                                    <ul class="b-filter-main__list b-filter-main__list--inner">
+                                        <li class="b-filter-main__item"><a href="javascript:void(0)" title="Все" class="b-filter-main__link b-filter-main__link--main">Все</a>
+                                        </li>
+                                        <li class="b-filter-main__item">
+                                            <a href="javascript:void(0)" title="Радиальные" class="b-filter-main__link"> <i class="icon-filter-radial"></i>Радиальные</a>
+                                        </li>
+                                        <li class="b-filter-main__item"><a href="javascript:void(0)" title="Диагональные" class="b-filter-main__link"><i class="icon-filter-bias"></i>Диагональные</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- BEGIN section.b-filter-item-->
+                <li class="active b-catalog-filter__item">
+                    <a href="javascript:void(0)" title="Ширина профиля" class="active b-catalog-filter__link js-filter-list__trigger"> <span class="b-catalog-filter__name">Ширина профиля</span><span class="b-catalog-filter__result">195 мм</span><span class="b-catalog-filter__what">что это<!-- BEGIN b-tooltip--><span class="b-tooltip">Предельно допустимая нагрузка, на которую рассчитана данная шина</span>
+                        <!-- END b-tooltip-->
+                        </span>
+                    </a>
+                    <!-- BEGIN section.b-filter-list-->
+                    <div class="b-filter-list js-filter-list mCustomScrollbar">
+                        <ul class="b-filter-list__list">
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="Любая" class="b-filter-list__link">Любая</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="145 мм" class="b-filter-list__link">145 мм</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="155 мм" class="b-filter-list__link">155 мм</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="165 мм" class="b-filter-list__link">165 мм</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="175 мм" class="b-filter-list__link">175 мм</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="185 мм" class="b-filter-list__link">185 мм</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="195 мм" class="b-filter-list__link">195 мм</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END section.b-filter-list-->
+                </li>
+                <!-- END section.b-filter-item-->
+                <!-- BEGIN section.b-filter-item-->
+                <li class="b-catalog-filter__item">
+                    <a href="javascript:void(0)" title="Серия" class="b-catalog-filter__link js-filter-list__trigger"> <span class="b-catalog-filter__name">Серия</span><span class="b-catalog-filter__what">что это<!-- BEGIN b-tooltip--><span class="b-tooltip">Предельно допустимая нагрузка, на которую рассчитана данная шина</span>
+                        <!-- END b-tooltip-->
+                        </span>
+                    </a>
+                    <!-- BEGIN section.b-filter-list-->
+                    <div class="b-filter-list js-filter-list mCustomScrollbar">
+                        <ul class="b-filter-list__list">
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="Любая" class="b-filter-list__link">Любая</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="50" class="b-filter-list__link">50</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="55" class="b-filter-list__link">55</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="60" class="b-filter-list__link">60</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="65" class="b-filter-list__link">65</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="70" class="b-filter-list__link">70</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END section.b-filter-list-->
+                </li>
+                <!-- END section.b-filter-item-->
+                <!-- BEGIN section.b-filter-item-->
+                <li class="active b-catalog-filter__item">
+                    <a href="javascript:void(0)" title="Посадочный диаметр" class="active b-catalog-filter__link js-filter-list__trigger"> <span class="b-catalog-filter__name">Посадочный диаметр</span><span class="b-catalog-filter__result">18 дюймов</span><span class="b-catalog-filter__what">что это<!-- BEGIN b-tooltip--><span class="b-tooltip">Предельно допустимая нагрузка, на которую рассчитана данная шина</span>
+                        <!-- END b-tooltip-->
+                        </span>
+                    </a>
+                    <!-- BEGIN section.b-filter-list-->
+                    <div class="b-filter-list js-filter-list mCustomScrollbar">
+                        <ul class="b-filter-list__list">
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="12 дюймов" class="b-filter-list__link">12 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="13 дюймов" class="b-filter-list__link">13 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="14 дюймов" class="b-filter-list__link">14 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="15 дюймов" class="b-filter-list__link">15 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="16 дюймов" class="b-filter-list__link">16 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="17 дюймов" class="b-filter-list__link">17 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="18 дюймов" class="b-filter-list__link">18 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="19 дюймов" class="b-filter-list__link">19 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="20 дюймов" class="b-filter-list__link">20 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="21 дюймов" class="b-filter-list__link">21 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="22 дюймов" class="b-filter-list__link">22 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="23 дюймов" class="b-filter-list__link">23 дюймов</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="24 дюймов" class="b-filter-list__link">24 дюймов</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END section.b-filter-list-->
+                </li>
+                <!-- END section.b-filter-item-->
+                <!-- BEGIN section.b-filter-item-->
+                <li class="active b-catalog-filter__item">
+                    <a href="javascript:void(0)" title="Категория скорости" class="active b-catalog-filter__link js-filter-list__trigger"> <span class="b-catalog-filter__name">Категория скорости</span><span class="b-catalog-filter__result">H — 210 км/ч</span><span class="b-catalog-filter__what">что это<!-- BEGIN b-tooltip--><span class="b-tooltip">Предельно допустимая нагрузка, на которую рассчитана данная шина</span>
+                        <!-- END b-tooltip-->
+                        </span>
+                    </a>
+                    <!-- BEGIN section.b-filter-list-->
+                    <div class="b-filter-list js-filter-list mCustomScrollbar">
+                        <ul class="b-filter-list__list">
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="H — 190 км/ч" class="b-filter-list__link">H — 190 км/ч</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="H — 210 км/ч" class="b-filter-list__link">H — 210 км/ч</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="H — 240 км/ч" class="b-filter-list__link">H — 240 км/ч</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="H — 270 км/ч" class="b-filter-list__link">H — 270 км/ч</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END section.b-filter-list-->
+                </li>
+                <!-- END section.b-filter-item-->
+                <!-- BEGIN section.b-filter-item-->
+                <li class="active b-catalog-filter__item">
+                    <a href="javascript:void(0)" title="Индекс нагрузки" class="active b-catalog-filter__link js-filter-list__trigger"> <span class="b-catalog-filter__name">Индекс нагрузки</span><span class="b-catalog-filter__result">85 — 515 кг</span><span class="b-catalog-filter__what">что это<!-- BEGIN b-tooltip--><span class="b-tooltip">Предельно допустимая нагрузка, на которую рассчитана данная шина</span>
+                        <!-- END b-tooltip-->
+                        </span>
+                    </a>
+                    <!-- BEGIN section.b-filter-list-->
+                    <div class="b-filter-list js-filter-list mCustomScrollbar">
+                        <ul class="b-filter-list__list">
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="Любой" class="b-filter-list__link">Любой</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="72 — 355 кг" class="b-filter-list__link">72 — 355 кг</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="69 — 365 кг" class="b-filter-list__link">69 — 365 кг</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="77 — 387 кг" class="b-filter-list__link">77 — 387 кг</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="79 — 412 кг" class="b-filter-list__link">79 — 412 кг</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="79 — 437 кг" class="b-filter-list__link">79 — 437 кг</a>
+                            </li>
+                            <li class="b-filter-list__item"><a href="javascript:void(0)" title="80 — 450 кг" class="b-filter-list__link">80 — 450 кг</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END section.b-filter-list-->
+                </li>
+                <!-- END section.b-filter-item-->
+            </ul>
+        </section>
+        <!-- END section.b-catalog-filter-->
+        <!-- BEGIN section.b-catalog-->
+        <div class="b-container b-container--content">
+            <section class="b-catalog">
+                <ul class="b-catalog__list">
+                    <li class="b-catalog__item">
+                        <div class="b-catalog__description">
+                            <a href="http://dunlop.kontora-dev.ru/product.html" title="" class="b-catalog__link">
+                                <img src="/images/content/tire_1.png" alt="sp winter ice02" title="sp winter ice02" class="b-catalog__image" /><span class="b-catalog__title">sp winter ice02</span>
+                                <p class="b-catalog__text">Летняя легковая шина Dunlop SP Touring T1 создана для владельцев легковых автомобилей малого и среднего сласса.</p>
+                                <p class="b-catalog__text b-catalog__text--info">Летняя легковая шина Dunlop SP Touring T1 создана для владельцев легковых автомобилей малого и среднего сласса. Данная модель обладает оптимальным балансом между</p><span class="b-catalog__new">new</span>
+                            </a><a href="http://dunlop.kontora-dev.ru/product-map.html" title="" class="b-button b-button--catalog-info">Купить у ближайшего дилера</a>
+                        </div>
+                    </li>
+                    <li class="b-catalog__item">
+                        <div class="b-catalog__description b-catalog__description--sport">
+                            <a href="http://dunlop.kontora-dev.ru/product.html" title="" class="b-catalog__link">
+                                <img src="/images/content/tire_2.png" alt="Graspic ds-2" title="Graspic ds-2" class="b-catalog__image" /><span class="b-catalog__title">Graspic ds-2</span>
+                                <p class="b-catalog__text">Шина изготовлена по технологии DIGI-TYPE.</p>
+                                <p class="b-catalog__text b-catalog__text--info">Шина изготовлена по технологии DIGI-TYPE.</p>
+                            </a>
+                            <ul class="b-catalog__list-line">
+                                <li class="b-catalog__item-line">
+                                    <div class="b-catalog__caption">Гонки</div>
+                                    <div class="b-catalog__line b-catalog__line--fill_0"></div>
+                                </li>
+                                <li class="b-catalog__item-line">
+                                    <div class="b-catalog__caption">Спорт</div>
+                                    <div class="b-catalog__line b-catalog__line--fill_1"></div>
+                                </li>
+                                <li class="b-catalog__item-line">
+                                    <div class="b-catalog__caption">Туризм</div>
+                                    <div class="b-catalog__line b-catalog__line--fill_2"></div>
+                                </li>
+                                <li class="b-catalog__item-line">
+                                    <div class="b-catalog__caption">Спорт</div>
+                                    <div class="b-catalog__line b-catalog__line--fill_3"></div>
+                                </li>
+                                <li class="b-catalog__item-line">
+                                    <div class="b-catalog__caption">Туризм</div>
+                                    <div class="b-catalog__line b-catalog__line--fill_4"></div>
+                                </li>
+                            </ul>
+                            <div class="b-catalog__price">
+                                <div class="b-catalog__sum">Средняя цена:<span>37 500 руб.</span>
+                                </div>
+                                <div href="" title="Купить у дилера" class="b-button b-button--catalog">Купить у дилера</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="b-catalog__item">
+                        <div class="b-catalog__description b-catalog__description--button">
+                            <a href="http://dunlop.kontora-dev.ru/product.html" title="" class="b-catalog__link">
+                                <img src="/images/content/product-pic.png" alt="sp Sport LM703" title="sp Sport LM703" class="b-catalog__image" /><span class="b-catalog__title">sp Sport LM703</span>
+                                <p class="b-catalog__text">Повышенный комфорт и безопасность.</p>
+                                <p class="b-catalog__text b-catalog__text--info">Повышенный комфорт и безопасность.</p>
+                            </a><a href="http://dunlop.kontora-dev.ru/product-map.html" title="" class="b-button b-button--catalog-info">Купить у ближайшего дилера</a><a href="http://dunlop.kontora-dev.ru/product-map.html" title="" class="b-button b-button--catalog-text">Купить у дилера</a>
+                        </div>
+                    </li>
+                    <li class="b-catalog__item">
+                        <div class="b-catalog__description">
+                            <a href="http://dunlop.kontora-dev.ru/product.html" title="" class="b-catalog__link">
+                                <img src="/images/content/product-pic.png" alt="sp touring t1" title="sp touring t1" class="b-catalog__image" /><span class="b-catalog__title">sp touring t1</span>
+                                <p class="b-catalog__text">Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса.</p>
+                                <p class="b-catalog__text b-catalog__text--info">SP TOURING T1 Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса. Данная модель обладает оптимальным балансом между управляемостью и высоким уровнем комфорта.</p>
+                            </a><a href="http://dunlop.kontora-dev.ru/product-map.html" title="" class="b-button b-button--catalog-info">Купить у ближайшего дилера</a>
+                        </div>
+                    </li>
+                    <li class="b-catalog__item">
+                        <div class="b-catalog__description b-catalog__description--price">
+                            <a href="http://dunlop.kontora-dev.ru/product.html" title="" class="b-catalog__link">
+                                <img src="/images/content/product-pic.png" alt="Graspic ds-2" title="Graspic ds-2" class="b-catalog__image" /><span class="b-catalog__title">Graspic ds-2</span>
+                                <p class="b-catalog__text">Шина изготовлена по технологии DIGI-TYPE.</p>
+                                <p class="b-catalog__text b-catalog__text--info">Шина изготовлена по технологии DIGI-TYPE.</p>
+                            </a>
+                            <div class="b-catalog__price b-catalog__price--info">
+                                <div class="b-catalog__sum">Средняя цена<span>укажите параметры шины</span>
+                                </div>
+                                <div href="" title="Купить у дилера" class="b-button b-button--catalog">Купить у дилера</div>
+                            </div><a href="http://dunlop.kontora-dev.ru/product-map.html" title="" class="b-button b-button--catalog-info">Купить у ближайшего дилера</a>
+                            <div class="b-catalog__price">
+                                <div class="b-catalog__sum">Средняя цена:<span>—</span>
+                                </div>
+                                <div href="" title="Купить у дилера" class="b-button b-button--catalog">Купить у дилера</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="b-catalog__item">
+                        <div class="b-catalog__description">
+                            <a href="http://dunlop.kontora-dev.ru/product.html" title="" class="b-catalog__link">
+                                <img src="/images/content/product-pic.png" alt="sp touring t1" title="sp touring t1" class="b-catalog__image" /><span class="b-catalog__title">sp touring t1</span>
+                                <p class="b-catalog__text">Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса.</p>
+                                <p class="b-catalog__text b-catalog__text--info">Летняя легковая шина создана для владельцев легковых автомобилей малого и среднего сласса.</p>
+                            </a><a href="http://dunlop.kontora-dev.ru/product-map.html" title="" class="b-button b-button--catalog-info">Купить у ближайшего дилера</a>
+                        </div>
+                    </li>
+                    <li class="b-catalog__item">
+                        <div class="b-catalog__description b-catalog__description--price">
+                            <a href="http://dunlop.kontora-dev.ru/product.html" title="" class="b-catalog__link">
+                                <img src="/images/content/product-pic.png" alt="Graspic ds-2" title="Graspic ds-2" class="b-catalog__image" /><span class="b-catalog__title">Graspic ds-2</span>
+                                <p class="b-catalog__text">Шина изготовлена по технологии DIGI-TYPE.</p>
+                                <p class="b-catalog__text b-catalog__text--info">Шина изготовлена по технологии DIGI-TYPE.</p>
+                            </a>
+                            <div class="b-catalog__price b-catalog__price--info">
+                                <div class="b-catalog__sum">Средняя цена<span>укажите параметры шины</span>
+                                </div>
+                                <div href="" title="Купить у дилера" class="b-button b-button--catalog">Купить у дилера</div>
+                            </div><a href="http://dunlop.kontora-dev.ru/product-map.html" title="" class="b-button b-button--catalog-info">Купить у ближайшего дилера</a>
+                            <div class="b-catalog__price">
+                                <div class="b-catalog__sum">Средняя цена:<span>—</span>
+                                </div>
+                                <div href="" title="Купить у дилера" class="b-button b-button--catalog">Купить у дилера</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!-- END section.b-catalog-->
+        </div>
+        <!-- BEGIN section.b-popup-->
+        <div class="b-popup b-popup--region js-popup">
+            <div id="choose-region" class="b-popup__wrapper b-popup__wrapper--region">
+                <div class="b-popup__body b-popup__body--region">
+                    <div class="b-popup__head"><a href="javascript:void(0);" title="Закрыть" class="b-popup__close b-popup__close--region js-close-popup"><i class="icon-popup-close"></i></a>
+                        <h3 class="b-popup__header b-popup__header--region">Выбор региона</h3>
+                    </div>
+                    <div class="b-line b-line--region"></div>
+                    <div class="b-popup__body-inner b-popup__body-inner--region">
+                        <div class="b-choose-city__block">
+                            <div class="b-choose-city__region">
+                                <div class="b-choose-city__title-region"><span>Россия</span>
+                                </div>
+                                <div class="b-choose-city__list-region">
+                                    <ul class="b-choose-city__list">
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Москва</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Санкт-Питербург</a>
+                                        </li>
+                                        <li class="b-choose-city__item b-choose-city__item--name">Края</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Алтайский</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Красноярский</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Краснодарский</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Пермский</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Приморский</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Ставропольский</a>
+                                        </li>
+                                        <li class="b-choose-city__item b-choose-city__item--name">Области</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Астраханская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Владимирская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Волгоградская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Вологодская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Воронежская</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="b-choose-city__list">
+                                        <li class="b-choose-city__item b-choose-city__item--name-top">Области</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Ивановская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Иркутская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Калужская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Кировская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Московская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city b-choose-city__link-city--selected">Нижегородская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Новосибирская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Омская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Ростовская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Самарская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Саратовская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Сахалинская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Свердловская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Томская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Тюменская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Челябинская</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="b-choose-city__list">
+                                        <li class="b-choose-city__item b-choose-city__item--name-top">Области</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Ярославская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Тульская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Пензенская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Тамбовская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Рязанская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Костромская</a>
+                                        </li>
+                                        <li class="b-choose-city__item b-choose-city__item--name">Республики</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Башкортостан</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Калмыкия</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Татарстан</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Хакасия</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Северная Осетия — Алания</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Крым</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="b-choose-city__region">
+                                <div class="b-choose-city__title-region"><span>Другие страны</span>
+                                </div>
+                                <div class="b-choose-city__list-region">
+                                    <ul class="b-choose-city__list">
+                                        <li class="b-choose-city__item b-choose-city__item--name-top">Белоруссия</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Брестская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Гомельская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Витебская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Могилёвская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Минская</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="b-choose-city__list">
+                                        <li class="b-choose-city__item b-choose-city__item--name-top">Казахстан</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Алматинская</a>
+                                        </li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Восточно-Казахстанская</a>
+                                        </li>
+                                        <li class="b-choose-city__item b-choose-city__item--name">Любая другая страна</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Любая другая страна</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="b-choose-city__list">
+                                        <li class="b-choose-city__item b-choose-city__item--name-top">Туркменистан</li>
+                                        <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Туркменистан</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END section.b-popup-->
+        <!-- BEGIN section.b-popup-->
+        <div class="b-popup b-popup--region js-popup">
+            <div id="choose-city" class="b-popup__wrapper b-popup__wrapper--region">
+                <div class="b-popup__body b-popup__body--region">
+                    <div class="b-popup__head"><a href="javascript:void(0);" title="Закрыть" class="b-popup__close b-popup__close--region js-close-popup"><i class="icon-popup-close"></i></a>
+                        <h3 class="b-popup__header b-popup__header--region">Выбор города</h3>
+                        <div class="b-popup__between-line"><span class="b-popup__dot"></span>
+                        </div><a href="javascript:void(0);" title="Красноярский край" data-target="#choose-region" class="b-popup__return js-open-popup js-select-region">Красноярский край</a><span class="b-popup__info-text">Изменить регион</span>
+                    </div>
+                    <div class="b-line b-line--region"></div>
+                    <div class="b-popup__body-inner b-popup__body-inner--region">
+                        <div class="b-choose-city__block">
+                            <ul class="b-choose-city__list">
+                                <li class="b-choose-city__item b-choose-city__item--name-top">Города</li>
+                                <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Красноярск</a>
+                                </li>
+                                <li class="b-choose-city__item"><a href="javascript:void(0)" rel="" data-type="" class="b-choose-city__link-city">Ачинск</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END section.b-popup-->
+        </main>
+        <!-- На внутренних страницах подгружаем расширенный футер-->
+        <!-- BEGIN section.b-footer-->
+        <footer class="b-footer">
+            <div class="b-footer-inner">
+                <div class="b-footer-inner__information">
+                    <p class="b-footer-inner__text">Обращаем Ваше внимание на то, что вся информация, включая цены на сайте www.dunlop-tire.ru носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (п.2)
+                        Гражданского кодекса Российской Федерации.</p>
+                </div>
+                <div class="b-footer-inner__menu">
+                    <ul class="b-footer-inner__list">
+                        <li class="b-footer-inner__item"><a href="javascript:void(0);" title="Подобрать шины" class="b-footer-inner__link">Подобрать шины</a>
+                        </li>
+                        <li class="b-footer-inner__item"><a href="javascript:void(0);" title="История" class="b-footer-inner__link">История</a>
+                        </li>
+                        <li class="b-footer-inner__item"><a href="javascript:void(0);" title="Где купить" class="b-footer-inner__link">Где купить</a>
+                        </li>
+                        <li class="b-footer-inner__item"><a href="javascript:void(0);" title="Новости" class="b-footer-inner__link">Новости</a>
+                        </li>
+                        <li class="b-footer-inner__item"><a href="javascript:void(0);" title="Технологии" class="b-footer-inner__link">Технологии</a>
+                        </li>
+                        <li class="b-footer-inner__item"><a href="javascript:void(0);" title="Контакты" class="b-footer-inner__link">Контакты</a>
+                        </li>
+                    </ul><a href="javascript:void(0);" title="" class="b-footer-inner__language">en</a>
+                </div>
+            </div>
+            <!-- END section.b-footer-->
+        </footer>
+        <!-- BEGIN section.b-footer-->
+        <footer class="b-footer">
+            <div class="b-footer-main b-footer-main--catalog">
+                <div class="b-footer-main__copyriting"><span>© Dunlop Tire CIS LLC, 2016</span>
+                    <ul class="b-footer-main__list">
+                        <li class="b-footer-main__item"><a href="javascript:void(0);" title="Правовая информация" class="b-footer-main__link">Правовая информация</a>
+                        </li>
+                        <li class="b-footer-main__item"><a href="http://www.srigroup.co.jp/english/index.html" target="_blank" title="www.srigroup.co.jp" class="b-footer-main__link">www.srigroup.co.jp</a>
+                        </li>
+                    </ul>
+                </div><a href="javascript:void(0);" target="_blank" title="Подписывайтесь" class="b-footer-main__social"><i class="icon-facebook"></i><span>Подписывайтесь</span></a>
+                <div class="b-footer-main__about">
+                    <a href="http://www.zero.ru/" target="_blank" title="Сделано в ZERO">
+                        <img src="images/inhtml/logo-zero.svg" alt="Сделано в ZERO" title="Сделано в ZERO">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- END section.b-footer-->
+        </div>
+        <script src="js/external.js"></script>
+        <script src="js/internal.js"></script>
+    </body>
+
+</html>

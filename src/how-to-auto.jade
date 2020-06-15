@@ -1,0 +1,42 @@
+//- Основная страница: Как выбрать шины - авто. 
+
+//- ПОДКЛЮЧАЕМ МИКСИНЫ: START
+
+//- Используем Dunlop: how-to-description.jade: mixin +how-to-description()
+include ./section/how-to-description.jade
+//- Используем Dunlop: how-to-auto_productivity.jade: mixin +how-to-auto_productivity()
+include ./section/how-to-auto_productivity.jade
+//- Используем Dunlop: wheel-back-to.jade: mixin +wheel-back-to()
+include ./section/wheel-back-to.jade
+
+//- Используем Dunlop: title-how-to.jade: mixin title-how-to(title)
+include ./section/title-how-to.jade
+
+//- ПОДКЛЮЧАЕМ МИКСИНЫ: END
+
+
+//- Используем стандартный шаблон
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Как выбрать шины';
+    - var background = '/images/inhtml/bg_4_auto.jpg';
+    - var footer_inner = true;
+    - var mod="b-footer-main--how-to";
+
+//- Выводим контент
+block content
+    +b('img')(src="/images/inhtml/auto.png" alt='' title='').background-wheel
+    //- Используем Dunlop: wheel-back-to.jade: mixin +wheel-back-to(value)
+    +wheel-back-to('Вернуться в каталог', 'icon-line-wheel')
+    //- Используем Dunlop: title-how-to.jade: mixin title-how-to(title)
+    +title-how-to('Как подобрать шины')
+    +b.border
+    +b.container--content
+        +b.how-to-auto
+            +e('section').info-wheel
+                //- Используем Dunlop: include ./section/how-to-description.jade
+                +how-to-description() 
+            //- Используем Dunlop: include ./section/how-to-auto_productivity.jade - how-to-auto_productivity.jade
+            +how-to-auto_productivity()

@@ -1,0 +1,33 @@
+//- ====================
+//- Dunlop: news-item-intro
+//- 07-05-2016: Tatiana Shemenyova
+//- --------------------
+//- превьюшка новости.
+//- ====================
+
+//- Dunlop: mixin news-item-intro
+//- 07-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- Основной шаблон интро блока новости.
+mixin news-item-intro(photo, name, date)
+    // BEGIN section.b-news-item-intro
+    if photo
+        +b('section').news-item-intro--image
+            +b.container--news-item
+                +b.title
+                    +e('img')(src="/images/content/news-item.jpg" alt="#{name}" title="#{name}").image
+                    h1 #{name}
+                    +e('span').date--image #{date}
+            +b.line--news-item
+                +b.container--news-item
+                    +b.line--intro
+    else
+        +b('section').news-item-intro
+            +b.container--news-item
+                +b.title--intro
+                    h1 #{name}
+                    +e('span').date #{date}
+            +b.line--news-item
+                +b.container--news-item
+                    +b.line--intro
+    // END section.b-news-item-intro

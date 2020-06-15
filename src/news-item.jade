@@ -1,0 +1,31 @@
+//- Основная страница: Новость одна.
+//- ====================
+
+//- Используем Dunlop: news-item-intro.jade: mixin +news-item-intro(photo, name, date)
+include ./section/news-item-intro.jade
+//- Используем Dunlop: news-item-text.jade: mixin +news-item-text()
+include ./section/news-item-text.jade
+//- Используем Dunlop: news-item-other.jade: mixin +news-item-other()
+include ./section/news.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Dunlop представили новые высокоскоростные летние шины';
+    - var logo = false;
+    - var main_page = false;
+    - var background = '/images/inhtml/bg_6_news.jpg';
+
+//- Выводим контент
+block content
+    //- Используем Dunlop: include ./section/news-item-intro.jade для заголовка + фото
+    //- variables: photo(true/false), name, date
+    +news-item-intro(false, 'Dunlop представили новые высокоскоростные летние шины', '20 апреля 2016')
+    //- Используем Dunlop: include ./section/news-item-text.jade для текста новости
+    +b.container--news.--news-inner
+        +news-item-text()
+    //- Используем Dunlop: include ./section/news-item-other.jade для блока с другими новостями
+    +b.line
+    +news-item-other-list()

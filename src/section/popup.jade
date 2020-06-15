@@ -1,0 +1,58 @@
+//- ====================
+//- Dunlop: popup
+//- 10-05-2016: Tatiana Sh
+//- --------------------
+//- Шаблон попапов
+//- ====================
+
+//- Dunlop: mixin popup
+//- 10-05-2016: Tatiana Sh
+//- ---------------------
+//- блок попапов
+//- переменная - название попапа (миксина)
+mixin popup(mixin, name)
+    // BEGIN section.b-popup
+    +b.popup.js-popup
+        +e.wrapper(id="#{mixin}")
+            +e.body
+                +e('a')(href="javascript:void(0);" title="Закрыть").close.js-close-popup
+                    i.icon-popup-close
+                +e('h3').header #{name}
+
+                +e.body-inner
+                    +#{mixin}()
+            +e('p').info Вы можете высказать свое мнение о нашей компании, ее продукции или рекламных акциях, направив нам письмо по электронной почте. Мы с большим вниманием относимся к вопросам, отзывам и пожеланиям наших потребителей.
+    // END section.b-popup
+
+//- Dunlop: mixin feedback
+//- 10-05-2016: Tatiana Sh
+//- ---------------------
+//- feedback
+mixin feedback()
+    +b('form')(name="feedback" action="/").form.js-contact-form
+        .js-form-area
+            +e.block
+                +e('select').select
+                    +e('option')(value="1").option Продажи и дистрибуция
+                    +e('option')(value="2").option Маркетинг и реклама
+                    +e('option')(value="3").option Технические вопросы
+                    +e('option')(value="4").option Работа в компании Dunlop Tire CIS
+                    +e('option')(value="5").option Другое
+            +e.block
+                +e('input').input(type="text" id="feedback_name" name="feedback_name")
+                +e('label').label(for="feedback_name") Ваше имя
+            .justify
+                +e.block--min
+                    +e('input').input--min(type="text" id="feedback_email" name="feedback_email")
+                    +e('label').label--min(for="feedback_email") Электронная почта
+                +e.block--min
+                    +e('input').input--min(type="text" id="feedback_phone" name="feedback_phone")
+                    +e('label').label--min(for="feedback_phone") Номер телефона
+            +e.block
+                +e('textarea').textarea(id="feedback_message" name="feedback_message")
+                +e('label').label(for="feedback_message") Сообщение
+            +e.block--center
+
+        button.b-button.b-button--form(type="submit") 
+            .b-button__inner
+                span Отправить

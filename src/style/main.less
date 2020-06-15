@@ -1,0 +1,52 @@
+/*
+ * Third Party
+ */
+
+/*
+ * Custom
+ */
+@import "partials/variables.less";
+@import "partials/sprite.less";
+@import "partials/fonts.less";
+@import "partials/icons.less";
+@import "partials/theme.less";
+@import "partials/default.less";
+
+// 02-05-2016: Tatiana Shemenyova
+// Используем https://github.com/malihu/malihu-custom-scrollbar-plugin
+// Для скроллбара в выпадашках фильтров на странице каталога
+@import "vendor/jquery.mCustomScrollbar.less";
+@import "partials/mCustomScrollbar.less";
+
+// 02-05-2016: Tatiana Shemenyova
+// Используем https://github.com/select2/select2
+// Селект
+@import "vendor/select2.less";
+@import "partials/select2.less";
+
+// 03-05-2016: Dovzhenko Vladislav
+// Используем https://github.com/kenwheeler/slick/   (slick-slider)
+// Для слайдера индекса нагрузки на странице - как выбрать шины
+@import "../../bower_components/slick-carousel/slick/slick-theme.less";
+@import "../../bower_components/slick-carousel/slick/slick.less";
+
+// 11-05-2016: Tatiana Shemenyova
+// История Dunlop
+@import "partials/history.less";
+
+@import "concat-less/bem.desktop.min.less";
+
+@media @desktop-lg {
+
+    @import "concat-less/bem.desktop.less";
+}
+
+@media @desktop-xl {
+
+    @import "concat-less/bem.desktop.big.less";
+}
+
+@media @desktop-xxl {
+
+    @import "concat-less/bem.desktop.large.less";
+}

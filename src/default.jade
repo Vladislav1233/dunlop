@@ -1,0 +1,26 @@
+//- Основная страница: 404.
+//- ====================
+
+//- Используем Dunlop: default.jade: mixin +section_default()
+include ./section/default.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Страница не найдена';
+
+//- Выводим контент
+block content
+    +b.not-found
+        .container
+            +e.title
+                | Ошибка
+                br
+                | страница не найдена
+                br
+                span 404
+
+    //- Используем Dunlop: include ./section/default.jade
+    +section_default()

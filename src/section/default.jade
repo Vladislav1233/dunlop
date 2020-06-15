@@ -1,0 +1,16 @@
+//- 
+//- Dunlop: default: section_default
+//- 28-04-2016: Tatiana Shemenyova
+//- ---------------------
+//- Шаблон страницы 404.
+//- 
+
+
+mixin section_default()
+    // BEGIN .b-page-404
+    +b('section').page-404
+        .container
+            h3 Вам стоит перейти на 
+                a(href="/index.html")
+                    | страницу страниц
+    // END .b-page-404

@@ -1,0 +1,195 @@
+/* MAIN : 1000 + */
+
+.b-pagination {
+    margin-bottom: 122px;
+
+    &__item {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+        margin-right: 20px;
+
+        &:first-child {
+            margin-right: 50px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            margin-left: 30px;
+        }
+
+    }
+    &__item--disabled & {
+        &__prev,
+        &__next {
+            color: @cl-dunlop-pagination-disabled;
+
+            &:after {
+                color: @cl-dunlop-pagination-disabled;
+                border-color: @cl-dunlop-pagination-disabled;
+            }
+
+            &:hover:after {
+                color: @cl-dunlop-pagination-disabled;
+                border-color: @cl-dunlop-pagination-disabled;
+            }
+        }
+
+        &__prev:before {
+            border-right-color: @cl-dunlop-pagination-disabled;
+        }
+
+        &__next:before {
+            border-left-color: @cl-dunlop-pagination-disabled;
+        }
+
+        &__prev {
+            &:hover {
+                color: @cl-dunlop-pagination-disabled;
+                &:before {
+                    border-right-color: @cl-dunlop-pagination-disabled;
+                }
+            }
+        }
+
+        &__next {
+            &:hover {
+                color: @cl-dunlop-pagination-disabled;
+                &:before {
+                    border-left-color: @cl-dunlop-pagination-disabled;
+                }
+            }
+        }
+    }
+
+    &__item--active &__link {
+        background: @cl-dublop-main;
+        color: @cl-dunlop-black;
+
+        &:before,
+        &:after {
+            display: block;
+        }
+    }
+
+    &__list {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    &__link {
+        font-family: 'helvetican_bold';
+        color: @cl-dunlop-white;
+        font-size: 12px;
+        line-height: 20px;
+        text-decoration: none;
+        padding: 16px 0;
+        display: inline-block;
+        height: 46px;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            display: none;
+            height: 0;
+            position: absolute;
+            top: 0px;
+            width: 0;
+        }
+
+        &:before {
+            border-bottom: 46px solid @cl-dublop-main;
+            border-left: 22px solid transparent;
+            left: -22px;
+        }
+
+        &:after {
+            border-top: 46px solid @cl-dublop-main;
+            border-right: 22px solid transparent;
+            right: -22px;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: @cl-dunlop-black;
+            background: @cl-dublop-main;
+
+            &:before,
+            &:after {
+                display: block;
+            }
+        }
+    }
+
+    &__prev,
+    &__next {
+        font-family: 'helvetican_regular';
+        color: @cl-dunlop-white;
+        font-size: 12px;
+        line-height: 20px;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            text-decoration: none;
+            color: @cl-dublop-main;
+
+            &:after {
+                border-color: @cl-dublop-main;
+            }
+        }
+
+        &:after {
+            border: 2px solid @cl-dunlop-white;;
+            border-radius: 100%;
+            content: "";
+            height: 14px;
+            margin-top: -9px;
+            position: absolute;
+            top: 50%;
+            width: 14px;
+        }
+
+        &:before {
+            border: none;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+        }
+    }
+
+
+    &__prev {
+        &:after {
+            left: -33px;
+        }
+
+        &:before {
+            left: -27px;
+            border-right: 4px solid @cl-dunlop-white;
+        }
+
+        &:hover:before {
+            border-right-color: @cl-dublop-main;
+        }
+    }
+
+    &__next {
+        &:after {
+            right: -33px;
+        }
+
+        &:before {
+            right: -27px;
+            border-left: 4px solid @cl-dunlop-white;;
+        }
+
+        &:hover:before {
+            border-left-color: @cl-dublop-main;
+        }
+    }
+}

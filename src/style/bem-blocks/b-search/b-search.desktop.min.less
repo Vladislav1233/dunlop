@@ -1,0 +1,47 @@
+/* MAIN : 1000 + */
+.b-search {
+    margin-left: 4px;
+    margin-bottom: 17px;
+
+    &--where-to-buy {
+        margin-top: 27px;
+        margin-left: 0;
+        margin-bottom: 26px;
+    }
+    &__baloon {
+        position: relative;
+        i {
+            position: absolute;
+            top: 10px;
+            left: 13px;
+            z-index: 2;
+            color: @cl-dunlop-table-dot;
+            font-size: 15px;
+        }
+    }
+    &__input {
+        height: 40px;
+        background-color: @cl-dunlop-catalog-background;
+        border: 2px solid @cl-dunlop-border-search;
+        border-radius: 30px;
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 36px;
+        color: @cl-font-white;
+
+        &:hover {
+            background-color: @cl-dunlop-search-hover;
+            border: 2px solid @cl-dunlop-search-border;
+        }
+
+        &:focus {
+            background-color: @cl-font-white;
+            border: 2px solid @cl-font-white;
+            color: @cl-font-black;
+        }
+    }
+    ::-webkit-input-placeholder {color: @cl-font-link;}
+    ::-moz-placeholder          {color: @cl-font-link;}/* Firefox 19+ */
+    :-moz-placeholder           {color: @cl-font-link;}/* Firefox 18- */
+    :-ms-input-placeholder      {color: @cl-font-link;}
+}

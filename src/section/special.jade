@@ -1,0 +1,32 @@
+//- ====================
+//- Dunlop: special
+//- 01-05-2016: A. Sokolova
+//- --------------------
+//- Шаблон блока с баннерами на главной странице.
+//- ====================
+
+//- Dunlop: mixin special
+//- 01-05-2016: A. Sokolova
+//- ---------------------
+//- Основной шаблон блока с специальными предложениями.
+mixin special()
+    // BEGIN section.b-special
+    +b.special
+        +e('ul').list
+            //- Используем Dunlop: mixin special_item (см ниже)
+            +special_item('images/content/special-logo1.png', 'images/content/special-tire1.png')
+            +special_item('images/content/special-logo2.png', 'images/content/special-tire2.png')
+            +special_item('images/content/special-logo3.png', 'images/content/special-tire3.png')
+    // END section.b-special
+
+
+//- Dunlop: mixin special_item
+//- 01-05-2016: A. Sokolova
+//- ---------------------
+//- Шаблон item'a с специальными предложениями.
+mixin special_item(logo, tire)
+    // BEGIN section.b-special__item
+    +e('li').item: +e('a')(href="javascript:void(0);" title='').link
+        +e('img')(src="#{logo}" alt='' title='').logo
+        +e('img')(src="#{tire}" alt='' title='').tire
+    // END section.b-special__item

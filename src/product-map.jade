@@ -1,0 +1,67 @@
+//- Используем Dunlop: default.jade: mixin +section_default()
+include ./section/default.jade
+//- Используем Dunlop: tab.jade: mixin +tab()
+include ./section/tab.jade
+//- Используем Dunlop: download_file.jade: mixin +download_file()
+include ./section/download_file.jade
+//- Используем Dunlop: product_pic.jade: mixin +product_pic()
+include ./section/product_pic.jade
+//- Используем Dunlop: product-table-info.jade: mixin +table_info()
+include ./section/product-table-info.jade
+//- Используем Dunlop: product-description.jade: mixin +product_map()
+include ./section/product-map.jade
+//- Используем Dunlop: product-description.jade: mixin +diler_block()
+include ./section/diler-block.jade
+//- Используем Dunlop: product-description.jade: mixin +search()
+include ./section/search.jade
+//- Используем Dunlop: product-diller-block.jade: mixin +product_diller-block()
+include ./section/product-diller-block.jade
+//- Используем Dunlop: breadcrumbs.jade: mixin +breadcrumbs()
+include ./section/breadcrumbs.jade
+//- Используем Dunlop: choose-region.jade: mixin +popup-city(mixin, name)
+include ./section/choose-region.jade
+//- Используем Dunlop: open-close.jade: mixin +open_close(text)
+include ./section/open-close.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'КУПИТЬ ШИНЫ DUNLOP SP SPORT LM703 165/55R15 75V';
+    - var main_page = false;
+    - var background = '/images/inhtml/auto_bg.jpg';
+    - var footer_inner = true;
+    - var mod="b-footer-main--how-to";
+    - var shadow = true;
+
+//- Выводим контент
+block content
+    +b.container--product
+        +breadcrumb('Шины для легковых автомобилей', 'Летние шины')
+        +b('h1').title--product-map Купить шины Dunlop sp sport lm703 165/55R15 75V
+
+        +b('a')(href="javascript:void(0);" data-target="#choose-region" title="Выбрать город").choose-city__link.js-open-popup.js-select-city Москва
+    //- +b('a').how-to
+    +b.line
+    +b.container--product
+        +b.product
+            +e.info-block
+                //- Используем Dunlop: include ./section/product_pic.jade
+                +product_pic_table('/images/content/product-pic.png', 'new', '35 700 руб.')
+                //- Используем Dunlop: include ./section/product-table-info.jade
+                +table_info_diler()
+            +e.description-block--map.js-catalog-dealers
+                //- Используем Dunlop: include ./section/tab.jade
+                +tab-map('Описание товара', 'Купить у дилера')
+                //- Используем Dunlop: include ./section/diler-block.jade
+                +diler_block()
+                //- Используем Dunlop: include ./section/search.jade
+                +search()
+                //- Используем Dunlop: include ./section/product-map.jade
+                +product_map()
+                //- Используем Dunlop: include ./section/diler-block.jade
+                +other-diler()
+    //- Используем Dunlop: popups.jade: mixin +popup(mixin, name)
+    +popup-region('choose-region', 'Выбор региона', '')
+    +popup-region('choose-city', 'Выбор города', 'back')

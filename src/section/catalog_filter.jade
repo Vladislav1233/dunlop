@@ -1,0 +1,118 @@
+//- ====================
+//- Dunlop: catalog_filter
+//- 29-04-2016: Tatiana Shemenyova
+//- --------------------
+//- Шаблон фильтров в каталоге.
+//- ====================
+
+
+
+//- Dunlop: mixin catalog_filter
+//- 29-04-2016: Tatiana Shemenyova
+//- ---------------------
+//- Основной фильтров
+mixin catalog_filter(type)
+    // BEGIN section.b-catalog-filter
+    +b('section').catalog-filter
+        +e('ul').list
+            if type
+                +filter_type_1()
+            else
+                +filter_type_2()
+            
+
+            //- Используем Dunlop: mixin filter_item (этот файл)
+            +filter_item('Ширина профиля', '195 мм', 'Любая', '145 мм', '155 мм', '165 мм', '175 мм', '185 мм', '195 мм')
+            +filter_item('Серия', false, 'Любая', '50', '55', '60', '65', '70')
+            +filter_item('Посадочный диаметр', '18 дюймов', '12 дюймов', '13 дюймов', '14 дюймов', '15 дюймов', '16 дюймов', '17 дюймов', '18 дюймов', '19 дюймов', '20 дюймов', '21 дюймов', '22 дюймов', '23 дюймов', '24 дюймов')
+            +filter_item('Категория скорости', 'H — 210 км/ч', 'H — 190 км/ч', 'H — 210 км/ч', 'H — 240 км/ч', 'H — 270 км/ч')
+            +filter_item('Индекс нагрузки', '85 — 515 кг', 'Любой', '72 — 355 кг', '69 — 365 кг', '77 — 387 кг', '79 — 412 кг', '79 — 437 кг', '80 — 450 кг')
+
+    // END section.b-catalog-filter
+
+
+//- Dunlop: mixin filter_type_1
+//- 05-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- Сезоны
+mixin filter_type_1()
+    +e('li').item--type
+        +e('a')(href="javascript:void(0)" title="Сезон зима").link--type.js-filter-main__trigger Сезон зима
+            +e('span').result Шипованые
+        +b.filter-main.js-filter-main
+            +e.block
+                +e('ul').list--simple
+                    +e('li').item: +e('a')(href="javascript:void(0)" title="Все").link--main.active Все
+                +e('ul').list
+                    +e('li').item
+                        +e('a')(href="javascript:void(0)" title="Лето").link--main
+                            i.icon-filter-summer
+                            | Лето
+                    +e('li').item
+                        +e('ul').list--inner
+                            +e('li').item
+                                +e('a')(href="javascript:void(0)" title="Зима").link--main
+                                    i.icon-filter-winter
+                                    | Зима
+                            +e('li').item
+                                +e('a')(href="javascript:void(0)" title="Шипованные").link 
+                                    | Шипованные
+                            +e('li').item
+                                +e('a')(href="javascript:void(0)" title="Нешипуемые").link 
+                                    | Нешипуемые
+
+//- Dunlop: mixin filter_type_2
+//- 05-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- Дорожные
+mixin filter_type_2()
+    +e('li').item--type
+        +e('a')(href="javascript:void(0)" title="Сезон зима").link--type.js-filter-main__trigger Дорожные
+        +b.filter-main.js-filter-main
+            +e.block
+                +e('ul').list--simple
+                    +e('li').item: +e('a')(href="javascript:void(0)" title="дорожные").link--main дорожные
+                    +e('li').item: +e('a')(href="javascript:void(0)" title="внедорожные").link--main внедорожные
+                +e('ul').list
+                    +e('li').item
+                        +e('ul').list--inner
+                            +e('li').item
+                                +e('a')(href="javascript:void(0)" title="Все").link--main
+                                    | Все
+                            +e('li').item
+                                +e('a')(href="javascript:void(0)" title="Радиальные").link 
+                                    i.icon-filter-radial
+                                    | Радиальные
+                            +e('li').item
+                                +e('a')(href="javascript:void(0)" title="Диагональные").link
+                                    i.icon-filter-bias
+                                    | Диагональные
+
+//- Dunlop: mixin filter_item
+//- 29-04-2016: Tatiana Shemenyova
+//- ---------------------
+//- Итем фильтра
+mixin filter_item(name, result, ...items)
+    // BEGIN section.b-filter-item
+    - var res = ''
+    if result 
+        - var res = 'active'
+
+    +e('li').item(class="#{res}")
+        +e('a').link.js-filter-list__trigger(href="javascript:void(0)" title="#{name}" class="#{res}") 
+            +e('span').name #{name}
+            if result 
+                +e('span').result #{result}
+            +e('span').what что это
+                // BEGIN b-tooltip
+                +b('span').tooltip
+                    | Предельно допустимая нагрузка, на которую рассчитана данная шина
+                // END b-tooltip
+        
+        // BEGIN section.b-filter-list
+        +b.filter-list.js-filter-list.mCustomScrollbar
+            +e('ul').list
+                each item in items
+                    +e('li').item: +e('a')(href="javascript:void(0)" title="#{item}").link #{item}
+        // END section.b-filter-list
+    // END section.b-filter-item

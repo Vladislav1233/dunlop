@@ -1,0 +1,94 @@
+.select2-container {
+    width: 100% !important;
+}
+.select2-container--default {
+    .select2-selection--single {
+        height: 55px;
+        width: 100%;
+        display: block;
+        padding: 0px 15px;
+        border-radius: 5px;
+        border: none;
+        color: @cl-font-black;
+        font-family: @font-regular;
+        background: @cl-dublop-main-hover;
+        font-size: 16px;
+        &:hover {
+            background: @cl-dunlop-input-hover;
+        }
+
+        .select2-selection {
+            &__rendered {
+                // background: @cl-dublop-main-hover;
+                color: @cl-font-black;
+                font-family: @font-regular;
+                font-size: 16px;
+                line-height: 55px;
+                padding: 0px;
+            }
+
+            &__arrow {
+                display: block;
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+                border: 2px solid @cl-dunlop-white;
+            }
+
+            &__arrow b {
+                border-color: @cl-dunlop-white transparent transparent transparent;
+                border-width: 5px 4px 0 4px;
+                margin-left: -4px;
+                margin-top: -2px;
+            }
+
+            &__arrow {
+                top: 50%;
+                right: 15px;
+                margin-top: -10px;
+            }
+        }
+    }
+    &.select2-container--open .select2-selection--single {
+        background: @cl-dunlop-white;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+
+        .select2-selection {
+            &__rendered {
+                background: @cl-dunlop-white;
+            }
+            &__arrow {
+                border-color: @cl-dublop-main;
+            }
+            &__arrow b {
+                border-color: transparent transparent @cl-dublop-main transparent;
+                border-width: 0 4px 5px 4px;
+                margin-top: -3px;
+            }
+        }
+    }
+    .select2-results > .select2-results__options {
+        max-height: none;
+        padding: 0px 15px 10px;
+        color: @cl-font-black;
+        font-family: @font-regular;
+        font-size: 16px;
+    }
+}
+.select2-results__option {
+    list-style-type: none;
+    padding: 12px 0px 10px;
+    margin: 0px;
+    border-top: 1px solid @cl-dunlop-option-border;
+}
+.select2-container--open .select2-dropdown--below {
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: @cl-dunlop-white;
+    color: @cl-dunlop-option-hover;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    display: none;
+}

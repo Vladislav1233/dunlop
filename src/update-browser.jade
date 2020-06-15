@@ -1,0 +1,17 @@
+//- Основная страница: update-browser.
+//- ====================
+
+//- Используем Dunlop: update-browser.jade: mixin +update-browser()
+include ./section/update.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Обновите Ваш браузер';
+    - var update_browser = true;
+
+//- Выводим контент
+block content
+    +update_browser()

@@ -1,0 +1,131 @@
+/* MAIN : 1000 + */
+
+.b-pagining {
+    z-index: 3;
+    height: 54px;
+    margin: 0px auto !important;
+    text-align: center;
+    background: rgba(36,36,36,0.7);
+    font-size: 0px;
+    line-height: 0px;
+    position: relative;
+    display: inline-block;
+
+    &-outer {
+        position: fixed;
+        height: 54px;
+        bottom: 90px;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0px;
+        width: 40px;
+    }
+
+    &:before {
+        left: -70px;
+        border-left: 30px solid transparent;
+        border-bottom: 54px solid rgba(36,36,36,0.7);
+    }
+
+    &:after {
+        right: -70px;
+        border-right: 30px solid transparent;
+        border-top: 54px solid rgba(36,36,36,0.7);
+    }
+
+    a { 
+        text-decoration: none; 
+        display: inline-block;
+        width: 50px;
+        margin: 0px 15px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 16px;
+        color: @cl-dunlop-white;
+        position: relative;
+
+        .no-touch &:hover {
+            background: rgba(255,255,255,0.1);
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0px;
+                width: 0px;
+                z-index: 3;
+            }
+
+            &:before {
+                left: -30px;
+                border-left: 30px solid transparent;
+                border-bottom: 54px solid rgba(255,255,255,0.1);
+            }
+
+            &:after {
+                right: -30px;
+                border-right: 30px solid transparent;
+                border-top: 54px solid rgba(255,255,255,0.1);
+            }
+
+        }
+    }
+    
+    div { 
+        display: block; 
+        position: absolute; 
+        top: 0; 
+        left: 30px; 
+        width: 50px; 
+        height: 54px; 
+        margin: 0px 15px;
+        text-align: center;
+        cursor: pointer; 
+        background: @cl-dublop-main;
+        color: @cl-font-black;
+        line-height: 54px;
+        font-size: 16px;
+        z-index: 3;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0px;
+            width: 1px;
+        }
+
+        &:before {
+            left: -30px;
+            border-left: 30px solid transparent;
+            border-bottom: 54px solid @cl-dublop-main;
+        }
+
+        &:after {
+            right: -30px;
+            border-right: 30px solid transparent;
+            border-top: 54px solid @cl-dublop-main;
+        }
+
+    }
+
+    span {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+
+}

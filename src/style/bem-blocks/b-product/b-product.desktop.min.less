@@ -1,0 +1,74 @@
+/* MAIN : 1000 + */
+.b-product {
+    display: flex;
+    justify-content: flex-start; //space-between;
+    padding-top: 1px;
+    margin-bottom: 10px;
+
+    &__info-block {
+        width: 40%;
+        margin-top: 28px;
+        padding-right: 28px;
+    }
+
+    &__description-block {
+        width: 60%;
+        margin-top: 30px;
+        padding-left: 3px;
+
+        &--map {
+            margin-top: 27px;
+            padding: 0;
+        }
+    }
+
+    &__tab-block {
+        margin-left: 24px;
+    }
+
+    &__top-description {
+        display: flex;
+        margin-top: 55px;
+        // margin-left: 3px;
+    }
+
+
+    &__download {
+        margin-left: 39px;
+    }
+
+    &__image {
+        display: none;
+    }
+
+
+    &__description-block--moto & {
+        &__top-description {
+            margin-top: 0px;
+        }
+    }
+
+    
+    &__logo-name h1 {
+        font-size: 28px;
+        letter-spacing: 0;
+        font-family: @font-medium;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+        span {
+            font: 38px/60% Arial;
+            text-transform: none;
+        }
+    }
+
+    .model-703 &__image {
+        display: block;
+    }
+
+    .model-703 &__logo-name h1 {
+        display: none;
+    }
+
+
+
+}

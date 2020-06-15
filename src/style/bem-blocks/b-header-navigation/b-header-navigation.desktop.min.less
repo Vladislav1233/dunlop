@@ -1,0 +1,102 @@
+/* MAIN : 1000 + */
+
+.b-header-navigation {
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+
+    &__list {
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 15px;
+        padding: 0;
+    }
+
+    &__link {
+        color: @cl-font-white;
+        display: block;
+        font-family: @font-medium;
+        font-size: 12px;
+        line-height: 60px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0 2px;
+        -webkit-font-smoothing: antialiased;
+
+        transition: 0.3s;
+
+        &:after,
+        &:before {
+            content: "";
+            height: 0;
+            position: absolute;
+            top: 0;
+            width: 0;
+            display: block;
+
+        transition: 0.3s;
+        }
+        &:after {
+            border-right: 30px solid transparent;
+            border-top: 60px solid transparent;
+            right: -30px;
+        }
+
+        &:before {
+            border-bottom: 60px solid transparent;
+            border-left: 30px solid transparent;
+            left: -30px;
+            display: block;
+        }
+
+        &:hover {
+            background: @cl-dunlop-header-navigation-hover;
+            color: @cl-font-white;
+            text-decoration: none;
+
+            &:after {
+                border-top-color: @cl-dunlop-header-navigation-hover;
+            }
+
+            &:before {
+                border-bottom-color: @cl-dunlop-header-navigation-hover;
+            }
+        }
+    }
+
+    .active {
+        background: @cl-dunlop-white;
+        color: @cl-dunlop-black;
+
+        &:after {
+            border-right: 30px solid transparent;
+            border-top: 60px solid @cl-dunlop-white;
+            content: "";
+            display: block;
+            height: 0;
+            position: absolute;
+            right: -30px;
+            top: 0;
+            width: 1px;
+        }
+
+        &:before {
+            border-bottom: 60px solid @cl-dunlop-white;
+            border-left: 30px solid transparent;
+            content: "";
+            display: block;
+            height: 0;
+            left: -30px;
+            position: absolute;
+            top: 0;
+            width: 1px;
+        }
+    }
+}

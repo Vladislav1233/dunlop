@@ -1,0 +1,100 @@
+/* MAIN : 1000 + */
+
+.b-filter-main {
+    display: none;
+
+    background: @cl-dublop-main;
+    height: 80px;
+
+    flex-flow: column;
+    justify-content: center;
+
+    &__block {
+        margin-left: 30px;
+    }
+
+    &__list {
+        margin: 0px 32px 0px 0px;
+        padding: 0px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__list--inner {
+        box-shadow: 0 0 0 2px @cl-dublop-main-hover;
+        border-radius: 17px;
+        margin: 0px;
+    }
+
+
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0px;
+        list-style-type: none;
+        height: 34px;
+    }
+
+    &__block > &__list > &__item {
+        background: @cl-dublop-main-hover;
+        border-radius: 17px;
+        margin-right: 8px;
+    }
+
+
+    &__link {
+        font-family: @font-regular;
+        color: @cl-font-black;
+        text-transform: none;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 36px;
+        height: 34px;
+        padding: 0px 18px;
+        display: block;
+        border-radius: 17px;
+
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            color: @cl-dunlop-white;
+            margin-right: 8px;
+            margin-left: -8px;
+            line-height: 32px;
+            height: 34px;
+
+            &.icon-filter-summer {
+                font-size: 19px;
+            }
+
+            &.icon-filter-winter {
+                font-size: 17px;
+            }
+
+            &.icon-filter-radial {
+                font-size: 10px;
+            }
+
+            &.icon-filter-bias {
+                font-size: 18px;
+            }
+        }
+
+        &:hover,
+        &.active {
+            background: @cl-dunlop-white;
+            text-decoration: none;
+            color: @cl-font-black;
+
+            i {
+                color: @cl-dublop-main;
+            }
+        }
+    }
+
+    &__link--main {
+        font-family: @font-bold;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+}

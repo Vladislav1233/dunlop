@@ -1,0 +1,90 @@
+//- Основная страница: История.
+//- ====================
+
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'История компании';
+    - var logo = false;
+    - var history_page = true;
+
+//- Выводим контент
+block content
+
+    #pics-cutter
+
+        #history-slider
+            .sausage
+                .wrap.slide1
+                    //- h2 1888
+                    //- p В 1888 году в г. Белфаст, Северная Ирландия, шотландский ветеринар Джон Бойд Данлоп (John Boyd Dunlop) изобрел первую пневматическую шину, нашедшую практическое применение. Он стремился сделать более плавным ход трехколесного велосипеда своего сына — именно так ему пришла идея создания пневматической шины. Это выдающееся изобретение внесло значительный вклад в развитие мирового автомобилестроения.
+                .wrap.slide2
+                    //- h2 1909
+                    //- p Компания DUNLOP основала первую в Японии фабрику по производству шин в городе Кобе.
+                .wrap.slide3
+                    //- h2 1924
+                    //- p Первая победа DUNLOP в&nbsp;гонках &laquo;24 часа <nobr>Ле-Мана</nobr>&raquo;. Со&nbsp;времени первого проведения гонок в&nbsp;1923 году, компания DUNLOP принимала участие во&nbsp;всех заездах. На&nbsp;счету DUNLOP 34 победы за&nbsp;всю историю проведения гонок &laquo;24 часа <nobr>Ле-Мана</nobr>&raquo;
+                .wrap.slide4
+                    //- h2 1958
+                    //- p DUNLOP начинает доминировать в&nbsp;<nobr>Формуле-1</nobr>. Победы во&nbsp;Франции, Германии &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;и&nbsp;Швеции в&nbsp;1958 и&nbsp;чемпионство в&nbsp;мировом первенстве в&nbsp;1959 стали первыми в&nbsp;ряду <nobr>83-х</nobr> побед DUNLOP в&nbsp;<nobr>Формуле-1</nobr>.
+                .wrap.slide5
+                    //- h2 1972
+                    //- p Анонсирован выпуск шины Denovo 2 с&nbsp;системой Denloc и&nbsp;специальной технологией герметизации проколов. <br/>Данная разработка позволила при проколе шин преодолевать расстояние примерно в&nbsp;80&nbsp;км при скорости 80&nbsp;км/ч.
+                .wrap.slide6
+                    //- h2 1998
+                    //- p Компания DUNLOP разрабатывает технологии компьютерного моделирования шума от&nbsp;пятна контакта с&nbsp;поверхностью и&nbsp;систему <br/>DRS (Digital rolling stimulation)&nbsp;&mdash; система цифрового моделирования качения. Результатом разработок стало создание шины LE&nbsp;MANS LM701.
+                .wrap.slide7
+                    //- h2 2007
+                    //- p С&nbsp;целью представления бренда DUNLOP на&nbsp;территории России и&nbsp;стран СНГ в&nbsp;2007 году в&nbsp;Москве была основана компания <nobr>ООО &laquo;Данлоп Тайр СНГ&raquo;,</nobr> учрежденная фирмами<br/> Sumitomo Rubber Industries и&nbsp;Sumitomo Corporation LTD.
+                .wrap.slide8
+                    //- h2 2008
+                    //- p Компания DUNLOP начинает выпускать экологически чистые шины нового поколения на&nbsp;97% изготовленные из&nbsp;материалов без содержания углеводородов.
+                .wrap.slide9
+                    //- h2 2009
+                    //- p Бренд DUNLOP отметил свой столетний юбилей с&nbsp;начала производства шин в&nbsp;Японии. Качество, проверненное более чем вековой историей и&nbsp;самые передовые технологии производства шин. DUNLOP&nbsp;&mdash; новая эра в&nbsp;развитии шин.
+                .wrap.slide10
+                    //- h2 2011
+                    //- p 
+                .wrap.slide11
+                    //- h2 2013
+                    //- p 
+
+                i.flower &nbsp;
+                i.prize &nbsp;
+                i.ribbon &nbsp;
+                i.him &nbsp;
+                i.rings &nbsp;
+                i.line &nbsp;
+
+        #wrapper-history
+            #wheel
+                div
+                i
+            .b-pagining-outer
+                +b('div').pagining.paging
+                    a.active(rel="110" baserel="0" rev="2450" baserev="2450" name="1" href="javascript:void(0);") 1888
+                    a(rel="2560" baserel="2450" rev="2350" baserev="2350" name="2" href="javascript:void(0);") 1909
+                    a(rel="4910" baserel="4800" rev="2600" baserev="2600" name="3" href="javascript:void(0);") 1924
+                    a(rel="7510" baserel="7400" rev="2400" baserev="2400" name="4" href="javascript:void(0);") 1958
+                    a(rel="9910" baserel="9800" rev="2397" baserev="2397" name="5" href="javascript:void(0);") 1978
+                    a(rel="12307" baserel="12197" rev="2355" baserev="2355" name="6" href="javascript:void(0);") 1998
+                    a(rel="14662" baserel="14552" rev="2900" baserev="2900" name="7" href="javascript:void(0);") 2007
+                    a(rel="17562" baserel="17452" rev="2450" baserev="2450" name="8" href="javascript:void(0);") 2008
+                    a(rel="20012" baserel="19902" rev="2520" baserev="2520" name="9" href="javascript:void(0);") 2009
+                    a(rel="22660" baserel="22550" rev="2555" baserev="2555" name="10" href="javascript:void(0);") 2011
+                    a(rel="25210" baserel="25100" rev="2350" baserev="2350" name="11" href="javascript:void(0);") 2013
+                    .ui-draggable(style="left:0px;" aria-disabled="false")
+                        span.y1888 1888
+                        span.y1909 1909
+                        span.y1924 1924
+                        span.y1958 1958
+                        span.y1972 1978
+                        span.y1998 1998
+                        span.y2007 2007
+                        span.y2008 2008
+                        span.y2009 2009
+                        span.y2011 2011
+                        span.y2013 2013

@@ -1,0 +1,548 @@
+/* MAIN : 1000 + */
+.b-how-to {
+    width: 940px;
+    margin: 0px auto;
+    position: relative;
+
+    .js-icon-hover {
+
+        &.b-how-to__block:after {
+            background: @cl-dunlop-table-dot;
+        }
+    }
+
+    &__block {
+        display: inline-block;
+        position: absolute;
+
+        i:before {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+        }
+
+        &:after,
+        &:before {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 60px;
+            content: "";
+        }
+
+        &:after {
+            left: 0px;
+            top: 0px;
+            background: @cl-font-white;
+        }
+
+        &:before {
+            right: 0px;
+            bottom: 0px;
+            background: @cl-dunlop-table-dot;
+        }
+
+        &.num205 {
+            top: 192px;
+            left: 47px;
+
+            width: 78px;
+            height: 55px;
+
+            i:before {
+                font-size: 50px;
+                line-height: 50px;
+            }
+
+            &:after {
+                left: 0px;
+                top: 0px;
+                background: @cl-font-white;
+            }
+
+            &:before {
+                right: 0px;
+                bottom: 0px;
+                background: @cl-dunlop-table-dot;
+            }
+        }
+
+        &.num55 {
+            top: 214px;
+            left: 243px;
+
+            width: 50px;
+            height: 99px;
+
+            i:before {
+                line-height: 91px;
+                font-size: 91px;
+            }
+        }
+
+        &.num-r {
+            top: 208px;
+            left: 280px;
+            width: 89px;
+            height: 192px;
+
+            i:before {
+                line-height: 187px;
+                font-size: 187px;
+            }
+        }
+
+        &.num16 {
+            top: 61px;
+            left: 273px;
+            width: 45px;
+            height: 96px;
+
+            &:after {
+                left: 1px;
+            }
+
+            i:before {
+                line-height: 90px;
+                font-size: 90px;
+            }
+        }
+
+        &.num91 {
+            top: 210px;
+            left: 369px;
+            width: 91px;
+            height: 111px;
+
+            i:before {
+                line-height: 105px;
+                font-size: 105px;
+            }
+        }
+
+        &.num-v {
+            top: 104px;
+            left: 413px;
+            width: 48px;
+            height: 64px;
+
+            i:before {
+                line-height: 59px;
+                font-size: 59px;
+            }
+
+            &:before {
+                left: 0px;
+                bottom: 0px;
+            }
+
+            &:after {
+                right: 0px;
+                left: auto;
+                top: 0px;
+            }
+        }
+
+        &.num-sp-sport {
+            top: 368px;
+            left: 641px;
+            width: 64px;
+            height: 49px;
+
+            i:before {
+                font-size: 45px;
+                line-height: 45px;
+            }
+        }
+/* ====== */
+        &.num-moto-130 {
+            top: 182px;
+            left: 19px;
+            width: 77px;
+            height: 54px;
+
+            i:before {
+                font-size: 50px;
+                line-height: 50px;
+            }
+        }
+
+        &.num-moto-70 {
+            top: 241px;
+            left: 185px;
+            width: 50px;
+            height: 99px;
+
+            i:before {
+                font-size: 91px;
+                line-height: 91px;
+            }
+        }
+
+        &.num-moto-z {
+            top: 102px;
+            left: 133px;
+            width: 69px;
+            height: 82px;
+
+            i:before {
+                font-size: 77px;
+                line-height: 77px;
+            }
+        }
+
+        &.num-moto-r {
+            top: 224px;
+            left: 244px;
+            width: 88px;
+            height: 191px;
+
+            i:before {
+                font-size: 185px;
+                line-height: 185px;
+            }
+        }
+
+        &.num-moto-16 {
+            top: 71px;
+            left: 228px;
+            width: 45px;
+            height: 98px;
+
+            i:before {
+                font-size: 91px;
+                line-height: 91px;
+            }
+        }
+
+        &.num-moto-61w {
+            top: 218px;
+            left: 340px;
+            width: 92px;
+            height: 112px;
+
+            i:before {
+                font-size: 107px;
+                line-height: 107px;
+            }
+        }
+
+        &.num-moto-tl {
+            top: 118px;
+            left: 435px;
+            width: 49px;
+            height: 66px;
+
+            i:before {
+                font-size: 60px;
+                line-height: 60px;
+            }
+
+            &:before {
+                left: 0px;
+                bottom: 0px;
+            }
+
+            &:after {
+                right: 0px;
+                left: auto;
+                top: 0px;
+            }
+        }
+
+        &.num-moto-name {
+            top: 352px;
+            left: 651px;
+            width: 64px;
+            height: 49px;
+
+            i:before {
+                font-size: 45px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-family: @font-medium;
+        color: @cl-dunlop-letter;
+        position: absolute;
+        transition: 0.2s;
+
+        &:hover {
+            color: @cl-dunlop-color-info-wheel !important;
+            text-decoration: none;
+        
+            + .b-how-to__block:after {
+                background: @cl-dunlop-table-dot;
+            }
+        }
+
+        &.js-icon-hover {
+            color: @cl-dunlop-color-info-wheel !important;
+            text-decoration: none;
+        }
+
+        &.num-divider-auto {
+            top: 191px;
+            left: 208px;
+            font-size: 32px;
+
+            &:hover {
+                color: @cl-dunlop-white !important;
+            }
+        }
+
+        &.num-divider-moto {
+            top: 223px;
+            left: 146px;
+            font-size: 32px;
+
+            &:hover {
+                color: @cl-dunlop-white !important;
+            }
+        }
+
+        &.num205 {
+            top: 193px;
+            left: 136px;
+            font-size: 53px;
+            line-height: 53px;
+            color: @cl-dunlop-white;
+        }
+
+        &.num55 {
+            top: 176px;
+            left: 218px;
+            font-size: 35px;
+            line-height: 35px;
+            color: @cl-dunlop-how-to-num55;
+        }
+
+        &.num-r {
+            top: 171px;
+            left: 266px;
+            font-size: 29px; 
+            line-height: 29px;
+            color: @cl-dunlop-how-to-num-r;
+        }
+
+        &.num16 {
+            top: 168px;
+            left: 295px;
+            font-size: 29px;
+            line-height: 29px;
+            color: @cl-dunlop-filter-divider;
+        }
+
+        &.num91 {
+            top: 171px;
+            left: 355px;
+            font-size: 30px;
+            line-height: 30px;
+            color: @cl-dunlop-how-to-num91;
+        }
+
+        &.num-v {
+            top: 176px;
+            left: 400px;
+            font-size: 30px;
+            line-height: 30px; 
+            color: @cl-dunlop-how-to-num-v;
+        }
+
+        &.num-sp-sport {
+            top: 273px;
+            left: 483px;
+            font-size: 150px;
+            color: @cl-dunlop-sp-sport;
+        }
+
+        &.num-moto-130 {
+            top: 231px;
+            left: 83px;
+            font-size: 50px;
+            line-height: 50px;
+            color: @cl-dunlop-white;
+        }
+
+        &.num-moto-70 {
+            top: 201px;
+            left: 153px;
+            font-size: 38px;
+            line-height: 38px;
+            color: @cl-dunlop-how-to-num70;
+        }
+
+        &.num-moto-z {
+            top: 191px;
+            left: 197px;
+            font-size: 32px;
+            line-height: 32px;
+            color: @cl-dunlop-how-to-num-z;
+        }
+
+        &.num-moto-r {
+            top: 185px;
+            left: 225px;
+            font-size: 30px;
+            line-height: 30px;
+            color: @cl-dunlop-how-to-moto-num-r;
+        }
+
+        &.num-moto-16 {
+            top: 178px;
+            left: 254px;
+            font-size: 30px;
+            line-height: 30px;
+            color: @cl-dunlop-how-to-num-16;
+        }
+
+        &.num-moto-61w {
+            top: 176px;
+            left: 313px;
+            font-size: 32px;
+            line-height: 32px;
+            color: @cl-dunlop-how-to-num61w;
+        }
+
+        &.num-moto-tl {
+            top: 188px;
+            left: 410px;
+            font-size: 40px;
+            line-height: 40px;
+            color: @cl-dunlop-how-to-num-tl;
+        }
+
+        &.num-moto-name {
+            top: 332px;
+            left: 465px;
+            font-size: 260px;
+            color: @cl-dunlop-how-to-num-moto-name;
+        }
+    }
+
+    &__description {
+        font-family: @font-medium;
+        font-size: 12px;
+        line-height: 20px;
+        color: @cl-dunlop-white;
+        text-transform: uppercase;
+        position: absolute;
+        text-transform: uppercase;
+        transition: 0.2s;
+
+        &.js-icon-hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &.right {
+            text-align: right;
+        }
+
+        &.num205 {
+            top: 130px;
+            left: 44px;
+            width: 100px;
+        }
+
+        &.num55 {
+            top: 315px;
+            left: 148px;
+            width: 145px;
+        }
+
+        &.num-r {
+            top: 403px;
+            left: 363px;
+        }
+
+        &.num16 {
+            top: 30px;
+            left: 290px;
+            width: 125px;
+        }
+
+        &.num91 {
+            top: 319px;
+            left: 456px;
+            width: 90px;
+            z-index: 1;
+        }
+
+        &.num-v {
+            top: 70px;
+            left: 470px;
+            width: 90px;
+        }
+
+        &.num-sp-sport {
+            top: 392px;
+            left: 717px;
+            width: 90px;
+        }
+
+        &.num-moto-130 {
+            top: 125px;
+            left: 16px;
+            text-align: left;
+            width: 110px;
+        }
+
+        &.num-moto-70 {
+            top: 343px;
+            left: 91px;
+            width: 145px;
+        }
+
+        &.num-moto-z {
+            top: 38px;
+            left: 18px;
+            width: 170px;
+        }
+
+        &.num-moto-r {
+            top: 420px;
+            left: 326px;
+            width: 200px;
+        }
+
+        &.num-moto-16 {
+            top: 42px;
+            left: 248px;
+            width: 125px;
+        }
+
+        &.num-moto-61w {
+            top: 329px;
+            left: 427px;
+            width: 125px;
+        }
+
+        &.num-moto-tl {
+            top: 86px;
+            left: 492px;
+            width: 125px;
+        }
+
+        &.num-moto-name {
+            width: 115px;
+            top: 380px;
+            left: 735px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 6px;
+    }
+
+    &__text {
+        text-transform: none;
+        font-family: @font-regular;
+        font-size: 13px;
+        line-height: 22px;
+        margin-top: 0px;
+    }
+}

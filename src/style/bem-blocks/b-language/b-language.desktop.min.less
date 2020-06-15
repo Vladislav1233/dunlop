@@ -1,0 +1,34 @@
+/* MAIN : 1000 + */
+
+.b-language {
+    color: @cl-font-white;
+    font-family: @font-regular;
+    font-size: 11px;
+    line-height: 60px;
+    margin: 0 0 0 15px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    // transition: none;
+    width: 48px;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+        background: @cl-dunlop-header-navigation-hover;
+        color: @cl-font-white;
+        text-decoration: none;
+
+        &:before {
+            border-bottom: 60px solid  @cl-dunlop-header-navigation-hover;
+            border-left: 30px solid transparent;
+            content: "";
+            display: block;
+            height: 0;
+            left: -30px;
+            position: absolute;
+            top: 0;
+            width: 0;
+        }
+    }
+}

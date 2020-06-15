@@ -1,0 +1,56 @@
+{
+  "name": "kontora_html_default",
+  "version": "0.1.0a",
+  "description": "Kontora HTML Default",
+  "keywords": [
+    "project",
+    "frontend",
+    "gulp",
+    "jade",
+    "less"
+  ],
+  "scripts": {
+    "start": "gulp --debug",
+    "build": "gulp build",
+    "lint": "gulp lint"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/kontorainc/kontora-html-default"
+  },
+  "devDependencies": {
+    "bemto.jade": "^0.2.2",
+    "bluebird": "^3.1.1",
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-filelist": "^0.2.0",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-iconfont": "^5.0.1",
+    "gulp-iconfont-css": "^2.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jade-inheritance": "^0.5.3",
+    "gulp-less": "^3.0.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5",
+    "gulp.spritesmith": "4.2.4",
+    "imagemin-pngquant": "^4.2.0",
+    "less-plugin-autoprefix": "^1.4.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "object-fit-images": "^2.5.3",
+    "pngsmith": "^0.1.3",
+    "require-dir": "^0.3.0",
+    "rimraf": "^2.4.3"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.0"
+  }
+}

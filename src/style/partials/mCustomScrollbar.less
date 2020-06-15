@@ -1,0 +1,57 @@
+.mCSB_scrollTools {
+    margin-right: 13px;
+    background: @cl-dublop-main-hover;
+    width: 19px;
+    border-radius: 10px;
+    border: 2px solid @cl-dublop-main-hover;
+}
+@media all and (min-width: 1440px) {
+    .mCSB_scrollTools {
+        margin-right: 20px;
+    }
+}
+@media all and (min-width: 1440px) {
+    .mCSB_inside > .mCSB_container {
+        // margin-right: 45px;
+    }
+}
+
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    background: transparent;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: @cl-dublop-main;
+    width: 15px;
+    border: 2px solid @cl-dunlop-white;
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 2px;
+        top: 50%;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    }
+    &:before {
+        margin-top: 3px;
+        border-top: 4px solid @cl-dunlop-white;
+    }
+    &:after {
+        margin-top: -3px;
+        border-bottom: 4px solid @cl-dunlop-white;
+    }
+}
+
+
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+    background: @cl-dublop-main;
+}
+
+.mCSB_scrollTools .mCSB_dragger {
+    // margin-left: 1px;
+}

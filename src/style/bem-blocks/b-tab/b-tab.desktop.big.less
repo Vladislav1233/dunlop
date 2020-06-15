@@ -1,0 +1,44 @@
+/* 1440 + */
+.b-tab {
+
+    &--tech {
+        margin-left: 166px;
+        // margin-top: 96px;
+        // margin-top: 57px;
+        // margin-bottom: 57px;
+    }
+
+    &--catalog {
+        padding-top: 55px;
+        margin-bottom: 42px;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 21px;
+    }
+
+    &__link {
+        padding: 14px 33px 13px 40px;
+        font-size: 14px;
+        line-height: 20px;
+
+        &:before {
+            border-bottom-width: 47px;
+            border-left-width: 23px;
+            left: -23px;
+        }
+
+        &:after {
+            border-top-width: 47px;
+            border-right-width: 23px;
+            right: -23px;
+        }
+    }
+
+    &__link.active &__text,
+    .ui-tabs-active &__link &__text {
+        &:after {
+            top: 30px;
+        }
+    }
+}

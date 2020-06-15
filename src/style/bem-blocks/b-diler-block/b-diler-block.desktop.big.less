@@ -1,0 +1,88 @@
+/* 1440 + */
+.b-diler-block {
+    margin-top: 61px;
+    margin-bottom: 48px;
+
+    &--where-to-buy {
+        margin-top: 8px;
+        padding: 0 44px;
+        margin-bottom: 203px;
+    }
+
+    &--other {
+        margin-top: 0;
+    }
+
+    &__info {
+        // padding: 16px 19px;
+        // padding-bottom: 16px;
+        &--where-to-buy {
+            padding-top: 14px;
+            padding-left: 21px;
+        }
+
+        &--other {
+            // padding-bottom: 15px;
+        }
+    }
+    &__name {
+        width: 195px;
+        &--other {
+            width: 135px;
+        }
+        &--where-to-buy {
+            width: 176px;
+        }
+    }
+
+    &__adress {
+        width: 195px;
+
+        &--other {
+            width: 150px;
+            p {
+                margin-bottom: 2px;
+            }
+        }
+        &--where-to-buy {
+            width: 176px;
+            p {
+                margin-bottom: 2px;
+            }
+        }
+    }
+
+    &__item {
+        &--where-to-buy {
+            width: 20%;
+
+
+            &:hover {
+                border: 1px solid @cl-dunlop-diler-border;
+
+                &:first-child {
+                    border-right: 1px solid @cl-dunlop-diler-border;
+                }
+                &:nth-child(n) {
+                    border-right: 1px solid @cl-dunlop-diler-border;
+                }
+            }
+        }
+    }
+
+    &__list {
+        &--other {
+            margin-bottom: 18px;
+        }
+
+        &--where-to-buy {
+            margin-bottom: 216px;
+        }
+    }
+
+    &__phone-block {
+        &--other{
+            padding-top: 2px;
+        }
+    }
+}

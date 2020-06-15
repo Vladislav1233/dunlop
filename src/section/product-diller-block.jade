@@ -1,0 +1,23 @@
+//- Dunlop: mixin product_description
+//- 04-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- Купить у диллера  product-diller-block
+mixin product-diller-block()
+    // BEGIN section.b-product-diller-block
+    .product-diller-block
+        input(type="search").search.js-autocomplete
+        #product-map(style="height:300px; width:500px;")
+    .dealers
+        .dealer(rel="4map")
+            h3 Шинсервис1
+            span ул. Куликовская, 3 корп. Д
+            a.show-on-map(href="javascript:void(0);", rel="55.5711206;37.5648077", rev="0") Показать_на_карте
+        .dealer(rel="4map")
+            h3 Шинсервис2
+            span ш. Сколковское, 31А
+            a.show-on-map(href="javascript:void(0);", rel="55.704255;37.40654", rev="1") Показать_на_карте
+            // END section.b-product-diller-block
+        .dealer(rel="4map")
+            h3 Шинсервис3
+            span пр-д Черницынский, 3
+            a.show-on-map(href="javascript:void(0);", rel="55.819494;37.792367", rev="2") Показать_на_карте

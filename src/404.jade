@@ -1,0 +1,18 @@
+//- Основная страница: 404.
+//- ====================
+
+//- Используем Dunlop: 404.jade: mixin +404()
+include ./section/404.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Ошибка 404 СТРАНИЦА не найдена';
+    - var logo = false;
+    - var background = '/images/inhtml/bg_404.jpg';
+
+//- Выводим контент
+block content
+    +404()

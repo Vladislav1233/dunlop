@@ -1,0 +1,30 @@
+//- Шапка для главной страницы
+//- ====================
+//- Основной шаблон headerа
+mixin header_main()
+    // BEGIN section.b-header
+    +b('header').header
+        +b.logo
+            if logo
+                span: img(src='images/inhtml/logo.svg' alt='Dunlop' title='Dunlop')
+            else
+                a(href='/' title=''): img(src='images/inhtml/logo.svg' alt='Dunlop' title='Dunlop')
+
+        //- Шаблон меню.
+        mixin header_navigation(...items)
+            // BEGIN section.header-navigation
+            +b('nav').header-navigation
+                +e('ul').list
+                    each item, index in items
+                        - var active = ''
+                        if index == 0
+                            - var active = 'active'
+                                +e('li').item: +e('a').link(href="javascript:void(0);" title="#{item}" class="#{active}") #{item}
+                        else
+                            +e('li').item: +e('a')(href="javascript:void(0);" title= item).link= item
+                +b('a').language(href="javascript:void(0);") EN
+            // END section.header-navigations
+
+        //- Используем Dunlop: header_navigation (см выше)
+        +header_navigation('Подобрать шины', 'Где купить', 'Технологии', 'История', 'Новости', 'Контакты')
+    // END section.b-header

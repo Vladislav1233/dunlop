@@ -1,0 +1,52 @@
+//- Основная страница: Каталог. 
+
+//- Используем Dunlop: catalog_filter.jade: mixin +catalog_filter()
+include ./section/catalog_filter.jade
+//- Используем Dunlop: tab.jade: mixin +tab()
+include ./section/tab.jade
+//- Используем Dunlop: download_file.jade: mixin +download_file()
+include ./section/download_file.jade
+//- Используем Dunlop: catalog_list.jade: mixin +catalog_list()
+include ./section/catalog_list.jade
+//- Используем Dunlop: tab.jade: mixin +tab()
+include ./section/tab.jade
+//- Используем Dunlop: wheel-back-to.jade: mixin +wheel-back-to()
+include ./section/wheel-back-to.jade
+//- Используем Dunlop: choose-region.jade: mixin +popup-city(mixin, name)
+include ./section/choose-region.jade
+
+//- Используем стандартный шаблон
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Каталог';
+    - var main_page = false;
+    - var background = '/images/inhtml/auto_bg.jpg';
+    - var footer_inner = true;
+    - var mod="b-footer-main--catalog";
+    
+//- Выводим контент
+block content
+    +wheel-back-to('Как правильно подобрать шину', 'icon-line-catalog').b-wheel-back-to--catalog
+    +b.container--content.container--catalog
+        +b('h1').title--catalog Автошины Dunlop
+            +b('a')(href="javascript:void(0);" data-target="#choose-region" title="Выбрать город").choose-city__link.choose-city__link--catalog.js-open-popup.js-select-city Нижний новгород
+    +b.line
+    +b.container--content.container--catalog
+        .b-justify
+            //- Используем Dunlop: include ./section/tab.jade
+            +tab('Для легковых', 'Для внедорожников', 'Для мотоциклов').b-tab--catalog
+
+            //- Используем Dunlop: include ./section/download_file.jade
+            +download_file('PDF', 'Каталог летних шин', 'Каталог стандартных шин').b-file--catalog
+
+    //- Используем Dunlop: include ./section/catalog_filter.jade
+    //- true для авто, false для мото
+    +catalog_filter(true)
+
+    //- Используем Dunlop: include ./section/catalog_list.jade
+    +catalog_list()
+    //- Используем Dunlop: popups.jade: mixin +popup(mixin, name)
+    +popup-region('choose-region', 'Выбор региона', '')
+    +popup-region('choose-city', 'Выбор города', 'back')

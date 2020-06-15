@@ -1,0 +1,39 @@
+/* MAIN : 1000 + */
+
+.b-tooltip {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    margin-left: -80px;
+
+    width: 160px;
+    padding: 10px;
+    background: rgba(63,63,63,0.8);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+
+    color: @cl-font-white;
+    font-size: 11px;
+    line-height: 20px;
+    text-align: left;
+
+    z-index: 101;
+
+    display: none;
+
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 50%;
+        top: -6px;
+        margin-right: -6px;
+        border-bottom: 6px solid rgba(63, 63, 63, 0.8);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+    }
+
+    .b-catalog-filter__what:hover & {
+        display: block;
+    }
+}

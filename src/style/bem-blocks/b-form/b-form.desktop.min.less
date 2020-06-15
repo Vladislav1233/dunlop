@@ -1,0 +1,131 @@
+/* MAIN : 1000 + */
+.b-form {
+    &__block {
+        margin-bottom: 10px;
+        position: relative;
+
+        &--min {
+            width: 205px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &--center {
+            text-align: center;
+            margin-top: 18px;
+        }
+    }
+
+    &__label, 
+    &__input,
+    &__textarea {
+        height: 55px;
+        width: 100%;
+        display: block;
+        padding: 0px 15px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 0px;
+        line-height: 22px;
+    }
+
+    &__textarea {
+        padding: 20px 15px;
+        height: 170px;
+        resize: none;
+    }
+
+    &__textarea + label,
+    &__textarea + em + label {
+        height: 170px;
+    }
+
+    &__label {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: @cl-dublop-main-hover;
+        color: @cl-font-black;
+        font-family: @font-regular;
+        font-size: 16px;
+        z-index: 1;
+        padding-top: 17px;
+    }
+
+    &__input,
+    &__textarea {
+        background: transparent;
+        color: @cl-font-black;
+        font-family: @font-regular;
+        font-size: 16px;
+        border: none;
+        z-index: 2;
+    }
+
+    &__input:hover + &__label,
+    &__textarea:hover + &__label {
+        background: @cl-dunlop-input-hover;
+    }
+
+    &__input:hover,
+    &__textarea:hover {
+        cursor: default;
+    }
+
+
+    em {
+        display: none !important;
+    }
+
+    &__input:focus + &__label,
+    &__textarea:focus + &__label,
+    &__input.valid + &__label,
+    &__textarea.valid + &__label,
+    &__input.valid + em + &__label,
+    &__textarea.valid + em + &__label,
+    &__input.error + &__label,
+    &__textarea.error + &__label,
+    &__input.error + em + &__label,
+    &__textarea.error + em + &__label,
+    &__input.not-empty + &__label,
+    &__textarea.not-empty + &__label,
+    &__input.not-empty + em + &__label,
+    &__textarea.not-empty + em + &__label {
+        background: @cl-dunlop-white;
+        color: @cl-font-link;
+        font-size: 11px;
+        padding-top: 8px;
+    }
+
+
+    &__input:focus,
+    &__textarea:focus,
+    &__input.valid,
+    &__textarea.valid,
+    &__input.error,
+    &__textarea.error,
+    &__input.error,
+    &__textarea.error,
+    &__input.not-empty,
+    &__textarea.not-empty {
+        padding-top: 24px;
+    }
+
+
+    &__input.error + &__label,
+    &__textarea.error + &__label,
+    &__input.error + em + &__label,
+    &__textarea.error + em + &__label {
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            background: @cl-dunlop-error;
+        }
+    }
+
+}

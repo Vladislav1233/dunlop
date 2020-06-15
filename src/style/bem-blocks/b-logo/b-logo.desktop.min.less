@@ -1,0 +1,32 @@
+/* MAIN : 1000 + */
+
+.b-logo {
+    background: @cl-dublop-main;
+    display: block;
+    height: 60px;
+    position: relative;
+    text-align: center;
+    width: 181px;
+
+    &:after {
+        border-right: 30px solid transparent;
+        border-top: 60px solid @cl-dublop-main;
+        content: "";
+        display: block;
+        height: 0;
+        position: absolute;
+        right: -30px;
+        top: 0;
+        width: 1px;
+    }
+
+    & > a, & > span {
+        display: block;
+        height: 100%;
+    }
+
+    img {
+        padding: 17px 0 0;
+        width: 152px;
+    }
+}

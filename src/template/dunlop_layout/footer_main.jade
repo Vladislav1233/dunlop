@@ -1,0 +1,21 @@
+//- Футер для главной страницы
+//- ====================
+//- ---------------------
+//- Основной шаблон футера
+mixin footer_main()
+    // BEGIN section.b-footer
+    +b('footer').footer
+        +b.footer-main(class="#{mod}")
+            +e.copyriting
+                span © Dunlop Tire CIS LLC, 2016
+                +e('ul').list
+                    +e('li').item: +e('a')(href="javascript:void(0);" title='Правовая информация').link Правовая информация
+                    +e('li').item: +e('a')(href='http://www.srigroup.co.jp/english/index.html' target='_blank' title='www.srigroup.co.jp').link www.srigroup.co.jp
+            
+            +e('a')(href="javascript:void(0);" target='_blank' title='Подписывайтесь').social
+                i.icon-facebook
+                span Подписывайтесь
+            +e.about
+                a(href='http://www.zero.ru/' target='_blank' title='Сделано в ZERO')
+                    img(src='images/inhtml/logo-zero.svg' alt='Сделано в ZERO' title='Сделано в ZERO')
+    // END section.b-footer

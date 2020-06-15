@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-family: @font-base;
+    line-height: 20px;
+    color: @cl-theme-global;
+    vertical-align: top;
+    -webkit-text-size-adjust: 100%;
+}
+
+// global
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: @cl-theme-link;
+    text-decoration: underline;
+    outline: none;
+
+    // .no-touch &:hover,
+    // .touch &:active {
+    //     color: @cl-theme-link-hover;
+    //     text-decoration: underline;
+    // }
+}
+
+p { margin-bottom: 15px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    color: @cl-theme-global;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5,
+h6 {
+    font-size: 14px;
+}
+
+hr {
+    background: none;
+    border: none;
+    border-bottom: 1px solid @cl-theme-grey;
+    display: block;
+    position: relative;
+    height: 1px;
+    margin: 15px 0;
+    *margin: 7px 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+ul {
+    margin-bottom: 15px;
+}
+li {
+    list-style: disc inside;
+    margin-bottom: 15px;
+}
+
+ol {
+    margin-bottom: 15px;
+}
+
+.table {
+    border: 1px solid @cl-theme-grey;
+    margin: 15px 0;
+}
+th,
+td {
+    background: none;
+    border: 1px solid @cl-theme-grey;
+    padding: 5px;
+    text-align: left;
+}
+
+q,
+blockquote {
+    border: none;// Убирает рамку, т.к. видимо bootstrap ставит рамку слева
+    font-size: 14px;
+    line-height: 24px;
+    margin: 58px auto;
+    max-width: 590px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:before, &:after {
+        background: @cl-theme-grey;
+        content: '';
+        display: block;
+        height: 3px;
+        margin: 0 auto;
+        position: relative;
+        width: 50px;
+    }
+    &:before {
+        bottom: 25px;
+    }
+    &:after {
+        top: 25px;
+    }
+}
+
+fieldset {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+// clear
+
+.clearfix {
+    position: relative;
+    zoom: 1;
+}
+
+.clear {
+    clear: both;
+    height: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    margin-top: -1px;
+}
+
+
+// form
+
+form {
+    display: block;
+    clear: both;
+    position: relative;
+    zoom: 1;
+}
+
+label,
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;//Сброс значения bold, идущего из битрикса
+    position: relative;
+    clear: both;
+    width: 100%;
+    margin: 0 0 5px 0;
+    zoom: 1;
+
+}
+
+input,
+textarea,
+select {
+    background: #fff;
+    border: 1px solid @cl-theme-grey;
+    border-radius: 2px;
+    box-shadow: none;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 34px;
+    margin: 0 0 15px 0;
+    padding: 7px 8px;
+    color: @cl-theme-global;
+    vertical-align: top;
+    outline: none;
+    zoom: 1;
+    font-family: @font-base;
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+input[type="file"] {
+    display: block;
+    position: relative;
+    margin: 0 0 15px 0;
+}
+
+textarea {
+    height: auto;
+    resize: vertical;
+}
+
+select {
+    padding: 0;
+}
+
+// placeholder 
+
+::-webkit-input-placeholder {
+    color: @cl-theme-global;
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    color: @cl-theme-global;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: @cl-theme-global;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: @cl-theme-global;
+    opacity: 1;
+}
+
+// /placeholder
+
+
+// для display-inline блоков. указывается у родителя, дочерние элементы расходятся по ширине
+.b-justify {
+    font-size: 1px !important;
+    line-height: 0;
+    text-align: justify;
+    
+    &:after {
+        content: "";
+        display: inline-block;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 100%;
+    }
+}

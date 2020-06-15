@@ -1,0 +1,61 @@
+//- ====================
+//- Dunlop: tab
+//- 29-04-2016: Tatiana Shemenyova
+//- --------------------
+//- Шаблон вывода списка ссылок - табов.
+//- ====================
+
+//- Dunlop: mixin tab
+//- 29-04-2016: Tatiana Shemenyova
+//- ---------------------
+//- Табы
+
+mixin tab(...items)
+    +b.tab(class!=attributes.class)
+        +e('ul').list
+            each item, index in items
+                - var active = ''
+                    if index == 0
+                        - var active = 'active'
+                +e('li').item: +e('a').link(href='javascript:void(0);' title="#{item}" class="#{active}")
+                    +e.text= item
+
+        // END section.b-tab
+
+
+//- Этот миксин используется на продакт мап.
+mixin tab-map(...items)
+    +b.tab(class!=attributes.class)
+        +e('ul').list
+            each item, index in items
+                - var active = ''
+                    if index == 1
+                        - var active = 'active'
+                +e('li').item: +e('a').link(href='javascript:void(0);' title="#{item}" class="#{active}")
+                    +e.text= item
+
+
+//- Это миксин для табов, которые работают не как навигация (в программинге), а как табы.
+mixin tabs(...items)
+    +b.tab(class!=attributes.class)
+        +e('ul').list
+            each item, index in items
+                - var vv = ''
+                if index == 0
+                    - var vv = 'auto'
+                else if index == 1
+                    - var vv = 'moto'
+                +e('li').item: +e('a').link(href='#technology-#{vv}' title="#{item}")
+                    +e.text= item
+
+//- Это миксин для табов, которые работают не как навигация (в программинге), а как табы.
+mixin tabs-moto(...items)
+    +b.tab-moto(class!=attributes.class)
+        +e('ul').list
+            each item, index in items
+                - var vv = ''
+                if index == 0
+                    - var vv = 'front'
+                else if index == 1
+                    - var vv = 'back'
+                +e('li').item: +e('a').link(href='#tire-#{vv}' title="#{item}")= item

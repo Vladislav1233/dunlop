@@ -1,0 +1,17 @@
+//- ====================
+//- Dunlop: wheel-back-to
+//- 05-05-2016: Vladislav Dovzhenko
+//- --------------------
+//- Колесо-ссылка для возвращения\открытя раздела (в правом верхнем углу)
+//- ====================
+
+mixin wheel-back-to(value, icon, moto)
+    +b('a').wheel-back-to(class!=attributes.class title="#{value}" href='javascript:void(0);')
+        +e.line
+            +e('span').dot
+                i(class="#{icon}")
+        +e('p').value #{value}
+        if moto
+            +e('img')(src="images/inhtml/mini-wheel-moto.png").mini-wheel
+        else
+            +e('img')(src="images/inhtml/mini-wheel.png").mini-wheel

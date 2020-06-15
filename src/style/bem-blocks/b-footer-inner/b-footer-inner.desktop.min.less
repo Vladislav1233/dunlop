@@ -1,0 +1,106 @@
+/* MAIN : 1000 + */
+
+.b-footer-inner {
+    z-index: 2;
+    font-size: 0;
+    background: @cl-dunlop-footer;
+    margin-top: 75px;
+    padding: 0 30px 29px;
+
+    &__menu,
+    &__information {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+        height: 100%;
+    }
+
+    &__text {
+        font-family: 'helvetican_regular';
+        font-size: 13px;
+        padding-right: 30px;
+        margin: 0;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+    &__link {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: 'helvetican_medium';
+        color: @cl-dunlop-white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: @cl-font-link;
+        }
+    }
+
+    &__item {
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+        width: 190px;
+        margin-bottom: 0;
+        margin-bottom: 5px;
+    }
+
+    &__list {
+        padding-left: 30px;
+        margin-bottom: 0;
+        max-width: 430px
+    }
+
+    &__menu {
+        position: relative;
+    }
+
+    &__text,
+    &__list {
+        padding-top: 45px;
+        padding-bottom: 15px;
+    }
+
+    &__language {
+        font-family: 'helvetican_regular';
+        color: @cl-dunlop-white;
+        font-size: 11px;
+        position: absolute;
+        right: 1px;
+        top: 43px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: @cl-font-link;
+        }
+    }
+
+    &__information {
+        position: relative;
+
+        &:after {
+            content: '';
+            border-right: 1px solid @cl-footer-border;
+            position: absolute;
+            height: calc(~'100% + 29px');
+            right: 0px;
+            top: 0px;
+        }
+    }
+
+    &__menu {
+        position: relative;
+
+        &:before {
+            content: '';
+            border-right: 1px solid @cl-footer-border;
+            position: absolute;
+            height: calc(~'100% + 29px');
+            left: -1px;
+            top: 0px;
+        }
+    }
+}

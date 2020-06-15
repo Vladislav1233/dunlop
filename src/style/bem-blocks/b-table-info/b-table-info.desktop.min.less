@@ -1,0 +1,201 @@
+/* MAIN : 1000 + */
+.b-table-info {
+
+    &--limk {
+        margin-top: 20px;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    &__underlined {
+        border-top: 1px solid @cl-dunlop-table-underline;
+        &:hover {
+            background: rgba(68, 68, 68, 0.4);
+        }
+
+        &--min {
+            &:hover {
+                background: none;
+            }
+        }
+    }
+
+    td {
+        font-size: 12px;
+        border: 0;
+        line-height: 16px;
+    }
+
+
+    &__diameter {
+        padding-top: 16px;
+        line-height: 18px;
+        padding-left: 20px;
+        border: 0;
+        border-bottom: 2px solid @cl-dunlop-table-line !important;
+        vertical-align: top;
+        line-height: 18px !important;
+
+        &--min {
+            padding-top: 32px;
+
+        }
+    }
+
+    &__size {
+        padding-top: 16px;
+        line-height: 18px;
+        padding-left: 0px;
+        border: 0;
+        border-bottom: 2px solid @cl-dunlop-table-line !important;
+        vertical-align: top;
+        line-height: 18px !important;
+
+        &--min {
+            padding-top: 32px;
+        }
+
+        &--no-price {
+            padding-left: 43px;
+        }
+    }
+
+    &__load {
+        padding-top: 16px;
+        line-height: 18px;
+        padding-left: 0px;
+        padding-right: 20px;
+        border: 0;
+        border-bottom: 2px solid @cl-dunlop-table-line !important;
+        vertical-align: top;
+        line-height: 18px !important;
+
+        &--min {
+            padding-top: 32px;
+            padding-right: 4px;
+        }
+
+        &--no-price {
+            width: 198px;
+            padding-right: 0;
+        }
+    }
+
+    &__average-price {
+        max-width: 70px;
+        padding-left: 0;
+        padding-top: 16px;
+        line-height: 18px;
+        border: 0;
+        border-bottom: 2px solid @cl-dunlop-table-line !important;
+        vertical-align: top;
+        line-height: 18px !important;
+    }
+
+    &__table-header {
+        font-size: 12px;
+        font-family: @font-bold;
+        color: @cl-font-white;
+
+        td {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__radius {
+        padding-bottom: 2px;
+        padding-left: 20px;
+        padding-top: 2px;
+        min-width: 116px;
+
+        &--min {
+            padding-top: 5px;
+            padding-bottom: 14px;
+        }
+    }
+
+    &__size-load {
+        min-width: 96px;
+        padding: 5px 0;
+    }
+
+    &__size-info {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        padding-left: 3px;
+        position: relative;
+
+        &--min {
+            padding-top: 5px;
+            padding-bottom: 14px;
+        }
+
+        &--last {
+            padding-bottom: 11px;
+            float: right;
+        }
+
+        &--float {
+            float: right;
+            margin-top: 2px;
+        }
+
+        &--no-price {
+            padding-left: 43px;
+        }
+        &--float-no-price {
+            padding-left: 60px;
+        }
+    }
+
+    &__load-info {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 80px;
+        
+        &--min {
+            padding-top: 5px;
+            padding-bottom: 14px;
+        }
+
+        &--last {
+            padding-bottom: 11px;
+        }
+    }
+
+    &__text {
+        padding: 0;
+        padding-right: 20px;
+        min-width: 55px;
+
+        &--last {
+            padding-bottom: 11px;
+        }
+    }
+
+    &__empty {
+        padding: 0;
+    }
+
+    &__extra-load {
+        text-align: left;
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    &__info-line {
+        height: 23px;
+        &:hover {
+            background: rgba(68, 68, 68, 0.4);
+        }
+    }
+    &__last {
+        height: 6px;
+    }
+}

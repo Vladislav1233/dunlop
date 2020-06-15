@@ -1,0 +1,21 @@
+//- ====================
+//- Dunlop: download_file
+//- 29-04-2016: Tatiana Shemenyova
+//- --------------------
+//- Шаблон вывода списка ссылок для скачивания файлов.
+//- ====================
+
+//- Dunlop: mixin download_file
+//- 29-04-2016: Tatiana Shemenyova
+//- ---------------------
+//- список ссылок для скачивания файлов
+//- первый аргумент - тип файла
+mixin download_file(type, ...items)
+    // BEGIN section.b-file
+    +b.file(class!=attributes.class)
+        +e('ul').list
+            each item in items
+                +e('li').item: +e('a')(href="javascript:void(0);" title="#{item}").link
+                    +e('span').icon #{type}
+                    +e('span').text #{item}
+    // END section.b-file

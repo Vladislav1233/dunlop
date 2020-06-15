@@ -1,0 +1,22 @@
+//- Основная страница: Главная. 
+
+//- Используем Dunlop: main_slider.jade: mixin +main_slider()
+include ./section/main_slider.jade
+//- Используем Dunlop: special.jade: mixin +special()
+include ./section/special.jade
+
+//- Используем стандартный шаблон
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Главная';
+    - var logo = true;
+    - var main_page = true;
+
+//- Выводим контент
+block content
+    //- Используем Dunlop: include ./section/main_slider.jade
+    +main_slider()
+    //- Используем Dunlop: include ./section/special.jade
+    +special()

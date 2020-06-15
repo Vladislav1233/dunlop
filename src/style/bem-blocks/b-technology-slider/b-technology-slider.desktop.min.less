@@ -1,0 +1,280 @@
+/* MAIN : 1000 + */
+.b-technology-slider {
+    margin-left: 88px;
+    // margin-bottom: 81px;
+
+    &__list {
+        // margin-top: 40px;
+        padding-top: 15px;
+        width: 734px;
+    }
+
+    &__name-tech {
+        max-width: 320px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__item {
+        outline: none;
+    }
+
+    &__header {
+        width: 400px;
+        font-family: @font-italic;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        color: @cl-font-white;
+        margin-top: 36px;
+        text-transform: uppercase;
+        margin-bottom: 23px;
+        // font-style: italic;
+        font-style: normal
+    }
+
+    &__column {
+        width: 100%;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 28px;
+
+        p {
+            margin-top: 11px;
+            margin-bottom: 5px;
+        }
+
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+
+    &__block-info {
+        display: flex;
+        margin-bottom: 35px;
+        width: 735px;
+    }
+
+    &__header-min {
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: @cl-font-white;
+
+        &--app {
+            margin-top: 22px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__application {
+        width: 80%;
+        line-height: 25px;
+    }
+
+    &__line {
+        width: 54%;
+        margin-bottom: 47px;
+        border-bottom: 3px solid @cl-dublop-main;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 24px;//40px;
+        color: @cl-dublop-main;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-left: 5px;
+
+        &:hover {
+            color: @cl-dublop-main;
+            text-decoration: none;
+        }
+
+        &:first-child,
+        &:nth-child(6) {
+            margin-left: 0;
+        }
+        
+        span {
+            font: 19px/60% Arial;
+            text-transform: none;
+        }
+    }
+
+    .slick-list {
+        top: 5px;
+    }
+
+    .slidesjs-navigation {
+        position: absolute;
+        width: auto;
+        height: auto;
+        // top: -15px;
+        top: 0px;
+        font-size: 13px;
+        line-height: 20px;
+        color: @cl-font-white;
+        -webkit-appearance: none;
+        text-decoration: none;
+        cursor: pointer;
+
+    }
+
+    .slidesjs-previous {
+        left: 104px;
+        padding-left: 25px;
+
+        &:hover {
+            &:before {
+                border-right-color: @cl-dublop-main;
+            }
+        }
+
+        &:hover {
+            &:after {
+                border-color: @cl-dublop-main;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -4px;
+            margin-left: 1px;
+            border: 4px solid transparent;
+            border-right: 4px solid @cl-font-white;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            margin-left: -2px;
+            margin-top: -10px;
+            border: 2px solid @cl-font-white;
+            border-radius: 100%;
+        }
+    }
+
+    .slidesjs-next {
+        right: 102px;
+        padding-right: 28px;
+
+        &:hover {
+            &:before {
+                border-left-color: @cl-dublop-main;
+            }
+        }
+
+        &:hover {
+            &:after {
+                border-color: @cl-dublop-main;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: 3px;
+            top: 6px;
+            border: 4px solid transparent;
+            border-left: 4px solid @cl-font-white;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            width: 15px;
+            height: 15px;
+            margin-top: -10px;
+            border: 2px solid @cl-font-white;
+            border-radius: 100%;
+        }
+    }
+
+    .slidesjs-pagination {
+        position: absolute;
+        padding: 0px;
+        list-style: none;
+        text-align: center;
+        width: 20px;
+        top: 0px;
+        margin-top: 11px;
+        margin-bottom: 0px;
+        left: 48px;
+        bottom: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .slidesjs-pagination-item {
+        list-style: none;
+        margin-bottom: 5px;
+
+        a {
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 20px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: @cl-dunlop-dots-tchnology;
+                border-radius: 100%;
+                opacity: 1;
+                top: 7px;
+                left: 7px;
+                margin: 0px;
+                // margin-left: -1px;
+                // margin-top: -1px;
+            }
+        }
+    }
+
+    .slidesjs-pagination-item .active {
+        &:before {
+            background-color: @cl-dublop-main;
+        }
+    }
+
+    .slidesjs-pagination-item .active {
+        position: relative;
+            
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0;//1px;
+            opacity: 1;
+            width: 15px;
+            height: 15px;
+            border: 2px solid @cl-dublop-main;
+            border-radius: 100%;
+        }
+    }
+
+    .slick-slider {
+        margin-bottom: 0px;
+    }
+
+    // &[aria-hidden="false"] .slidesjs-container,
+    // &[aria-hidden="false"] .slidesjs-control {
+    //     width: 100% !important;
+    // }
+}

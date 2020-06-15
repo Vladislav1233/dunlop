@@ -1,0 +1,123 @@
+//- ====================
+//- Dunlop: product_pic
+//- 29-04-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон изображения товара
+//- ====================
+mixin td-table(name)
+    +e('td')(class!=attributes.class) #{name}
+
+//- mixin td-table-size(size, name)
+//-     +e('td')(class!=attributes.class)
+//-         +e('span').extra-load #{size}
+//-         +e('span').size-load #{name}
+mixin td-table-size(size, name)
+    +e('td').size-load #{name}
+
+
+//- Dunlop: mixin product_pic
+//- 30-04-2016: Vladimir Trifonov
+//- ---------------------
+//- Таблица с характеристиками для страницы Продукт
+mixin table_info(close)
+    // BEGIN section.b-table-info
+    +b.table-info--link
+        if close != true
+            +open-table('скрыть список типоразмеров')
+        +e('table').table
+            +e('thead').table-header
+                tr
+                    +e('td').diameter
+                        | Посадочный
+                        br
+                        | диаметр
+                    +e('td').size Размер
+                    +e('td')(colspan='2').load
+                        | Индекс нагрузки
+                        br
+                        | и скорости
+            +e('tbody')
+                +e('tr').underlined
+                    +td-table('15"').radius
+                    +td-table-size('XL','205/70R15')
+                    +td-table('75H').load-info
+                    +e('td').text XL
+                +e('tr').underlined
+                    +td-table('15"').radius
+                    +td-table-size('XL','205/70R9')
+                    +td-table('75H').load-info
+                    +e('td').text S
+                +e('tr').underlined
+                    +td-table('15"').radius
+                    +td-table-size('XL','205-/170R105')
+                    +td-table('75H').load-info
+                    +e('td').text XXL
+
+    // END section.b-table-info
+
+//- Dunlop: mixin product_pic
+//- 30-04-2016: Vladimir Trifonov
+//- ---------------------
+//- Таблица с характеристиками без средней цены для страницы Продукт
+mixin table_info_diler()
+    // BEGIN section.b-table-info
+    +b.table-info
+        //- +open-table('скрыть список типов и размеров')
+        +e('table').table
+            +e('thead').table-header
+                tr
+                    +e('td').diameter--no-price Посадочный диаметр
+                    +e('td').size--no-price Размер
+                        +e('td').load--no-price Индекс нагрузки и скорости
+            +e('tbody')
+                +e('tr').underlined
+                    +td-table('15"').radius
+                    +td-table-size('XL','205/70R15')--no-price
+                    +td-table('75H').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table-size('XL','235/75R1')--no-price
+                    +td-table('81H').load-info
+                +e('tr').last
+                +e('tr').underlined
+                    +td-table('16"').radius
+                    +td-table-size('XL','195/45R16')--no-price
+                    +td-table('84V').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table('195/60R16')-no-price
+                    +td-table('89V').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table('205/55R16')-no-price
+                    +td-table('91V').load-info
+                +e('tr').info-line
+                    +td-table()
+                    +td-table('215/55R16')-no-price
+                    +td-table('93V').load-info
+                +e('tr').last
+                +e('tr').underlined
+                    +td-table('17"').radius
+                    +td-table-size('XL','205/50R17')--no-price
+                    +td-table('93W').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table('205/55R17')-no-price
+                    +td-table('91V').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table('215/60R16')-no-price
+                    +td-table('99H').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table('215/65R16')-no-price
+                    +td-table('98H').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table('215/60R16')-no-price
+                    +td-table('99H').load-info
+                +e('tr').info-line
+                    +td-table().empty
+                    +td-table('215/65R16')-no-price
+                    +td-table('98H').load-info
+    // END section.b-table-info

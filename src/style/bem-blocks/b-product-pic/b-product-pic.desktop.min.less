@@ -1,0 +1,72 @@
+/* MAIN : 1000 + */
+.b-product-pic {
+    position: relative;
+    height: 462px;
+    text-align: center;
+    border: 1px solid @cl-dunlop-table-underline;
+    margin-bottom: 20px;
+
+    &--table {
+        height: auto;
+    }
+
+    &__new {
+        transform: rotate(-90deg);
+        width: 56px;
+        height: 25px;
+        position: absolute;
+        top: 15px;
+        background: @cl-dunlop-icon-hover;
+        color: @cl-font-white;
+        left: 2px;
+        text-align: left;
+        padding-left: 8px;
+        line-height: 26px;
+        text-transform: uppercase;
+        font-size: 10px;
+
+    }
+
+    &__image-block {
+        // width: 184px;
+        height: 316px;
+        margin: 72px auto;
+        // margin-top: 72px;
+    }
+
+    &__image {
+        max-height: 100%;
+    }
+
+    &__buy {
+        display: flex;
+        align-items: center;
+        background-color: @cl-dunlop-buy-product;
+        width: 100%;
+        height: 98px;
+
+        &--no-table {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    &__average-price {
+        margin: 0px 20px;
+    }
+
+    &__text-price {
+        color: @cl-font-grey;
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    &__price {
+        font-family: @font-bold;
+        font-size: 16px;
+        color: @cl-dunlop-white;
+        margin-top: 0;
+        text-align: left;
+    }
+}

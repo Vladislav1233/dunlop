@@ -1,0 +1,132 @@
+/* MAIN : 1000 + */
+.b-product-description {
+    p {
+        color: @cl-font-grey;
+        font-size: 13px;
+        line-height: 22px;
+        margin: 0 0 23px;
+    }
+
+    p > strong {
+        color: @cl-font-white;
+        display: block;
+        font-family: @font-bold;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 22px;
+        margin: 0 0 -16px;
+        text-transform: uppercase;
+    }
+
+    &__intro {
+        p:last-child {
+            border-bottom: 1px solid @cl-dunlop-table-underline;
+            margin: 0 0 28px;
+            padding: 0 0 20px;
+            color: @cl-font-white;
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        p > strong {
+            color: @cl-font-white;
+            font-size: 22px;
+            line-height: 32px;
+            margin: 13px 0 27px;
+            text-transform: none;
+            font-weight: normal;
+            font-family: @font-regular;
+        }
+
+    }
+
+    &__description {
+        margin: 50px 0 22px 3px;
+    }
+
+    &__title {
+        margin: 13px 0 27px;
+
+        p {
+            color: @cl-dunlop-white;
+            font-size: 22px;
+            line-height: 32px;
+            margin: 0;
+        }
+    }
+
+    &__text {
+        border-bottom: 1px solid @cl-dunlop-table-underline;
+        margin: 0 0 28px;
+        padding: 0 0 5px;
+
+        p {
+            color: @cl-font-white;
+            font-size: 16px;
+            line-height: 28px;
+            margin: 0 0 15px;
+        }
+
+        .b-product__description-block--moto & {
+            padding: 0 0 13px;
+            margin: 0 0 55px;
+        }
+    }
+
+    &__benefits {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    &__table-title {
+        position: relative;
+        top: 0;
+        width: 50%;
+        padding-left: 32px;
+        font-family: @font-bold;
+        color: @cl-dunlop-white;
+        border: 0;
+        height: 45px;
+        vertical-align: top;
+        border-bottom: 2px solid @cl-dunlop-table-line;
+        list-style-type: circle;
+
+        &:before {
+            position: absolute;
+            top: 11px;
+            left: 3px;
+            width: 5px;
+            height: 5px;
+            background: @cl-dunlop-table-dot;
+            -moz-border-radius: 60px;
+            -webkit-border-radius: 60px;
+            border-radius: 60px;
+            color: red;
+            content: "";
+        }
+        &:last-child {
+            padding-left: 40px;
+
+            &:before {
+                left: 11px;
+            }
+        }
+    }
+
+    &__table-text {
+        padding-top: 10px;
+        padding-left: 3px;
+        padding-bottom: 9px;
+        font-size: 13px;
+        color: @cl-dunlop-white;
+        border: 0;
+        line-height: 20px;
+        border-top: 1px solid @cl-dunlop-table-underline;
+        vertical-align: top;
+
+        &:last-child {
+            border-bottom: 0;
+            padding-left: 10px;
+        }
+    }
+}

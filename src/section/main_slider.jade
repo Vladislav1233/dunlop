@@ -1,0 +1,55 @@
+//- ====================
+//- Dunlop: main_slider
+//- 28-04-2016: Tatiana Shemenyova
+//- --------------------
+//- Шаблон блока с слайдером на главной странице.
+//- ====================
+
+//- Dunlop: mixin main_slider
+//- 27-04-2016: Tatiana Shemenyova
+//- ---------------------
+//- Основной шаблон слайдера.
+mixin main_slider()
+    - var n = 1
+    // BEGIN section.b-main-slider
+    +b('section').main-slider
+        +e.list.js-main-slider
+            +e.item
+                +e('img').background-image.js-preloader-image.js-background-image(src='images/content/main/bg_1.jpg' alt='' title='')
+                +e('img').image.js-preloader-image.js-main-image(src='images/content/main/main-slider1.png' alt='' title='')
+                +e.text
+                    +e.header 
+                        | Идеальны для&nbsp;городской среды
+                    +b('a')(href='javascript:void(0);' title='Подобрать шины').button--main Подобрать шины
+            +e.item
+                +e('img').background-image.js-preloader-image.js-background-image(src='images/content/main/bg_2.jpg' alt='' title='')
+                +e('img').image.js-preloader-image.js-main-image(src='images/content/main/main-slider2.png' alt='' title='')
+                +e.text
+                    +e.header
+                        | Везде есть
+                        br 
+                        | дорога
+                    +b('a')(href='javascript:void(0);' title='Подобрать шины').button--main Подобрать шины
+            +e.item
+                +e('img').background-image.js-preloader-image.js-background-image(src='images/content/main/bg_3.jpg' alt='' title='')
+                +e('img').image.js-preloader-image.js-main-image(src='images/content/main/main-slider3.png' alt='' title='')
+                +e.text
+                    +e.header 
+                        | Управляй энергией движения
+                    +b('a')(href='javascript:void(0);' title='Подобрать шины').button--main Подобрать шины
+        //- Используем Dunlop: main_slider_navigation (см ниже)
+        +main_slider_navigation('Легковые', 'Внедорожники', 'Мотоциклы')
+    // END section.b-main-slider
+
+
+//- Dunlop: mixin main_slider_navigation
+//- 02-05-2016: A. Sokolova
+//- ---------------------
+//- Шаблон меню слайдера.
+mixin main_slider_navigation(...items)
+    // BEGIN section.b-main-slider-navigation
+    +b.main-slider-navigation
+        +e('ul').list.js-nav-slider
+            each item, index in items
+                +e('li').item: +e('a').link(href="javascript:void(0);" title="#{item}" class="#{active} js-main-slider-navigation") #{item}
+    // END section.b-main-slider-navigation

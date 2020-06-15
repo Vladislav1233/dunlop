@@ -1,0 +1,56 @@
+//- ====================
+//- Dunlop: how-to-description
+//- 06-05-2016: Tatiana Shemenyova
+//- --------------------
+//- Шаблон вывода описания названия.
+//- ====================
+
+//- Dunlop: how-to-description
+//- 06-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- описание названия
+mixin how-to-description()
+    +b.how-to
+        +how-to-item('num205', 'icon-num205', 'icon-line-205', 'left', 'Ширина Профиля, мм')
+        +e.link.num-divider-auto
+            i(class="icon-num-divider")
+        +how-to-item('num55', 'icon-num55', 'icon-line-55', 'right', 'Серия', 'Отношение высоты профиля к ширине, %')
+        +how-to-item('num-r', 'icon-num-r', 'icon-line-r', 'left', 'Конструкция шины', 'R &mdash; радиальная <br />D &mdash; диагональная<br />B &mdash; диагонально-опоясанная')
+        +how-to-item('num16', 'icon-num16', 'icon-line-16', 'left', 'Посадочный диаметр, дюймы')
+        +how-to-item('num91', 'icon-num91', 'icon-line-91', 'left', 'Индекс нагрузки')
+        +how-to-item('num-v', 'icon-num-v', 'icon-line-v', 'left', 'Категория скорости')
+        +how-to-item('num-sp-sport', 'icon-num-sp-sport', 'icon-line-name', 'left', 'Наименование модели')
+
+
+//- Dunlop: how-to-description-moto
+//- 06-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- описание названия - МОТО
+mixin how-to-description-moto()
+    +b.how-to
+        +how-to-item('num-moto-130', 'icon-num-moto-130', 'icon-line-moto-130', 'right', 'Ширина Профиля, мм')
+        +e.link.num-divider-moto
+            i(class="icon-num-divider")
+        +how-to-item('num-moto-70', 'icon-num-moto-70', 'icon-line-moto-70', 'right', 'Серия', 'Отношение высоты профиля к ширине, %')
+        +how-to-item('num-moto-z', 'icon-num-moto-z', 'icon-line-moto-z', 'left', 'Специальная маркировка скорости', 'Больше 240 км/ч')
+        +how-to-item('num-moto-r', 'icon-num-moto-r', 'icon-line-moto-r', 'left', 'Конструкция шины', 'R &mdash; радиальная <br />D &mdash; диагональная<br />B &mdash; диагонально-опоясанная')
+        +how-to-item('num-moto-16', 'icon-num-moto-16', 'icon-line-moto-16', 'left', 'Посадочный диаметр, дюймы')
+        +how-to-item('num-moto-61w', 'icon-num-moto-61w', 'icon-line-moto-61w', 'left', 'Индекс нагрузки и скорости')
+        +how-to-item('num-moto-tl', 'icon-num-moto-tl', 'icon-line-moto-tl', 'left', 'Тип шины', 'TL &mdash; безкамерная <br />WT &mdash; камерная')
+        +how-to-item('num-moto-name', 'icon-num-moto-name', 'icon-line-moto-name', 'left', 'Наименование модели')
+
+//- Dunlop: how-to-item
+//- 06-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- итем описания
+mixin how-to-item(index, link, line, description_type, description_header, description)
+    +e('a').link(href="javascript:void(0);" title="#{link}" class="#{index}" data-hover="#{index}")
+        i(class="#{link}")
+    +e.block(class="#{index}" data-hover="#{index}")
+        +e('span').dot
+            i(class="#{line}")
+    +e('span').description(class="#{description_type} #{index}" data-hover="#{index}")
+        +e('p').header #{description_header}
+        if description
+            +e('p').text 
+                != description

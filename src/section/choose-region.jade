@@ -1,0 +1,132 @@
+//- ====================
+//- Dunlop: popup-coose-region
+//- 11-05-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон попапов
+//- ====================
+
+//- Dunlop: mixin popup-choose-region
+//- 11-05-2016: Vladimir Trifinov
+//- ---------------------
+//- блок попапов
+//- переменная - название попапа (миксина)
+mixin popup-region(mixin, name, back)
+    // BEGIN section.b-popup
+    +b.popup.popup--region.js-popup
+        +e.wrapper--region(id="#{mixin}")
+            +e.body--region
+                +e.head
+                    +e('a')(href="javascript:void(0);" title="Закрыть").close--region.js-close-popup
+                        i.icon-popup-close
+                    +e('h3').header--region #{name}
+                    if back
+                        +e.between-line
+                            +e('span').dot
+                        +e('a'  )(href= "javascript:void(0);" title= "Красноярский край" data-target="#choose-region").return.js-select-region.js-open-popup Красноярский край
+                        +e('span').info-text Изменить регион
+                +b.line--region
+                +e.body-inner--region
+                    +#{mixin}()
+    // END section.b-popup
+
+
+//- Dunlop: mixin region-link
+//- 11-05-2016: Vladimir Trifinov
+//- ---------------------
+//- блок попапов
+//- переменная - название попапа (миксина)
+mixin region-link(name, rel, data)
+    +e('li').item
+        +e('a')(href='javascript:void(0)', rel='#{rel}', data-type='#{data}' class!=attributes.class) #{name}
+
+
+//- Dunlop: mixin choose-region
+//- 11-05-2016: Vladimir Trifonov
+//- ---------------------
+//- choose-region
+mixin choose-region()
+    +b.choose-city__block
+        +e.region
+            +e.title-region
+                span Россия
+            +e.list-region
+                +e('ul').list
+                    +region-link('Москва', '', "").link-city
+                    +region-link('Санкт-Питербург', '', '').link-city
+                    +e('li').item--name Края
+                    +region-link('Алтайский', '', '').link-city
+                    +region-link('Красноярский', '', '').link-city
+                    +region-link('Краснодарский', '', '').link-city
+                    +region-link('Пермский', '', '').link-city
+                    +region-link('Приморский', '', '').link-city
+                    +region-link('Ставропольский', '', '').link-city
+                    +e('li').item--name Области
+                    +region-link('Астраханская', '', '').link-city
+                    +region-link('Владимирская', '', '').link-city
+                    +region-link('Волгоградская', '', '').link-city
+                    +region-link('Вологодская', '', '').link-city
+                    +region-link('Воронежская', '', '').link-city
+                +e('ul').list
+                    +e('li').item--name-top Области
+                    +region-link('Ивановская', '', '').link-city
+                    +region-link('Иркутская', '', '').link-city
+                    +region-link('Калужская', '', '').link-city
+                    +region-link('Кировская', '', '').link-city
+                    +region-link('Московская', '', '').link-city
+                    +region-link('Нижегородская', '', '').link-city.choose-city__link-city--selected
+                    +region-link('Новосибирская', '', '').link-city
+                    +region-link('Омская', '', '').link-city
+                    +region-link('Ростовская', '', '').link-city
+                    +region-link('Самарская', '', '').link-city
+                    +region-link('Саратовская', '', '').link-city
+                    +region-link('Сахалинская', '', '').link-city
+                    +region-link('Свердловская', '', '').link-city
+                    +region-link('Томская', '', '').link-city
+                    +region-link('Тюменская', '', '').link-city
+                    +region-link('Челябинская', '', '').link-city
+                +e('ul').list
+                    +e('li').item--name-top Области
+                    +region-link('Ярославская', '', '').link-city
+                    +region-link('Тульская', '', '').link-city
+                    +region-link('Пензенская', '', '').link-city
+                    +region-link('Тамбовская', '', '').link-city
+                    +region-link('Рязанская', '', '').link-city
+                    +region-link('Костромская', '', '').link-city
+                    +e('li').item--name Республики
+                    +region-link('Башкортостан', '', '').link-city
+                    +region-link('Калмыкия', '', '').link-city
+                    +region-link('Татарстан', '', '').link-city
+                    +region-link('Хакасия', '', '').link-city
+                    +region-link('Северная Осетия — Алания', '', '').link-city
+                    +region-link('Крым', '', '').link-city
+        +e.region
+            +e.title-region
+                span Другие страны
+            +e.list-region
+                +e('ul').list
+                    +e('li').item--name-top Белоруссия
+                    +region-link('Брестская', '', '').link-city
+                    +region-link('Гомельская', '', '').link-city
+                    +region-link('Витебская', '', '').link-city
+                    +region-link('Могилёвская', '', '').link-city
+                    +region-link('Минская', '', '').link-city
+                +e('ul').list
+                    +e('li').item--name-top Казахстан
+                    +region-link('Алматинская', '', '').link-city
+                    +region-link('Восточно-Казахстанская', '', '').link-city
+                    +e('li').item--name Любая другая страна
+                    +region-link('Любая другая страна', '', '').link-city
+                +e('ul').list
+                    +e('li').item--name-top Туркменистан
+                    +region-link('Туркменистан', '', '').link-city
+
+//- Dunlop: mixin choose-city
+//- 11-05-2016: Vladimir Trifonov
+//- ---------------------
+//- choose-region
+mixin choose-city()
+    +b.choose-city__block
+        +e('ul').list
+            +e('li').item--name-top Города
+            +region-link('Красноярск', '', "").link-city
+            +region-link('Ачинск', '', '').link-city

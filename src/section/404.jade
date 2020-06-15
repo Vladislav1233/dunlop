@@ -1,0 +1,29 @@
+//- ====================
+//- Dunlop: 404
+//- 17-05-2016: Vladimir Trifonov
+//- --------------------
+//- Основная страница: 404.
+//- ====================
+
+//- Dunlop: mixin 404
+//- 17-05-2016: Vladimir Trifonov
+//- ---------------------
+//- Основной шаблон слайдера.
+mixin 404()
+    +b.not-found
+        +b.container.container--404
+            +b('h1').title.title--404 ошибка 404
+            +b('p').404__title СТРАНИЦА не найдена
+        +b.line
+            +b.container.container--404
+                +b.line.line--404
+        +b.container.container--404
+            +b.404
+                p Может быть, вы хотите 
+                    +e('a')(href='javascript:void(0);' title='подобрать шины') подобрать шины
+                    |  для&nbsp;своего автомобиля?
+                p Или, возможно, вы ищете ближайшего 
+                    +e('a')(href='javascript:void(0);' title='дилера') дилера
+                    |  DUNLOP?
+                p И, кстати, DUNLOP - это шины, которые&nbsp;производятся 
+                    +e('a')(href='javascript:void(0);' title='с 1888 года') с&nbsp;1888&nbsp;года.

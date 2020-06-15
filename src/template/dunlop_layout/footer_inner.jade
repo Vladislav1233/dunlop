@@ -1,0 +1,22 @@
+//- Расширенный футер для фнутренних страниц
+//- ====================
+//- ---------------------
+//- Цикл меню для футера
+mixin footer-inner-list(...items)
+    +e('ul').list
+        each item in items
+            +e('li').item
+                +e('a')(href="javascript:void(0);" title= item).link= item
+
+//- Основной шаблон расширенного футера
+mixin footer_inner()
+    // BEGIN section.b-footer
+    +b('footer').footer
+        +b.footer-inner
+            +e.information
+                +e('p').text
+                    | Обращаем Ваше внимание на то, что вся информация, включая цены на сайте www.dunlop-tire.ru носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (п.2) Гражданского кодекса Российской Федерации.
+            +e.menu
+                +footer-inner-list('Подобрать шины', 'История', 'Где купить', 'Новости', 'Технологии', 'Контакты')
+                +e('a')(href="javascript:void(0);" title="").language en
+        // END section.b-footer

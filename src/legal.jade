@@ -1,0 +1,26 @@
+//- Основная страница: Правовая информация.
+//- ====================
+
+include ./section/legal.jade
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Правовая информация';
+    - var logo = false;
+    - var main_page = false;
+    - var background = '/images/inhtml/bg_11_legal.jpg';
+
+//- Выводим контент
+block content
+    +b.legal-page
+        +b.container
+            h1 Правовая информация
+        +b.line
+            +b.container
+                +b.line--legal
+        //- Используем Dunlop: include ./section/legal.jade
+        +b.container--news
+            +legal()

@@ -1,0 +1,129 @@
+/* MAIN : 1000 + */
+.b-update {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: @font-base;
+    color: @cl-font-white;
+    background-size: cover;
+    background: url('/images/inhtml/update.jpg') no-repeat center center;
+    overflow: hidden;
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        height: 60px;
+    }
+
+    td {
+        border: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-family: @font-base;
+        font-size: 28px;
+        line-height: 76px;
+        letter-spacing: 0;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 34px;
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    &__block {
+        width: 650px;
+        margin: 0 auto;
+    }
+
+    &__browser {
+        padding-right: 45px;
+        font-size: 16px;
+        line-height: 34px;
+        color: @cl-font-white;
+        text-decoration: none;
+        &:hover {
+            color: @cl-font-white;
+            text-decoration: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        span {
+            padding-left: 10px;
+        }
+    }
+
+    &__line,
+    &__big-line {
+        width: 100%;
+        height: 1px;
+    }
+
+    &__line {
+        background: url('/images/inhtml/line.png');
+        margin-bottom: 40px;
+    }
+
+    &__big-line {
+        background: url('/images/inhtml/big-line.png');
+    }
+
+
+    &__footer {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        height: 60px;
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    &__dunlop {
+        display: inline-block;
+        padding: 20px 42px 20px 22px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        color: @cl-font-white;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 20px 15px;
+    }
+
+    &__link:hover {
+        color: @cl-font-link;
+        text-decoration: none;
+    }
+
+    &__social {
+        display: inline-block;
+        padding: 20px 15px;
+        text-decoration: none;
+
+        span {
+            color: @cl-font-link;
+            padding: 0 0 0 18px;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__zero {
+        display: inline-block;
+        padding: 20px 15px;
+        padding-right: 20px;
+        float: right;
+    }
+}

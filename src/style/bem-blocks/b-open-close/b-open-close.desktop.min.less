@@ -1,0 +1,68 @@
+/* MAIN : 1000 + */
+.b-open-close {
+    // position: relative;
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    background: rgba(68, 68, 68, 0.4);
+    padding: 10px 20px;
+    font-family: @font-bold;
+    color: @cl-dunlop-white;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 20px;
+    letter-spacing: -0.38px;
+    text-align: center;
+        padding-left: 29px;
+
+    &--map {
+        // position: absolute;
+        // top: 0;
+        // z-index: 2;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        text-decoration: none;
+        color: @cl-dunlop-white;
+        background-color: @cl-dunlop-arrow-background;
+    }
+
+
+    &__text {
+        position: relative;
+        padding-right: 30px;
+        display: inline-block;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%; //12px;
+            right: 5px; //215px;
+            margin-top: -7px;
+            border: 4px solid transparent;
+            border-bottom: 4px solid @cl-dunlop-table-dot;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            width: 14px;
+            height: 14px;
+            margin-top: -10px;
+            border: 2px solid @cl-dunlop-table-dot;
+            -webkit-border-radius: 60px;
+            border-radius: 50px;
+        }
+
+        &--more {
+            &:before {
+                margin-top: -2px;
+                border-bottom: 0;
+                border-top: 4px solid @cl-dunlop-table-dot;
+            }
+        }
+    }
+}

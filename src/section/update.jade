@@ -1,0 +1,40 @@
+//- ====================
+//- Dunlop: update
+//- 13-06-2016: drtvader
+//- --------------------
+//- Основная страница: update.
+//- ====================
+
+//- Dunlop: mixin update
+//- 13-06-2016: drtvader
+//- ---------------------
+//- Основной шаблон страницы обновления.
+mixin update_browser()
+    +b('table')(cellpadding="0" cellspacing="0" border="0").update
+        tr
+            td
+                +e('img')(src='images/inhtml/logo-dunlop.png' alt='Dunlop' title='Dunlop').logo
+            
+                +e.block
+                    h1 outdated version
+                    p
+                        | You are using outdated version of the web browser. This version does not support many of the modern technologies. We recommend to update your version of the browser:
+                    +e.line
+                    +e('a')(href="https://www.google.ru/chrome/browser/desktop/" target='_blank' title='Скачать Google Chrome').browser
+                        img(src='images/inhtml/chrome.png' alt='Google Chrome' title='Google Chrome')
+                        span Google Chrome
+                    +e('a')(href="http://windows.microsoft.com/ru-ru/internet-explorer/download-ie" target='_blank' title='Скачать Internet Explorer').browser
+                        img(src='images/inhtml/explorer.png' alt='Internet Explorer' title='Internet Explorer')
+                        span Internet Explorer
+                    +e('a')(href="http://www.opera.com/ru/computer/windows" target='_blank' title='Скачать Opera').browser
+                        img(src='images/inhtml/opera.png' alt='Opera' title='Opera')
+                        span Opera
+                +e.footer
+                    +e.big-line
+                    +e('a')(href='http://www.zero.ru/' target='_blank' title='Сделано в ZERO').zero
+                        img(src='images/inhtml/logo.png' alt='Сделано в ZERO' title='Сделано в ZERO')
+                    +e('span').dunlop &copy; Dunlop Tire CIS LLC, 2016
+                    +e('a')(href='http://www.srigroup.co.jp/english/index.html' target='_blank' title='www.srigroup.co.jp').link www.srigroup.co.jp
+                    +e('a')(href="javascript:void(0);" target='_blank' title='Подписывайтесь').social
+                        img(src='images/inhtml/facebook.png' alt='Подписывайтесь' title='Подписывайтесь')
+                        span Подписывайтесь

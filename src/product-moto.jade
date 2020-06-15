@@ -1,0 +1,93 @@
+//- Основная страница: 404.
+//- ====================
+
+//- Используем Dunlop: default.jade: mixin +section_default()
+include ./section/default.jade
+//- Используем Dunlop: tab.jade: mixin +tab()
+include ./section/tab.jade
+//- Используем Dunlop: download_file.jade: mixin +download_file()
+include ./section/download_file.jade
+//- Используем Dunlop: product_pic.jade: mixin +product_pic()
+include ./section/product_pic.jade
+//- Используем Dunlop: product-table-info.jade: mixin +table_info()
+include ./section/product-table-info.jade
+//- Используем Dunlop: product-description.jade: mixin +product_description()
+include ./section/product-description.jade
+//- Используем Dunlop: product-diller-block.jade: mixin +product-diller-block()
+include ./section/product-diller-block.jade
+//- Используем Dunlop: breadcrumbs.jade: mixin +breadcrumbs()
+include ./section/breadcrumbs.jade
+//- Используем Dunlop: choose-region.jade: mixin +popup-city(mixin, name)
+include ./section/choose-region.jade
+//- Используем Dunlop: open-close.jade: mixin +open_close(text)
+include ./section/open-close.jade
+
+
+//- Используем стандартный шаблон Dunlop
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'КУПИТЬ ШИНЫ DUNLOP SP SPORT LM703 165/55R15 75V';
+    - var main_page = false;
+    - var background = '/images/inhtml/moto_bg.jpg';
+    - var footer_inner = true;
+    - var mod="b-footer-main--how-to";
+    - var shadow = true;
+
+//- Выводим контент
+block content
+    +b.container--product
+        +breadcrumb('Шины для легковых автомобилей', 'Летние шины')
+        +b('h1').title--product КУПИТЬ ШИНЫ DUNLOP SP SPORT LM703 165/55R15 75V
+
+        +b('a')(href="javascript:void(0);" data-target="#choose-region" title="Выбрать город").choose-city__link.js-open-popup.js-select-city Нижний новгород
+    +b.line
+    +b.container--product
+        +b.product.model-703
+            +e.info-block
+                +b.product-pic
+                    +e.new new
+                    +e.image-block
+                        +e('img')(src="/images/content/tire_1.png" alt='' title='').image
+                //- Используем Dunlop: include ./section/product-table-info.jade
+                .js-tab_ui
+                    +tabs-moto('Передняя', 'Задняя')
+                    div(id="tire-front")
+                        +table_info(true)
+                        | 1
+                    div(id="tire-back")
+                        +table_info(true)
+                        | 2
+            +e.description-block--moto
+
+                +e.top-description
+                    //- Название шины
+                    +e.logo-name
+                        h1 SPORTMAX GPR-300
+                        +e('img')(src='/images/content/name-logo.png' alt='' title='').image
+
+                +b.product-description
+                    +e.title
+                        p Шина для мотоциклов класса Touring радиальной конструкции для городских условий эксплуатации.
+                    +e.text
+                        p Эту шину отличает впечатляющий баланс между характеристиками сцепления на сухой и влажной поверхностях и увеличенным пробегом.
+                    +e('table').benefits
+                        thead
+                            tr
+                                +e('td').table-title ОСОБЕННОСТИ
+                                +e('td').table-title ПРЕИМУЩЕСТВА
+                        tbody
+                            tr
+                                +e('td').table-text Новый состав резиновой смеси, созданный при использовании технологии 4D Nano Design
+                                +e('td').table-text Безопасное вождение на влажной поверхности
+                            tr
+                                +e('td').table-text Наличие нейлон-арамидного волокна в составе опоясывающей ленты
+                                +e('td').table-text Устойчивость на высоких скоростях
+                            tr
+                                +e('td').table-text Широкие канавки для отвода воды из под пятна контакта
+                                +e('td').table-text Максимальный контроль на мокрой дороге
+
+    //- Используем Dunlop: popups.jade: mixin +popup(mixin, name)
+    +popup-region('choose-region', 'Выбор региона', '')
+    +popup-region('choose-city', 'Выбор города', 'back')

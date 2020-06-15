@@ -1,0 +1,100 @@
+//- ====================
+//- Dunlop: technology
+//- 07-05-2016: Tatiana Shemenyova
+//- --------------------
+//- Основная страница: Технология.
+//- ====================
+
+//- Dunlop: mixin technology
+//- 07-05-2016: Tatiana Shemenyova
+//- ---------------------
+//- Основной шаблон слайдера.
+mixin technology()
+
+    // BEGIN section.b-technology-slider
+    +b.container--tech
+        +b('section').technology-slider(id="technology-auto")
+            +b.technology-slider__list.js-technnology-slider-auto
+                a.slidesjs-previous.slidesjs-navigation 12ТЕХНОЛОГИЯ DRS DIGITAL ROLLING SIMULATION
+                a.slidesjs-next.slidesjs-navigation 2ТЕХНОЛОГИЯ DRS DIGITAL ROLLING SIMULATION
+                - var n = 1
+                while n < 13
+                    +e.item
+                        +e.text-block
+                            +e('p').header= n++
+                                | Технология&nbsp;DRS Digital&nbsp;Rolling&nbsp;Simulation1
+                            +e.block-info
+                                +e.column
+                                    +e.line
+                                    p Моделирование работы шины с помощью суперкомпьютера. Рассчитывается оптимальный дизайн и состав шины с точки зрения улучшения её характеристик.
+                                +e.column
+                                    +e('p').header-min Преимущества
+                                    p Снижение шума, повышение плавности хода, улучшение контакта шины с дорогой, износостойкости, а также других характеристик (сопротивление качению и т. д.).
+                            +e.application
+                                +e('p').header-min--app Применяется
+                                p
+                                    +e('a')(href="javascript:void(0);" title="SP WINTER ICE01").link SP WINTER ICE01
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP WINTER SPORT 400").link SP WINTER SPORT 400
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="GRASPIC DS-3").link GRASPIC DS-3
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT MAXX TT").link SP SPORT MAXX TT
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT MAXX").link SP SPORT MAXX
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT 9000").link SP SPORT 9000
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="DIREZZA DZ101").link DIREZZA DZ101
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT LM703").link SP SPORT LM703
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="ECO EC201").link ECO EC201
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="GRASPIC DS-2").link GRASPIC DS-2
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT LM702").link SP SPORT LM702
+
+        +b('section').technology-slider(id="technology-moto")
+            +b.technology-slider__list.js-technnology-slider-moto
+                a.slidesjs-previous.slidesjs-navigation 12ТЕХНОЛОГИЯ DRS DIGITAL ROLLING SIMULATION
+                a.slidesjs-next.slidesjs-navigation 2ТЕХНОЛОГИЯ DRS DIGITAL ROLLING SIMULATION
+                - var n = 1
+                while n < 13
+                    +e.item
+                        +e.text-block
+                            +e('p').header= n++
+                                | Технология&nbsp;DRS Digital&nbsp;Rolling&nbsp;Simulation2
+                            +e.block-info
+                                +e.column
+                                    +e.line
+                                    p Моделирование работы шины с помощью суперкомпьютера. Рассчитывается оптимальный дизайн и состав шины с точки зрения улучшения её характеристик.
+                                +e.column
+                                    +e('p').header-min Преимущества
+                                    p Снижение шума, повышение плавности хода, улучшение контакта шины с дорогой, износостойкости, а также других характеристик (сопротивление качению и т. д.).
+                            +e.application
+                                +e('p').header-min--app Применяется
+                                p
+                                    +e('a')(href="javascript:void(0);" title="SP WINTER ICE01").link SP WINTER ICE01
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP WINTER SPORT 400").link SP WINTER SPORT 400
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="GRASPIC DS-3").link GRASPIC DS-3
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT MAXX TT").link SP SPORT MAXX TT
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT MAXX").link SP SPORT MAXX
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT 9000").link SP SPORT 9000
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="DIREZZA DZ101").link DIREZZA DZ101
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT LM703").link SP SPORT LM703
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="ECO EC201").link ECO EC201
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="GRASPIC DS-2").link GRASPIC DS-2
+                                    |,
+                                    +e('a')(href="javascript:void(0);" title="SP SPORT LM702").link SP SPORT LM702
+
+    // END section.b-technology-slider

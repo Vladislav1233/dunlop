@@ -1,0 +1,23 @@
+//- Основная страница: Список новстей
+
+
+//- ПОДКЛЮЧАЕМ МИКСИНЫ: START
+//- Используем Dunlop: news.jade: mixin +news()
+include ./section/news.jade
+//- Используем Dunlop: pagination.jade: mixin +pagination()
+include ./section/pagination.jade
+//- ПОДКЛЮЧАЕМ МИКСИНЫ: END
+
+
+//- Используем стандартный шаблон
+extends ./template/dunlop_layout
+
+//- Модифицируем head
+block head
+    - var pageTitle = 'Новости';
+    - var background = '/images/inhtml/bg_6_news.jpg';
+
+//- Выводим контент
+block content
+    +news()
+    +pagination()

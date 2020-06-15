@@ -1,0 +1,53 @@
+//- ====================
+//- Dunlop: product_pic
+//- 29-04-2016: Vladimir Trifonov
+//- --------------------
+//- Шаблон изображения товара
+//- ====================
+
+
+//- Dunlop: mixin product_pic
+//- 30-04-2016: Vladimir Trifonov
+//- ---------------------
+//- Изображение товара для страницы Продукт
+mixin product_pic(src, text, price)
+    // BEGIN section.b-product-pic
+    +b.product-pic
+        +e.new #{text}
+        +e.image-block
+            +e('img')(src="#{src}" alt='' title='').image
+        +e.buy--no-table
+            +e.average-price
+                +e('p').text-price Средняя цена
+                +e('p').price #{price}
+            +b('a')(href='' title='Купить у дилера').button--product Купить у дилера
+    // END section.b-product-pic
+
+//- Dunlop: mixin product_pic
+//- 30-04-2016: Vladimir Trifonov
+//- ---------------------
+//- Изображение товара с таблицей, без кнопки покупки для страницы Продукт
+mixin product_pic_table(src, text, price)
+    // BEGIN section.b-product-pic
+    +b.product-pic--table
+        +e.new= text
+        +e.image-block
+            +e('img')(src="#{src}" alt='' title='').image
+        //- для того что бы добавить таблицу под изображением
+        +b.table-info
+            +e('table').table
+                +e('thead').table-header
+                    +e('tr').header
+                        +e('td').diameter--min Посадочный диаметр
+                        +e('td').size--min Размер
+                            +e('td').load--min Индекс нагрузки и скорости
+                +e('tbody')
+                    +e('tr').underlined--min
+                        +td-table('15"').radius--min
+                        +td-table-size('XL','205/70R15').size-info--min
+                        +td-table('75H').load-info--min
+        +e.buy
+            +e.average-price
+                +e('p').text-price Средняя цена
+                +e('p').price #{price}
+    // END section.b-product-pic
