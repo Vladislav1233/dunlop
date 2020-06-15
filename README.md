@@ -4,11 +4,13 @@
 ## Веб-страницы
 - [Главная](https://vladislav1233.github.io/dunlop/build/main.html "Главная")
 - [Каталог](https://vladislav1233.github.io/dunlop/build/catalog.html "Каталог")
+- [Карточка товара](https://vladislav1233.github.io/dunlop/build/product.html "Карточка товара")
 - [Подобрать шины](https://vladislav1233.github.io/dunlop/build/how-to-moto.html "Подобрать шины")
 - [Где купить](https://vladislav1233.github.io/dunlop/build/where-to-buy.html "Где купить")
 - [Технологии](https://vladislav1233.github.io/dunlop/build/technology.html "Технологии")
 - [Новости](https://vladislav1233.github.io/dunlop/build/news.html "Новости")
-- [Контакты](https://vladislav1233.github.io/dunlop/build/contacts.html "Контакты")
+- [Контакты](https://vladislav1233.github.io/dunlop/build/contacts.html "Контакты")\
+- [404](https://vladislav1233.github.io/dunlop/build/404.html "404")
 
 ## Технологии
 - Pug (ex. jade) / HTML5
