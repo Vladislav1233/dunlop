@@ -3741,6 +3741,137 @@ yx-axis
   margin-bottom: 0;
 }
 /* MAIN : 1000 + */
+.b-choose-city {
+  color: #fff;
+  height: 100%;
+}
+.b-choose-city__block {
+  margin-top: 44px;
+}
+.b-choose-city__region {
+  height: 480px;
+  margin-bottom: 50px;
+}
+.b-choose-city__region:last-child {
+  height: auto;
+  margin-bottom: 0;
+}
+.b-choose-city__list-region {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px auto;
+  position: relative;
+}
+.b-choose-city__title-region {
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "helvetican_regular";
+  font-size: 22px;
+  line-height: 22px;
+}
+.b-choose-city__title-region:after {
+  content: "";
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  margin: -4px 25px 0 10px;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+}
+.b-choose-city__list {
+  margin-top: 19px;
+  padding-left: 0;
+  padding-right: 138px;
+  width: 300px;
+}
+.b-choose-city__list:last-child {
+  padding-right: 0;
+}
+.b-choose-city__item {
+  font-size: 16px;
+  margin-bottom: 0;
+  line-height: 26px;
+  list-style-type: none;
+}
+.b-choose-city__item--name-top {
+  font-size: 11px;
+  line-height: 29px;
+  color: #b9b9b9;
+}
+.b-choose-city__item--name {
+  margin-top: 13px;
+  line-height: 30px;
+  font-size: 11px;
+  color: #b9b9b9;
+}
+.b-choose-city__link-city {
+  color: #fff;
+  text-decoration: none;
+}
+.b-choose-city__link-city:hover {
+  color: #c4c4c4;
+  text-decoration: none;
+}
+.b-choose-city__link-city--selected {
+  color: #fdd32a;
+}
+.b-choose-city__link {
+  position: relative;
+  top: 0;
+  display: block;
+  width: 255px;
+  height: 35px;
+  background-color: rgba(68, 68, 68, 0.6);
+  font-family: "helvetican_medium";
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 0 0 16px;
+  line-height: 20px;
+  border-radius: 50px;
+  margin-bottom: 39px;
+  letter-spacing: 0;
+}
+.b-choose-city__link:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(45, 45, 45, 0.6);
+}
+.b-choose-city__link:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -1px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fdd32a;
+}
+.b-choose-city__link:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid #fdd32a;
+  border-radius: 100%;
+}
+.b-choose-city__link--where-to-buy {
+  width: 233px;
+  margin-left: 20px;
+  margin-top: -3px;
+  margin-bottom: 0;
+}
+.b-choose-city__link--catalog {
+  position: absolute;
+  right: -150px;
+  top: 110px;
+}
+/* MAIN : 1000 + */
 .b-catalog-filter.position-fixed {
   position: fixed;
   left: 0px;
@@ -3954,137 +4085,6 @@ yx-axis
   cursor: default;
 }
 /* MAIN : 1000 + */
-.b-choose-city {
-  color: #fff;
-  height: 100%;
-}
-.b-choose-city__block {
-  margin-top: 44px;
-}
-.b-choose-city__region {
-  height: 480px;
-  margin-bottom: 50px;
-}
-.b-choose-city__region:last-child {
-  height: auto;
-  margin-bottom: 0;
-}
-.b-choose-city__list-region {
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  position: relative;
-}
-.b-choose-city__title-region {
-  color: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "helvetican_regular";
-  font-size: 22px;
-  line-height: 22px;
-}
-.b-choose-city__title-region:after {
-  content: "";
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  margin: -4px 25px 0 10px;
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
-}
-.b-choose-city__list {
-  margin-top: 19px;
-  padding-left: 0;
-  padding-right: 138px;
-  width: 300px;
-}
-.b-choose-city__list:last-child {
-  padding-right: 0;
-}
-.b-choose-city__item {
-  font-size: 16px;
-  margin-bottom: 0;
-  line-height: 26px;
-  list-style-type: none;
-}
-.b-choose-city__item--name-top {
-  font-size: 11px;
-  line-height: 29px;
-  color: #b9b9b9;
-}
-.b-choose-city__item--name {
-  margin-top: 13px;
-  line-height: 30px;
-  font-size: 11px;
-  color: #b9b9b9;
-}
-.b-choose-city__link-city {
-  color: #fff;
-  text-decoration: none;
-}
-.b-choose-city__link-city:hover {
-  color: #c4c4c4;
-  text-decoration: none;
-}
-.b-choose-city__link-city--selected {
-  color: #fdd32a;
-}
-.b-choose-city__link {
-  position: relative;
-  top: 0;
-  display: block;
-  width: 255px;
-  height: 35px;
-  background-color: rgba(68, 68, 68, 0.6);
-  font-family: "helvetican_medium";
-  font-size: 12px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 8px 0 0 16px;
-  line-height: 20px;
-  border-radius: 50px;
-  margin-bottom: 39px;
-  letter-spacing: 0;
-}
-.b-choose-city__link:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: rgba(45, 45, 45, 0.6);
-}
-.b-choose-city__link:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  margin-top: -1px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid #fdd32a;
-}
-.b-choose-city__link:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  width: 14px;
-  height: 14px;
-  margin-top: -9px;
-  border: 2px solid #fdd32a;
-  border-radius: 100%;
-}
-.b-choose-city__link--where-to-buy {
-  width: 233px;
-  margin-left: 20px;
-  margin-top: -3px;
-  margin-bottom: 0;
-}
-.b-choose-city__link--catalog {
-  position: absolute;
-  right: -150px;
-  top: 110px;
-}
-/* MAIN : 1000 + */
 .b-column-block {
   font-size: 0;
   padding-top: 40px;
@@ -4118,23 +4118,6 @@ yx-axis
   font-size: 13px;
   line-height: 22px;
   padding-left: 8px;
-}
-/* MAIN : 1000 + */
-.b-contacts {
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column;
-      flex-flow: column;
-}
-.b-contacts__content {
-  width: 100%;
 }
 /* MAIN : 1000 + */
 .b-contacts-info {
@@ -4194,6 +4177,23 @@ yx-axis
 }
 .b-contacts-info__fax {
   color: #808080;
+}
+/* MAIN : 1000 + */
+.b-contacts {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+}
+.b-contacts__content {
+  width: 100%;
 }
 /* MAIN : 1000 + */
 .b-contacts-map {
@@ -8462,10 +8462,6 @@ yx-axis
   /* 1280 + */
   /* 1280 + */
   /* 1280 + */
-  .b-contacts__content {
-    margin-top: 115px;
-  }
-  /* 1280 + */
   .b-contacts-info {
     left: 242px;
     width: 310px;
@@ -8478,6 +8474,10 @@ yx-axis
   }
   .b-contacts-info__address {
     padding-left: 24px;
+  }
+  /* 1280 + */
+  .b-contacts__content {
+    margin-top: 115px;
   }
   /* 1280 + */
   .b-contacts-map {
@@ -8872,6 +8872,19 @@ yx-axis
     width: 223px;
   }
   /* 1440 + */
+  .b-choose-city__link {
+    margin-bottom: 55px;
+  }
+  .b-choose-city__link--catalog {
+    right: -208px;
+    top: 140px;
+  }
+  .b-choose-city__link--where-to-buy {
+    width: 258px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  /* 1440 + */
   .b-catalog-filter__link:before {
     right: 20px;
   }
@@ -8888,19 +8901,6 @@ yx-axis
     right: 15px;
   }
   /* 1440 + */
-  .b-choose-city__link {
-    margin-bottom: 55px;
-  }
-  .b-choose-city__link--catalog {
-    right: -208px;
-    top: 140px;
-  }
-  .b-choose-city__link--where-to-buy {
-    width: 258px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-  /* 1440 + */
   .b-column-block {
     padding-top: 35px;
   }
@@ -8910,6 +8910,7 @@ yx-axis
   .b-column-block p {
     width: 437px;
   }
+  /* 1440 + */
   /* 1440 + */
   .b-container--news-inner {
     padding-left: 15px;
@@ -8941,7 +8942,6 @@ yx-axis
   .b-container--news-inner div img {
     padding-top: 58px;
   }
-  /* 1440 + */
   /* 1440 + */
   .b-contacts-map {
     padding: 225px 0px;
@@ -9633,12 +9633,12 @@ yx-axis
   /* 1920 + */
   /* 1920 + */
   /* 1920 + */
-  .b-contacts__content {
-    margin-top: 205px;
-  }
-  /* 1920 + */
   .b-contacts-info {
     left: 440px;
+  }
+  /* 1920 + */
+  .b-contacts__content {
+    margin-top: 205px;
   }
   /* 1920 + */
   .b-contacts-map {

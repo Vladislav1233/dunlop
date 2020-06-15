@@ -15,7 +15,7 @@ mixin news-item-intro(photo, name, date)
         +b('section').news-item-intro--image
             +b.container--news-item
                 +b.title
-                    +e('img')(src="/images/content/news-item.jpg" alt="#{name}" title="#{name}").image
+                    +e('img')(src="./images/content/news-item.jpg" alt="#{name}" title="#{name}").image
                     h1 #{name}
                     +e('span').date--image #{date}
             +b.line--news-item

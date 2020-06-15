@@ -21,13 +21,13 @@ extends ./template/dunlop_layout
 //- Модифицируем head
 block head
     - var pageTitle = 'Как выбрать шины';
-    - var background = '/images/inhtml/bg_4_auto.jpg';
+    - var background = './images/inhtml/bg_4_auto.jpg';
     - var footer_inner = true;
     - var mod="b-footer-main--how-to";
 
 //- Выводим контент
 block content
-    +b('img')(src="/images/inhtml/auto.png" alt='' title='').background-wheel
+    +b('img')(src="./images/inhtml/auto.png" alt='' title='').background-wheel
     //- Используем Dunlop: wheel-back-to.jade: mixin +wheel-back-to(value)
     +wheel-back-to('Вернуться в каталог', 'icon-line-wheel')
     //- Используем Dunlop: title-how-to.jade: mixin title-how-to(title)
