@@ -1,15 +1,5 @@
-//- ====================
-//- Dunlop: popup-coose-region
-//- 11-05-2016: Vladimir Trifonov
-//- --------------------
 //- Шаблон попапов
 //- ====================
-
-//- Dunlop: mixin popup-choose-region
-//- 11-05-2016: Vladimir Trifinov
-//- ---------------------
-//- блок попапов
-//- переменная - название попапа (миксина)
 mixin popup-region(mixin, name, back)
     // BEGIN section.b-popup
     +b.popup.popup--region.js-popup
@@ -29,20 +19,10 @@ mixin popup-region(mixin, name, back)
                     +#{mixin}()
     // END section.b-popup
 
-
-//- Dunlop: mixin region-link
-//- 11-05-2016: Vladimir Trifinov
-//- ---------------------
-//- блок попапов
-//- переменная - название попапа (миксина)
 mixin region-link(name, rel, data)
     +e('li').item
         +e('a')(href='javascript:void(0)', rel='#{rel}', data-type='#{data}' class!=attributes.class) #{name}
 
-
-//- Dunlop: mixin choose-region
-//- 11-05-2016: Vladimir Trifonov
-//- ---------------------
 //- choose-region
 mixin choose-region()
     +b.choose-city__block
@@ -120,9 +100,6 @@ mixin choose-region()
                     +e('li').item--name-top Туркменистан
                     +region-link('Туркменистан', '', '').link-city
 
-//- Dunlop: mixin choose-city
-//- 11-05-2016: Vladimir Trifonov
-//- ---------------------
 //- choose-region
 mixin choose-city()
     +b.choose-city__block

@@ -1,14 +1,5 @@
-//- ====================
-//- Dunlop: how-to-description
-//- 06-05-2016: Tatiana Shemenyova
-//- --------------------
 //- Шаблон вывода описания названия.
 //- ====================
-
-//- Dunlop: how-to-description
-//- 06-05-2016: Tatiana Shemenyova
-//- ---------------------
-//- описание названия
 mixin how-to-description()
     +b.how-to
         +how-to-item('num205', 'icon-num205', 'icon-line-205', 'left', 'Ширина Профиля, мм')
@@ -21,10 +12,6 @@ mixin how-to-description()
         +how-to-item('num-v', 'icon-num-v', 'icon-line-v', 'left', 'Категория скорости')
         +how-to-item('num-sp-sport', 'icon-num-sp-sport', 'icon-line-name', 'left', 'Наименование модели')
 
-
-//- Dunlop: how-to-description-moto
-//- 06-05-2016: Tatiana Shemenyova
-//- ---------------------
 //- описание названия - МОТО
 mixin how-to-description-moto()
     +b.how-to
@@ -39,9 +26,6 @@ mixin how-to-description-moto()
         +how-to-item('num-moto-tl', 'icon-num-moto-tl', 'icon-line-moto-tl', 'left', 'Тип шины', 'TL &mdash; безкамерная <br />WT &mdash; камерная')
         +how-to-item('num-moto-name', 'icon-num-moto-name', 'icon-line-moto-name', 'left', 'Наименование модели')
 
-//- Dunlop: how-to-item
-//- 06-05-2016: Tatiana Shemenyova
-//- ---------------------
 //- итем описания
 mixin how-to-item(index, link, line, description_type, description_header, description)
     +e('a').link(href="javascript:void(0);" title="#{link}" class="#{index}" data-hover="#{index}")

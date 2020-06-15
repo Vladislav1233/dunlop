@@ -1,7 +1,3 @@
-//- ====================
-//- Dunlop: diler_block
-//- 05-05-2016: Vladimir Trifonov
-//- --------------------
 //- Шаблон карточки товара - список дилеров
 //- ====================
 mixin diler(name, adress, phone, car, bigcar, moto, remont, rel, rev)
@@ -38,11 +34,6 @@ mixin diler(name, adress, phone, car, bigcar, moto, remont, rel, rev)
         +e.link
             +b('a')(href='' title='Купить у дилера').button--product-map Купить у дилера
 
-
-//- ====================
-//- Dunlop: diler_block
-//- 05-05-2016: Vladimir Trifonov
-//- --------------------
 //- Шаблон карточки товара - список прочих дилеров
 //- ====================
 mixin other_diler(name, adress, phone, car, bigcar, moto, remont, rel, rev, type)
@@ -77,10 +68,6 @@ mixin other_diler(name, adress, phone, car, bigcar, moto, remont, rel, rev, type
         +e.link
             +b('a')(href='' title='Купить у дилера').button--other-diler Купить у дилера
 
-//- ====================
-//- Dunlop: diler_block
-//- 05-05-2016: Vladimir Trifonov
-//- --------------------
 //- Шаблон карточки товара - список дилеров для страницы Где купить
 //- ====================
 mixin where_to_buy_diler(name, adress, phone, car, bigcar, moto, remont, rel, rev)
@@ -113,10 +100,6 @@ mixin where_to_buy_diler(name, adress, phone, car, bigcar, moto, remont, rel, re
         +e.link
             +b('a')(href='' title='Купить у дилера').button--where-to-buy Купить у дилера
 
-//- ====================
-//- Dunlop: diler_block
-//- 05-05-2016: Vladimir Trifonov
-//- --------------------
 //- Шаблон карточки товара - список дилеров для страницы Где купить
 //- ====================
 mixin where_to_buy_diler2(name, adress, phone, car, bigcar, moto, remont, rel, rev)
@@ -149,9 +132,6 @@ mixin where_to_buy_diler2(name, adress, phone, car, bigcar, moto, remont, rel, r
         +e.link
             +b('a')(href='' title='Купить у дилера').button--where-to-buy Купить у дилера
 
-//- Dunlop: mixin diler_block
-//- 05-05-2016: Vladimir Trifonov
-//- ---------------------
 //- список дилеров
 mixin diler_block()
     // BEGIN section.b-diler-block
@@ -161,9 +141,6 @@ mixin diler_block()
             +diler('P-Zero', 'Ленинский пр-т, вл. 137А', '+7 (495) 689-48-58-69', 'moto', 'bigcar', 'remont','car', '55.780699;37.369871', '1')
     // END section.b-diler-block
 
-//- Dunlop: mixin diler_block
-//- 05-05-2016: Vladimir Trifonov
-//- ---------------------
 //- список прочих дилеров
 mixin other-diler()
     // BEGIN section.b-diler-block
@@ -182,9 +159,6 @@ mixin other-diler()
         
     // END section.b-diler-block
 
-//- Dunlop: mixin diler_block
-//- 05-05-2016: Vladimir Trifonov
-//- ---------------------
 //- список дилеров для страницы Где купить
 mixin where-to-buy()
     // BEGIN section.b-diler-block

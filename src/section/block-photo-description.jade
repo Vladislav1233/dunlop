@@ -1,17 +1,10 @@
-//- ====================
-//- Dunlop: block-photo-description
-//- 09-05-2016: Tatiana Shemenyova
-//- --------------------
 //- Фото с описанием слева. Используется в новости подробной.
 //- ====================
-
-//- Dunlop: mixin block-photo-description
-//- 09-05-2016: Tatiana Shemenyova
 //- ---------------------
 //- Фото с описанием слева.
 mixin block-photo-description(description)
     // BEGIN section.b-news-item-text
     div
         span #{description}
-        img(src="./images/content/news-item-inner.jpg" alt="#{description}" title="#{description}")
+        img(src="images/content/news-item-inner.jpg" alt="#{description}" title="#{description}")
     // END section.b-news-item-text

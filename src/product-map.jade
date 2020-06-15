@@ -30,7 +30,7 @@ extends ./template/dunlop_layout
 block head
     - var pageTitle = 'КУПИТЬ ШИНЫ DUNLOP SP SPORT LM703 165/55R15 75V';
     - var main_page = false;
-    - var background = './images/inhtml/auto_bg.jpg';
+    - var background = 'images/inhtml/auto_bg.jpg';
     - var footer_inner = true;
     - var mod="b-footer-main--how-to";
     - var shadow = true;
@@ -48,7 +48,7 @@ block content
         +b.product
             +e.info-block
                 //- Используем Dunlop: include ./section/product_pic.jade
-                +product_pic_table('./images/content/product-pic.png', 'new', '35 700 руб.')
+                +product_pic_table('images/content/product-pic.png', 'new', '35 700 руб.')
                 //- Используем Dunlop: include ./section/product-table-info.jade
                 +table_info_diler()
             +e.description-block--map.js-catalog-dealers

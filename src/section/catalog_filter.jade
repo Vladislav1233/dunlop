@@ -1,16 +1,5 @@
-//- ====================
-//- Dunlop: catalog_filter
-//- 29-04-2016: Tatiana Shemenyova
-//- --------------------
 //- Шаблон фильтров в каталоге.
 //- ====================
-
-
-
-//- Dunlop: mixin catalog_filter
-//- 29-04-2016: Tatiana Shemenyova
-//- ---------------------
-//- Основной фильтров
 mixin catalog_filter(type)
     // BEGIN section.b-catalog-filter
     +b('section').catalog-filter
@@ -30,10 +19,6 @@ mixin catalog_filter(type)
 
     // END section.b-catalog-filter
 
-
-//- Dunlop: mixin filter_type_1
-//- 05-05-2016: Tatiana Shemenyova
-//- ---------------------
 //- Сезоны
 mixin filter_type_1()
     +e('li').item--type
@@ -61,9 +46,6 @@ mixin filter_type_1()
                                 +e('a')(href="javascript:void(0)" title="Нешипуемые").link 
                                     | Нешипуемые
 
-//- Dunlop: mixin filter_type_2
-//- 05-05-2016: Tatiana Shemenyova
-//- ---------------------
 //- Дорожные
 mixin filter_type_2()
     +e('li').item--type
@@ -88,9 +70,6 @@ mixin filter_type_2()
                                     i.icon-filter-bias
                                     | Диагональные
 
-//- Dunlop: mixin filter_item
-//- 29-04-2016: Tatiana Shemenyova
-//- ---------------------
 //- Итем фильтра
 mixin filter_item(name, result, ...items)
     // BEGIN section.b-filter-item

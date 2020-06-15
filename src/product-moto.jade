@@ -30,7 +30,7 @@ extends ./template/dunlop_layout
 block head
     - var pageTitle = 'КУПИТЬ ШИНЫ DUNLOP SP SPORT LM703 165/55R15 75V';
     - var main_page = false;
-    - var background = './images/inhtml/moto_bg.jpg';
+    - var background = 'images/inhtml/moto_bg.jpg';
     - var footer_inner = true;
     - var mod="b-footer-main--how-to";
     - var shadow = true;
@@ -49,7 +49,7 @@ block content
                 +b.product-pic
                     +e.new new
                     +e.image-block
-                        +e('img')(src="./images/content/tire_1.png" alt='' title='').image
+                        +e('img')(src="images/content/tire_1.png" alt='' title='').image
                 //- Используем Dunlop: include ./section/product-table-info.jade
                 .js-tab_ui
                     +tabs-moto('Передняя', 'Задняя')
@@ -65,7 +65,7 @@ block content
                     //- Название шины
                     +e.logo-name
                         h1 SPORTMAX GPR-300
-                        +e('img')(src='./images/content/name-logo.png' alt='' title='').image
+                        +e('img')(src='images/content/name-logo.png' alt='' title='').image
 
                 +b.product-description
                     +e.title
